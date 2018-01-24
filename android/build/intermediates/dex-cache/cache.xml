@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_b2e7059a9c3d72b3b2b56043bdf71b27d7cd9572.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_23af70e02af6d0679a08b4a789a1f19cee8dea0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_164c97a789b4621ec1efeebf5e27f5bad50b28cf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_61851f35ad66d8df950f0401fd6875cb9158e55c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_23c4b59f0547764b66c151e12303de2e404272fd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_2bebb7172a0036e261510ef3799426bd09cfa3b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_c16af77b7f265266e073c004f8ddb111ec9e0b7e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_f88240b6f35541284e3bccfc76f289970aecfecd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_13f6f819cd58451a9781635a6d7b96bed8e59fe9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_90a7897bedb9962e9ea75e17e7dbd026e01334a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_188f2e11a293b05770c5deedcb76ee8006ea4170.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_4c14cfcb9672148372e5cd37639cb4c4a756da32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_22965591ecf7124f3c6a037a6113ec5735bba555.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_8a492065c6a243033e939787357196928fa6dcf7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_fd38ce090f5d1c36bff4d0cfd33cd40f1e170e48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_b3f241a31dd6ab6040fac3cba32df4faab8021a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_9c128bc5b7b270a46853acf8904938f708bea09e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_eafe39d83d7477228ca5daacaf045d53ff1cab83.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_ae32ddc450bfa8e8528e2c994900d318526c00e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_e1a7d36ba333c50473409c343fcd35b1a31996da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="99941aaaf86dc5e525cd9208c2f7c9a624f4f004">
+        <dex dex="/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.51.0_43684ca1ee1c238fdfd4372ed030eb5def6bb312.jar" />
+    </item>
+
+</items>

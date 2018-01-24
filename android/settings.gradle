@@ -1,0 +1,3 @@
+rootProject.name = 'ClubStack'
+
+include ':app'
