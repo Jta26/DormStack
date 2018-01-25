@@ -16,12 +16,11 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 //Custom Components
 import Register from "../components/Register";
-//Seperate Views
 
 const RegisterView = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <Image source={require('../img/logo.png')}></Image>
+            <Text style={styles.title}>Join the ClubStack!</Text>
             <View style={styles.register}>
                 <Register
                     navigation={navigation}
@@ -34,14 +33,20 @@ const RegisterView = ({navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#FFFFFF',
-      flex: 1,
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        flex: 1,
+        alignItems: 'center',
+      
     },
-    register: {
-      width: 300,
+    register: { 
+        width: 300,
+    },
+    title: {
+        textAlign: 'center',
+        fontFamily:'fjallaone',
+        marginBottom: 20,
+        fontSize: 40,
+        color: '#000000',
     }
 });
 export default RegisterView;

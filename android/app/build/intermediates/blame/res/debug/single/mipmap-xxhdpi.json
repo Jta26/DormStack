@@ -2,5 +2,9 @@
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/joel/Desktop/Development/ClubStack/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

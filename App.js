@@ -18,6 +18,7 @@ import {StackNavigator} from 'react-navigation';
 //Seperate Views
 import LoginView from './Views/LoginView';
 import RegisterView from './Views/RegisterView';
+import ClubStackView from './Views/ClubStackView';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
@@ -38,6 +39,12 @@ const App = StackNavigator({
   },
   Register: { 
     screen: RegisterView,
+    navigationOptions: {
+      header: null
+    }
+  },
+  ClubStack: {
+    screen: ClubStackView,
     navigationOptions: {
       header: null
     }

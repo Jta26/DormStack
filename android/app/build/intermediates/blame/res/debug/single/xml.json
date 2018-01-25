@@ -2,5 +2,9 @@
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
     }
 ]

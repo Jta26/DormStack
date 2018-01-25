@@ -69,9 +69,6 @@ export default class Login extends Component {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        
-    },
     button: {
         flex: 1,
         justifyContent: 'center',
@@ -86,10 +83,12 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
+        fontFamily: 'fjallaone',
         color: '#000000'
     },
     errortext: {
         textAlign: 'center',
+        fontFamily: 'fjallaone',
         color: 'red'
     }
 });

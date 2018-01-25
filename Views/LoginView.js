@@ -9,7 +9,8 @@ import {
   TextInput,
   ScrollView,
   KeyboardAvoidingView,
-  TouchableOpacity
+  TouchableOpacity,
+  Keyboard
 } from 'react-native';
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
@@ -21,13 +22,16 @@ import RegisterView from './RegisterView';
 
 const LoginView = ({navigation}) => {
     return(
-        <View style={styles.container}>   
-            <View style={styles.login}>
+        <View style={styles.container}>
+          <View>
+            <Image source={require('../img/logo.png')}></Image>
+          </View>   
+          
+            <KeyboardAvoidingView keyboardVerticalOffset={0} behavior={'padding'} style={styles.login}>
               <Login
                 navigation={navigation}
               />
-              
-            </View>
+            </KeyboardAvoidingView>
         </View>
     );
 };
@@ -40,10 +44,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     login: {
-      
       width: 300,
-      
-      
     }
 });
 

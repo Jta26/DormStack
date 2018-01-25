@@ -77,18 +77,8 @@ export default class Register extends Component {
             </View>
         );
     }
-   
-    
-
-
-
-
-
 }
 const styles = StyleSheet.create({
-    container: {
-        
-    },
     button: {
         flex: 1,
         justifyContent: 'center',
@@ -98,15 +88,15 @@ const styles = StyleSheet.create({
         borderColor: '#000000',
         marginTop: 30,
         padding: 20,
-        
-        
     },
     text: {
         fontSize: 20,
+        fontFamily: 'fjallaone',
         color: '#000000'
     },
     errortext: {
         textAlign: 'center',
+        fontFamily: 'fjallaone',
         color: 'red'
     }
 });
