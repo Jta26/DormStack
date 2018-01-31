@@ -1,6 +1,0 @@
-# Needed when app is not using OkHttp
--dontwarn okio.**
-
-# Needed when app's compileSdkVersion < 24
--dontwarn com.google.firebase.perf.network.**
-

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Jan 24 16:11:31 EST 2018
+#Wed Jan 31 14:27:46 EST 2018
 210.set=ANDROID_RESOURCE
 282.file=/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
 14.set=ANDROID_RESOURCE

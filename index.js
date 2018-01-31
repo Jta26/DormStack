@@ -1,5 +1,6 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import ClubStack from './App';
 
-AppRegistry.registerComponent('ClubStack', () => App);
+AppRegistry.registerComponent('clubstack', () => ClubStack);
+
 

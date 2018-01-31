@@ -7,7 +7,7 @@
 static NSMutableDictionary *_listeners;
 
 - (id)initWithPathAndModifiers:(RCTEventEmitter *) emitter
-                           app:(NSString *) app
+                appDisplayName:(NSString *) appDisplayName
                           path:(NSString *) path
                        filters:(NSArray *) filters
                         orders:(NSArray *) orders
@@ -15,7 +15,7 @@ static NSMutableDictionary *_listeners;
     self = [super init];
     if (self) {
         _emitter = emitter;
-        _app = app;
+        _appDisplayName = appDisplayName;
         _path = path;
         _filters = filters;
         _orders = orders;
@@ -64,7 +64,7 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
                 [self handleQuerySnapshotEvent:listenerId querySnapshot:snapshot];
             }
         };
-        
+
         FIRQueryListenOptions *options = [[FIRQueryListenOptions alloc] init];
         if (queryListenOptions) {
             if (queryListenOptions[@"includeDocumentMetadataChanges"]) {
@@ -74,14 +74,14 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
                 [options includeQueryMetadataChanges:TRUE];
             }
         }
-        
+
         id<FIRListenerRegistration> listener = [_query addSnapshotListenerWithOptions:options listener:listenerBlock];
         _listeners[listenerId] = listener;
     }
 }
 
 - (FIRQuery *)buildQuery {
-    FIRFirestore *firestore = [RNFirebaseFirestore getFirestoreForApp:_app];
+    FIRFirestore *firestore = [RNFirebaseFirestore getFirestoreForApp:_appDisplayName];
     FIRQuery *query = (FIRQuery*)[firestore collectionWithPath:_path];
     query = [self applyFilters:firestore query:query];
     query = [self applyOrders:query];
@@ -93,21 +93,39 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
 - (FIRQuery *)applyFilters:(FIRFirestore *) firestore
                      query:(FIRQuery *) query {
     for (NSDictionary *filter in _filters) {
-        NSString *fieldPath = filter[@"fieldPath"];
+        NSDictionary *fieldPathDictionary = filter[@"fieldPath"];
+        NSString *fieldPathType = fieldPathDictionary[@"type"];
         NSString *operator = filter[@"operator"];
         NSDictionary *jsValue = filter[@"value"];
         id value = [RNFirebaseFirestoreDocumentReference parseJSTypeMap:firestore jsTypeMap:jsValue];
 
-        if ([operator isEqualToString:@"EQUAL"]) {
-            query = [query queryWhereField:fieldPath isEqualTo:value];
-        } else if ([operator isEqualToString:@"GREATER_THAN"]) {
-            query = [query queryWhereField:fieldPath isGreaterThan:value];
-        } else if ([operator isEqualToString:@"GREATER_THAN_OR_EQUAL"]) {
-            query = [query queryWhereField:fieldPath isGreaterThanOrEqualTo:value];
-        } else if ([operator isEqualToString:@"LESS_THAN"]) {
-            query = [query queryWhereField:fieldPath isLessThan:value];
-        } else if ([operator isEqualToString:@"LESS_THAN_OR_EQUAL"]) {
-            query = [query queryWhereField:fieldPath isLessThanOrEqualTo:value];
+        if ([fieldPathType isEqualToString:@"string"]) {
+            NSString *fieldPath = fieldPathDictionary[@"string"];
+            if ([operator isEqualToString:@"EQUAL"]) {
+                query = [query queryWhereField:fieldPath isEqualTo:value];
+            } else if ([operator isEqualToString:@"GREATER_THAN"]) {
+                query = [query queryWhereField:fieldPath isGreaterThan:value];
+            } else if ([operator isEqualToString:@"GREATER_THAN_OR_EQUAL"]) {
+                query = [query queryWhereField:fieldPath isGreaterThanOrEqualTo:value];
+            } else if ([operator isEqualToString:@"LESS_THAN"]) {
+                query = [query queryWhereField:fieldPath isLessThan:value];
+            } else if ([operator isEqualToString:@"LESS_THAN_OR_EQUAL"]) {
+                query = [query queryWhereField:fieldPath isLessThanOrEqualTo:value];
+            }
+        } else {
+            NSArray *fieldPathElements = fieldPathDictionary[@"elements"];
+            FIRFieldPath *fieldPath = [[FIRFieldPath alloc] initWithFields:fieldPathElements];
+            if ([operator isEqualToString:@"EQUAL"]) {
+                query = [query queryWhereFieldPath:fieldPath isEqualTo:value];
+            } else if ([operator isEqualToString:@"GREATER_THAN"]) {
+                query = [query queryWhereFieldPath:fieldPath isGreaterThan:value];
+            } else if ([operator isEqualToString:@"GREATER_THAN_OR_EQUAL"]) {
+                query = [query queryWhereFieldPath:fieldPath isGreaterThanOrEqualTo:value];
+            } else if ([operator isEqualToString:@"LESS_THAN"]) {
+                query = [query queryWhereFieldPath:fieldPath isLessThan:value];
+            } else if ([operator isEqualToString:@"LESS_THAN_OR_EQUAL"]) {
+                query = [query queryWhereFieldPath:fieldPath isLessThanOrEqualTo:value];
+            }
         }
     }
     return query;
@@ -116,9 +134,17 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
 - (FIRQuery *)applyOrders:(FIRQuery *) query {
     for (NSDictionary *order in _orders) {
         NSString *direction = order[@"direction"];
-        NSString *fieldPath = order[@"fieldPath"];
+        NSDictionary *fieldPathDictionary = order[@"fieldPath"];
+        NSString *fieldPathType = fieldPathDictionary[@"type"];
 
-        query = [query queryOrderedByField:fieldPath descending:([direction isEqualToString:@"DESCENDING"])];
+        if ([fieldPathType isEqualToString:@"string"]) {
+            NSString *fieldPath = fieldPathDictionary[@"string"];
+            query = [query queryOrderedByField:fieldPath descending:([direction isEqualToString:@"DESCENDING"])];
+        } else {
+            NSArray *fieldPathElements = fieldPathDictionary[@"elements"];
+            FIRFieldPath *fieldPath = [[FIRFieldPath alloc] initWithFields:fieldPathElements];
+            query = [query queryOrderedByFieldPath:fieldPath descending:([direction isEqualToString:@"DESCENDING"])];
+        }
     }
     return query;
 }
@@ -152,7 +178,7 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
 - (void)handleQuerySnapshotError:(NSString *)listenerId
                            error:(NSError *)error {
     NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
-    [event setValue:_app forKey:@"appName"];
+    [event setValue:_appDisplayName forKey:@"appName"];
     [event setValue:_path forKey:@"path"];
     [event setValue:listenerId forKey:@"listenerId"];
     [event setValue:[RNFirebaseFirestore getJSError:error] forKey:@"error"];
@@ -163,7 +189,7 @@ queryListenOptions:(NSDictionary *) queryListenOptions {
 - (void)handleQuerySnapshotEvent:(NSString *)listenerId
                    querySnapshot:(FIRQuerySnapshot *)querySnapshot {
     NSMutableDictionary *event = [[NSMutableDictionary alloc] init];
-    [event setValue:_app forKey:@"appName"];
+    [event setValue:_appDisplayName forKey:@"appName"];
     [event setValue:_path forKey:@"path"];
     [event setValue:listenerId forKey:@"listenerId"];
     [event setValue:[RNFirebaseFirestoreCollectionReference snapshotToDictionary:querySnapshot] forKey:@"querySnapshot"];

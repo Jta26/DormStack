@@ -38,9 +38,8 @@ export default class Register extends Component {
     onAccountCreate = () => {
         var database = firebase.database();
         this.setState({error: '', loading: false});
-        alert('Account Created');
-        this.props.navigation.navigate('Login');
-        const {email, password} = this.state;
+        
+        const {first, last ,email, password} = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
             this.setState({error: '', loading: false}); 
@@ -48,8 +47,9 @@ export default class Register extends Component {
        .catch((error) => {
            alert('did not sign in');
        });
-        //Sign in User Here and divert to main screen.
-        var user = firebase.auth().currentUser
+        
+        var user = firebase.auth().currentUser;
+        
         firebase.database().ref('users/' + user.uid).set({
             email: user.email,
             firstname: first,

@@ -63,6 +63,9 @@ const DefaultDrawerConfig = {
     return Math.min(smallerAxisSize - appBarHeight, maxWidth);
   },
   contentComponent: defaultContentComponent,
+  drawerOpenRoute: 'DrawerOpen',
+  drawerCloseRoute: 'DrawerClose',
+  drawerToggleRoute: 'DrawerToggle',
   drawerPosition: 'left',
   drawerBackgroundColor: 'white',
   useNativeAnimations: true,
@@ -82,6 +85,9 @@ const DrawerNavigator = (
     drawerPosition,
     useNativeAnimations,
     drawerBackgroundColor,
+    drawerOpenRoute,
+    drawerCloseRoute,
+    drawerToggleRoute,
     ...tabsConfig
   } = mergedConfig;
 
@@ -89,7 +95,7 @@ const DrawerNavigator = (
 
   const drawerRouter = TabRouter(
     {
-      DrawerClose: {
+      [drawerCloseRoute]: {
         screen: createNavigator(
           contentRouter,
           routeConfigs,
@@ -99,15 +105,15 @@ const DrawerNavigator = (
           <DrawerScreen {...props} />
         )),
       },
-      DrawerOpen: {
+      [drawerOpenRoute]: {
         screen: () => null,
       },
-      DrawerToggle: {
+      [drawerToggleRoute]: {
         screen: () => null,
       },
     },
     {
-      initialRouteName: 'DrawerClose',
+      initialRouteName: drawerCloseRoute,
     }
   );
 
@@ -126,6 +132,9 @@ const DrawerNavigator = (
       contentComponent={contentComponent}
       contentOptions={contentOptions}
       drawerPosition={drawerPosition}
+      drawerOpenRoute={drawerOpenRoute}
+      drawerCloseRoute={drawerCloseRoute}
+      drawerToggleRoute={drawerToggleRoute}
     />
   ));
 

@@ -17,7 +17,7 @@ export default class Logout extends Component {
     onLogoutPress = () => {
         firebase.auth().signOut()
         .then(() => {
-            alert('testing');
+            alert('Account Successfully Logged Out');
             this.props.navigation.navigate('Login');
         })
         .catch(() => {

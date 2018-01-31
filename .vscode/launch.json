@@ -11,7 +11,8 @@
             "request": "launch",
             "platform": "android",
             "sourceMaps": true,
-            "outDir": "${workspaceRoot}/.vscode/.react"
+            "outDir": "${workspaceRoot}/.vscode/.react",
+            
         },
         {
             "name": "Debug iOS",
