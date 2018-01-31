@@ -14,7 +14,8 @@ import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
 
 
 export default class Register extends Component {
-    state = {error: '', email:'', password: '', passConfirm: '', loading: false};
+    
+    state = {error: '', first:'', last: '', email:'', password: '', passConfirm: '', loading: false};
     
     onRegisterPress = () => {
         this.setState({error: '', loading: true});
@@ -35,15 +36,45 @@ export default class Register extends Component {
         });
     }
     onAccountCreate = () => {
-        this.setState({error: '', loading: false})
+        var database = firebase.database();
+        this.setState({error: '', loading: false});
         alert('Account Created');
         this.props.navigation.navigate('Login');
+        const {email, password} = this.state;
+        firebase.auth().signInWithEmailAndPassword(email, password)
+       .then(() => {
+            this.setState({error: '', loading: false}); 
+            this.props.navigation.navigate('ClubStack')})
+       .catch((error) => {
+           alert('did not sign in');
+       });
+        //Sign in User Here and divert to main screen.
+        var user = firebase.auth().currentUser
+        firebase.database().ref('users/' + user.uid).set({
+            email: user.email,
+            firstname: first,
+            lastname: last,
+        });
         
     }
     render() {
         
         return(
             <View>
+                <Hoshi      
+                        label={'First Name'}
+                        borderColor={'black'}
+                        labelStyle={{ color: 'black' }}
+                        inputStyle={{ color: 'black' }}     
+                        onChangeText={first => this.setState({first})}
+                    />
+                    <Hoshi            
+                        label={'Last Name'}
+                        borderColor={'black'}
+                        labelStyle={{ color: 'black' }}
+                        inputStyle={{ color: 'black' }}     
+                        onChangeText={last => this.setState({last})} 
+                    />
                 <Hoshi
                         label={'Email'}
                         borderColor={'black'}
@@ -67,6 +98,7 @@ export default class Register extends Component {
                         inputStyle={{ color: 'black' }}     
                         onChangeText={passConfirm => this.setState({ passConfirm })}
                     />
+                    
                 <TouchableOpacity 
                 onPress={this.onRegisterPress.bind(this)}   
                 style={styles.button}>
@@ -90,6 +122,7 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     text: {
+        
         fontSize: 20,
         fontFamily: 'fjallaone',
         color: '#000000'

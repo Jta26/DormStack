@@ -19,7 +19,7 @@ import Register from "../components/Register";
 
 const RegisterView = ({navigation}) => {
     return (
-        <View style={styles.container}>
+        <KeyboardAvoidingView keyboardVerticalOffset={0} behavior={'padding'} style={styles.container}>
             <Text style={styles.title}>Join the ClubStack!</Text>
             <View style={styles.register}>
                 <Register
@@ -27,7 +27,7 @@ const RegisterView = ({navigation}) => {
                 />
             </View>
             
-        </View>
+        </KeyboardAvoidingView>
     );
 };
 
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         flex: 1,
         alignItems: 'center',
-      
+        paddingTop: 30
     },
     register: { 
         width: 300,

@@ -23,10 +23,22 @@ export default class Login extends Component {
        this.setState({error: '', loading: true});
        const { email, password } = this.state;
        firebase.auth().signInWithEmailAndPassword(email, password)
-       .then(() => {this.setState({ error: 'Correct', loading: false})})
+       .then(() => {
+            this.setState({error: '', loading: false}); 
+            this.props.navigation.navigate('ClubStack')})
        .catch((error) => {
-           this.setState({ error: error.code, loading: false});
-           
+
+           var errMessage = '';
+           if (error.message == 'The email address is badly formatted.'){
+               errMessage = 'Please Enter a Valid Email';
+           }
+           else if (error.message == 'The password is invalid or the user does not have a password.') {
+               errMessage = 'Password is Incorrect';
+           }
+           else if (error.message == 'There is no user record corresponding to this identifier. The user may have been deleted.') {
+                errMessage = 'User Not Found';                   
+           }
+           this.setState({ error: errMessage, loading: false});
        });
     };
     render() {
