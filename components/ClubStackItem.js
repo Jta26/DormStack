@@ -20,7 +20,9 @@ export default class ClubStackitem extends Component {
     render() {
         return(
             <View style={styles.container}>
-                <Text style={{color: '#FFFFFF', textAlign: 'center'}}>Hello World Signed In!</Text>
+                <TouchableOpacity>
+                    
+                </TouchableOpacity>
             </View>
         );
     }

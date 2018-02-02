@@ -51622,7 +51622,7 @@ var _require = require(21           ), // 21 = ReactNative
 
 module.exports = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.takeSnapshot;
 }, 485, null, "takeSnapshot");
-__d(/* clubstack/App.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* ClubStack/App.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
@@ -51689,7 +51689,7 @@ var App = (0, _reactNavigation.StackNavigator)({
 });
 
 exports.default = App;
-}, 486, null, "clubstack/App.js");
+}, 486, null, "ClubStack/App.js");
 __d(/* react-native-vector-icons/FontAwesome.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -82068,7 +82068,7 @@ function withNavigation(Component) {
   return (0, _hoistNonReactStatics2.default)(componentWithNavigation, Component);
 }
 }, 746, null, "react-navigation/src/views/withNavigation.js");
-__d(/* clubstack/Views/LoginView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* ClubStack/Views/LoginView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = '/home/joel/Desktop/Development/ClubStack/Views/LoginView.js';
@@ -82156,8 +82156,8 @@ var styles = _reactNative.StyleSheet.create({
 });
 
 exports.default = LoginView;
-}, 747, null, "clubstack/Views/LoginView.js");
-__d(/* clubstack/components/Login.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+}, 747, null, "ClubStack/Views/LoginView.js");
+__d(/* ClubStack/components/Login.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
@@ -82386,7 +82386,7 @@ var styles = _reactNative.StyleSheet.create({
         color: 'red'
     }
 });
-}, 748, null, "clubstack/components/Login.js");
+}, 748, null, "ClubStack/components/Login.js");
 __d(/* react-native-textinput-effects/lib/index.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -84960,7 +84960,7 @@ var styles = _reactNative.StyleSheet.create({
   }
 });
 }, 761, null, "react-native-textinput-effects/lib/Fumi.js");
-__d(/* clubstack/Views/RegisterView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* ClubStack/Views/RegisterView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var _jsxFileName = '/home/joel/Desktop/Development/ClubStack/Views/RegisterView.js';
@@ -84993,8 +84993,8 @@ var RegisterView = function RegisterView(_ref) {
     var navigation = _ref.navigation;
 
     return _react2.default.createElement(
-        _reactNative.KeyboardAvoidingView,
-        { keyboardVerticalOffset: 0, behavior: 'padding', style: styles.container, __source: {
+        _reactNative.View,
+        { style: styles.container, __source: {
                 fileName: _jsxFileName,
                 lineNumber: 22
             }
@@ -85009,8 +85009,8 @@ var RegisterView = function RegisterView(_ref) {
             'Join the ClubStack!'
         ),
         _react2.default.createElement(
-            _reactNative.View,
-            { style: styles.register, __source: {
+            _reactNative.KeyboardAvoidingView,
+            { keyboardVerticalOffset: 100, behavior: 'padding', style: styles.register, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 24
                 }
@@ -85030,8 +85030,9 @@ var styles = _reactNative.StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
         flex: 1,
-        alignItems: 'center',
-        paddingTop: 30
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     register: {
         width: 300
@@ -85045,7 +85046,7 @@ var styles = _reactNative.StyleSheet.create({
     }
 });
 exports.default = RegisterView;
-}, 762, null, "clubstack/Views/RegisterView.js");
+}, 762, null, "ClubStack/Views/RegisterView.js");
 __d(/* ClubStack/components/Register.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -85115,13 +85116,19 @@ var Register = _wrapComponent('Register')(function (_Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Register.__proto__ || Object.getPrototypeOf(Register)).call.apply(_ref, [this].concat(args))), _this), _this.state = { error: '', first: '', last: '', email: '', password: '', passConfirm: '', loading: false }, _this.onRegisterPress = function () {
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Register.__proto__ || Object.getPrototypeOf(Register)).call.apply(_ref, [this].concat(args))), _this), _this.state = { error: '', campus: '', first: '', last: '', email: '', password: '', passConfirm: '', loading: false }, _this.onRegisterPress = function () {
             _this.setState({ error: '', loading: true });
             var _this$state = _this.state,
+                first = _this$state.first,
+                last = _this$state.last,
                 email = _this$state.email,
                 password = _this$state.password,
                 passConfirm = _this$state.passConfirm;
 
+            if (!first || !last) {
+                _this.setState({ error: 'Please Enter Both First and Last Names', loading: false });
+                return;
+            }
             if (password != passConfirm) {
                 _this.setState({ error: 'Passwords Do Not Match', loading: false });
                 return;
@@ -85130,35 +85137,34 @@ var Register = _wrapComponent('Register')(function (_Component) {
                 _this.setState({ error: 'Please Enter an Email', loading: false });
                 return;
             }
+
             firebase.auth().createUserWithEmailAndPassword(email, password).then(_this.onAccountCreate.bind(_this)).catch(function (error) {
                 _this.setState({ error: error.message, loading: false });
                 return;
             });
         }, _this.onAccountCreate = function () {
             var database = firebase.database();
-            _this.setState({ error: '', loading: false });
 
             var _this$state2 = _this.state,
                 first = _this$state2.first,
+                campus = _this$state2.campus,
                 last = _this$state2.last,
                 email = _this$state2.email,
                 password = _this$state2.password;
 
             firebase.auth().signInWithEmailAndPassword(email, password).then(function () {
+                var user = firebase.auth().currentUser;
+                firebase.database().ref('users/' + user.uid).set({
+                    email: user.email,
+                    campus: campus,
+                    firstname: first,
+                    lastname: last
+                });
                 _this.setState({ error: '', loading: false });
                 _this.props.navigation.navigate('ClubStack');
             }).catch(function (error) {
-                alert('did not sign in');
+                alert(error);
             });
-
-            var user = firebase.auth().currentUser;
-
-            firebase.database().ref('users/' + user.uid).set({
-                email: user.email,
-                firstname: first,
-                lastname: last
-            });
-            alert('Account Created');
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -85172,9 +85178,52 @@ var Register = _wrapComponent('Register')(function (_Component) {
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 64
+                        lineNumber: 72
                     }
                 },
+                _react3.default.createElement(
+                    _reactNative.Picker,
+                    {
+                        selectedValue: this.state.campus,
+                        onValueChange: function onValueChange(itemValue) {
+                            return _this2.setState({ campus: itemValue });
+                        },
+                        mode: 'dropdown', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 73
+                        }
+                    },
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'Select University', value: '', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 77
+                        }
+                    }),
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'University of Pittsburgh', value: 'University of Pittsburgh', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 78
+                        }
+                    }),
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'University of Pittsburgh at Bradford', value: 'University of Pittsburgh at B  radford', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 79
+                        }
+                    }),
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'University of Pittsburgh at Greensburg', value: 'University of Pittsburgh at Greensburg', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 80
+                        }
+                    }),
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'University of Pittsburgh at Titusville', value: 'University of Pittsburgh at Titusville', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 81
+                        }
+                    }),
+                    _react3.default.createElement(_reactNative.Picker.Item, { label: 'University of Pittsburgh at Johnstown', value: 'University of Pittsburgh at Johnstown', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 82
+                        }
+                    })
+                ),
                 _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
                     label: 'First Name',
                     borderColor: 'black',
@@ -85185,7 +85234,7 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 65
+                        lineNumber: 85
                     }
                 }),
                 _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -85198,7 +85247,7 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 72
+                        lineNumber: 92
                     }
                 }),
                 _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -85211,7 +85260,7 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 79
+                        lineNumber: 99
                     }
                 }),
                 _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -85225,7 +85274,7 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 86
+                        lineNumber: 106
                     }
                 }),
                 _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -85239,7 +85288,7 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     },
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 94
+                        lineNumber: 114
                     }
                 }),
                 _react3.default.createElement(
@@ -85248,14 +85297,14 @@ var Register = _wrapComponent('Register')(function (_Component) {
                         onPress: this.onRegisterPress.bind(this),
                         style: styles.button, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 103
+                            lineNumber: 124
                         }
                     },
                     _react3.default.createElement(
                         _reactNative.Text,
                         { style: styles.text, __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 106
+                                lineNumber: 127
                             }
                         },
                         'Register'
@@ -85265,14 +85314,14 @@ var Register = _wrapComponent('Register')(function (_Component) {
                     _reactNative.Text,
                     { style: styles.errortext, __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 108
+                            lineNumber: 129
                         }
                     },
                     this.state.error
                 ),
                 _react3.default.createElement(_reactNative.ActivityIndicator, { size: 'large', color: 'black', animating: this.state.loading, __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 109
+                        lineNumber: 130
                     }
                 })
             );
@@ -85293,13 +85342,19 @@ var styles = _reactNative.StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000000',
         marginTop: 30,
-        padding: 20
+        padding: 20,
+        height: 35
     },
     text: {
 
         fontSize: 20,
         fontFamily: 'fjallaone',
         color: '#000000'
+    },
+    picker: {
+        borderColor: '#000000',
+        borderWidth: 1
+
     },
     errortext: {
         textAlign: 'center',
@@ -85308,9 +85363,9 @@ var styles = _reactNative.StyleSheet.create({
     }
 });
 }, 763, null, "ClubStack/components/Register.js");
-__d(/* clubstack/img/logo.png */function(global, require, module, exports) {module.exports=require(160                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/img","width":165,"height":318,"scales":[1],"hash":"113a0d1d0b5cac0e595a1c64e614ce68","name":"logo","type":"png"}); // 160 = react-native/Libraries/Image/AssetRegistry
-}, 764, null, "clubstack/img/logo.png");
-__d(/* clubstack/Views/ClubStackView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+__d(/* ClubStack/img/logo.png */function(global, require, module, exports) {module.exports=require(160                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/img","width":165,"height":318,"scales":[1],"hash":"113a0d1d0b5cac0e595a1c64e614ce68","name":"logo","type":"png"}); // 160 = react-native/Libraries/Image/AssetRegistry
+}, 764, null, "ClubStack/img/logo.png");
+__d(/* ClubStack/Views/ClubStackView.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var _jsxFileName = '/home/joel/Desktop/Development/ClubStack/Views/ClubStackView.js';
@@ -85335,9 +85390,9 @@ var _ClubStackItem = require(766                          ); // 766 = ../compone
 
 var _ClubStackItem2 = _interopRequireDefault(_ClubStackItem);
 
-var _Logout = require(767                   ); // 767 = ../components/Logout
+var _ClubStackOptions = require(768                             ); // 768 = ../components/ClubStackOptions
 
-var _Logout2 = _interopRequireDefault(_Logout);
+var _ClubStackOptions2 = _interopRequireDefault(_ClubStackOptions);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -85360,8 +85415,7 @@ var ClubStackView = function ClubStackView(_ref) {
         lineNumber: 26
       }
     }),
-    _react2.default.createElement(_Logout2.default, {
-      navigation: navigation,
+    _react2.default.createElement(_ClubStackOptions2.default, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 27
@@ -85371,8 +85425,8 @@ var ClubStackView = function ClubStackView(_ref) {
 };
 
 exports.default = ClubStackView;
-}, 765, null, "clubstack/Views/ClubStackView.js");
-__d(/* clubstack/components/ClubStackItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+}, 765, null, "ClubStack/Views/ClubStackView.js");
+__d(/* ClubStack/components/ClubStackItem.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
@@ -85448,15 +85502,12 @@ var ClubStackitem = _wrapComponent('ClubStackitem')(function (_Component) {
                         lineNumber: 22
                     }
                 },
-                _react3.default.createElement(
-                    _reactNative.Text,
-                    { style: { color: '#FFFFFF', textAlign: 'center' }, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 23
-                        }
-                    },
-                    'Hello World Signed In!'
-                )
+                _react3.default.createElement(_reactNative.TouchableOpacity, {
+                    __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 23
+                    }
+                })
             );
         }
     }]);
@@ -85474,8 +85525,8 @@ var styles = _reactNative.StyleSheet.create({
     }
 
 });
-}, 766, null, "clubstack/components/ClubStackItem.js");
-__d(/* clubstack/components/Logout.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
+}, 766, null, "ClubStack/components/ClubStackItem.js");
+__d(/* ClubStack/components/ClubStackOptions.js */function(global, require, module, exports) {Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
@@ -85487,19 +85538,21 @@ var _index = require(174                                                 ); // 1
 
 var _index2 = _interopRequireDefault(_index);
 
-var _jsxFileName = '/home/joel/Desktop/Development/ClubStack/components/Logout.js';
+var _jsxFileName = '/home/joel/Desktop/Development/ClubStack/components/ClubStackOptions.js';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _reactNavigation = require(682               ); // 682 = react-navigation
-
 var _reactNative = require(12            ); // 12 = react-native
+
+var _FontAwesome = require(487                                    ); // 487 = react-native-vector-icons/FontAwesome
+
+var _FontAwesome2 = _interopRequireDefault(_FontAwesome);
 
 var _firebase = require(537       ); // 537 = firebase
 
 var firebase = _interopRequireWildcard(_firebase);
 
-var _reactNativeTextinputEffects = require(749                             ); // 749 = react-native-textinput-effects
+var _reactNavigation = require(682               ); // 682 = react-navigation
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -85512,13 +85565,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var _components = {
-    Logout: {
-        displayName: 'Logout'
+    ClubStackOptions: {
+        displayName: 'ClubStackOptions'
     }
 };
 
 var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
-    filename: '/home/joel/Desktop/Development/ClubStack/components/Logout.js',
+    filename: '/home/joel/Desktop/Development/ClubStack/components/ClubStackOptions.js',
     components: _components,
     locals: [module],
     imports: [_react3.default]
@@ -85530,31 +85583,16 @@ function _wrapComponent(id) {
     };
 }
 
-var Logout = _wrapComponent('Logout')(function (_Component) {
-    _inherits(Logout, _Component);
+var ClubStackOptions = _wrapComponent('ClubStackOptions')(function (_Component) {
+    _inherits(ClubStackOptions, _Component);
 
-    function Logout() {
-        var _ref;
+    function ClubStackOptions() {
+        _classCallCheck(this, ClubStackOptions);
 
-        var _temp, _this, _ret;
-
-        _classCallCheck(this, Logout);
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Logout.__proto__ || Object.getPrototypeOf(Logout)).call.apply(_ref, [this].concat(args))), _this), _this.onLogoutPress = function () {
-            firebase.auth().signOut().then(function () {
-                alert('Account Successfully Logged Out');
-                _this.props.navigation.navigate('Login');
-            }).catch(function () {
-                alert('error logging out user ' + firebase.auth().currentUser.uid);
-            });
-        }, _temp), _possibleConstructorReturn(_this, _ret);
+        return _possibleConstructorReturn(this, (ClubStackOptions.__proto__ || Object.getPrototypeOf(ClubStackOptions)).apply(this, arguments));
     }
 
-    _createClass(Logout, [{
+    _createClass(ClubStackOptions, [{
         key: 'render',
         value: function render() {
             return _react3.default.createElement(
@@ -85562,14 +85600,29 @@ var Logout = _wrapComponent('Logout')(function (_Component) {
                 {
                     __source: {
                         fileName: _jsxFileName,
-                        lineNumber: 31
+                        lineNumber: 23
                     }
                 },
                 _react3.default.createElement(
                     _reactNative.TouchableOpacity,
-                    { onPress: this.onLogoutPress.bind('this'), style: styles.button, __source: {
+                    {
+                        __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 32
+                            lineNumber: 24
+                        }
+                    },
+                    _react3.default.createElement(_reactNative.Image, { source: require(769                  ), __source: { // 769 = ../img/settings.png
+                            fileName: _jsxFileName,
+                            lineNumber: 25
+                        }
+                    })
+                ),
+                _react3.default.createElement(
+                    _reactNative.TouchableOpacity,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 27
                         }
                     },
                     _react3.default.createElement(
@@ -85577,40 +85630,33 @@ var Logout = _wrapComponent('Logout')(function (_Component) {
                         {
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 33
+                                lineNumber: 28
                             }
                         },
-                        'Logout'
+                        'Start a Club!'
                     )
                 )
             );
         }
     }]);
 
-    return Logout;
+    return ClubStackOptions;
 }(_react2.Component));
 
-exports.default = Logout;
+exports.default = ClubStackOptions;
 
 
 var styles = _reactNative.StyleSheet.create({
-    button: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
-        borderWidth: 1,
-        borderColor: '#000000',
-        marginTop: 30,
-        padding: 20
-    },
-    text: {
-        fontSize: 20,
-        fontFamily: 'fjallaone',
-        color: '#000000'
+    container: {},
+    settings: {
+        width: 40,
+        height: 40
+
     }
 });
-}, 767, null, "clubstack/components/Logout.js");
+}, 768, null, "ClubStack/components/ClubStackOptions.js");
+__d(/* ClubStack/img/settings.png */function(global, require, module, exports) {module.exports=require(160                                         ).registerAsset({"__packager_asset":true,"httpServerLocation":"/assets/img","width":50,"height":50,"scales":[1],"hash":"64c4e3b8b078d764ce6469c109f8b719","name":"settings","type":"png"}); // 160 = react-native/Libraries/Image/AssetRegistry
+}, 769, null, "ClubStack/img/settings.png");
 ;require(50);
 ;require(0);
 //# sourceMappingURL=index.map

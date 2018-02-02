@@ -17,16 +17,14 @@ import { StackNavigator } from 'react-navigation';
 
 //Custom Components
 import ClubStackItem from '../components/ClubStackItem';
-import Logout from '../components/Logout';
+import ClubStackOptions from '../components/ClubStackOptions';
 
 const ClubStackView = ({navigation}) => {
     return(
 
       <View>
         <ClubStackItem/>
-        <Logout
-          navigation = {navigation}
-        />
+        <ClubStackOptions/>
       </View>
 
     )

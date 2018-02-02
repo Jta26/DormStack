@@ -7,7 +7,9 @@ import {
     View,
     TextInput,
     TouchableOpacity,
-    ActivityIndicator
+    ActivityIndicator,
+    Picker,
+
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
@@ -15,11 +17,15 @@ import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
 
 export default class Register extends Component {
     
-    state = {error: '', first:'', last: '', email:'', password: '', passConfirm: '', loading: false};
+    state = {error: '', campus: '', first:'', last: '', email:'', password: '', passConfirm: '', loading: false};
     
     onRegisterPress = () => {
         this.setState({error: '', loading: true});
-        const {email, password, passConfirm} = this.state;
+        const {first, last, email, password, passConfirm} = this.state;
+        if(!first || !last) {
+            this.setState({error: 'Please Enter Both First and Last Names', loading: false});
+            return;
+        }
         if (password != passConfirm) {
             this.setState({error: 'Passwords Do Not Match', loading: false});
             return;
@@ -28,6 +34,7 @@ export default class Register extends Component {
             this.setState({error: 'Please Enter an Email', loading: false});
             return;
         }
+
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(this.onAccountCreate.bind(this))
         .catch((error) => {
@@ -37,30 +44,44 @@ export default class Register extends Component {
     }
     onAccountCreate = () => {
         var database = firebase.database();
-        this.setState({error: '', loading: false});
         
-        const {first, last ,email, password} = this.state;
+        
+        const {first, campus, last ,email, password} = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
+            var user = firebase.auth().currentUser;
+            firebase.database().ref('users/' + user.uid).set({
+                email: user.email,
+                campus: campus,
+                firstname: first,
+                lastname: last,
+            });
             this.setState({error: '', loading: false}); 
-            this.props.navigation.navigate('ClubStack')})
+            this.props.navigation.navigate('ClubStack');
+        })
        .catch((error) => {
-           alert('did not sign in');
+           alert(error);
        });
         
-        var user = firebase.auth().currentUser;
         
-        firebase.database().ref('users/' + user.uid).set({
-            email: user.email,
-            firstname: first,
-            lastname: last,
-        });
         
     }
     render() {
         
         return(
             <View>
+                <Picker 
+                selectedValue = {this.state.campus}
+                onValueChange = {(itemValue) => this.setState({campus: itemValue})}
+                mode={'dropdown'}>
+                    <Picker.Item label="Select University" value=""/> 
+                    <Picker.Item label="University of Pittsburgh" value="University of Pittsburgh"/>
+                    <Picker.Item label="University of Pittsburgh at Bradford" value="University of Pittsburgh at B  radford"/>
+                    <Picker.Item label="University of Pittsburgh at Greensburg" value="University of Pittsburgh at Greensburg"/>
+                    <Picker.Item label="University of Pittsburgh at Titusville" value="University of Pittsburgh at Titusville"/>
+                    <Picker.Item label="University of Pittsburgh at Johnstown" value="University of Pittsburgh at Johnstown"/>
+                    
+                </Picker>
                 <Hoshi      
                         label={'First Name'}
                         borderColor={'black'}
@@ -99,6 +120,7 @@ export default class Register extends Component {
                         onChangeText={passConfirm => this.setState({ passConfirm })}
                     />
                     
+                    
                 <TouchableOpacity 
                 onPress={this.onRegisterPress.bind(this)}   
                 style={styles.button}>
@@ -120,12 +142,18 @@ const styles = StyleSheet.create({
         borderColor: '#000000',
         marginTop: 30,
         padding: 20,
+        height: 35
     },
     text: {
         
         fontSize: 20,
         fontFamily: 'fjallaone',
         color: '#000000'
+    },
+    picker: {
+        borderColor: '#000000',
+        borderWidth: 1,
+        
     },
     errortext: {
         textAlign: 'center',
