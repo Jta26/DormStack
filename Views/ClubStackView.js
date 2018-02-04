@@ -11,7 +11,6 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity
 } from 'react-native';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
@@ -21,13 +20,40 @@ import ClubStackOptions from '../components/ClubStackOptions';
 
 const ClubStackView = ({navigation}) => {
     return(
-
-      <View>
-        <ClubStackItem/>
-        <ClubStackOptions/>
+      <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.clubstack}>
+        <View style={styles.clubstackitem}>
+          <ClubStackItem />
+        </View>
+          
+        </ScrollView>
+        <View style={styles.settings}>
+        
+        </View>
+       
       </View>
 
     )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#ffffff'
+    
+  },
+  clubstack: {
+  
+  },
+  clubstackitem: {
+   
+    width: 250,
+    borderColor: 'red',
+    borderWidth: 3
+  },
+  settings: {
+    marginBottom: 40
+  }
+
+});
 
 export default ClubStackView;

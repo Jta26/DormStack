@@ -256,9 +256,11 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">clubstack</string>
+    <string name="app_name">ClubStack</string>
     <string name="catalyst_copy_button" project="catalyst" translatable="false">Copy</string>
     <string name="catalyst_debugjs" project="catalyst" translatable="false">Debug JS Remotely</string>
+    <string name="catalyst_debugjs_nuclide" project="catalyst" translatable="false">Debug JS in Nuclide</string>
+    <string name="catalyst_debugjs_nuclide_failure" project="catalyst" translatable="false">The request to attach Nuclide could not reach Metro Bundler!</string>
     <string name="catalyst_debugjs_off" project="catalyst" translatable="false">Stop Remote JS Debugging</string>
     <string name="catalyst_dismiss_button" project="catalyst" translatable="false">Dismiss\n(ESC)</string>
     <string name="catalyst_element_inspector" project="catalyst" translatable="false">Toggle Inspector</string>

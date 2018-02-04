@@ -11,7 +11,6 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity
 } from 'react-native';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
 import {StackNavigator} from 'react-navigation';
 
@@ -31,6 +30,11 @@ firebase.initializeApp({
 
 
 const App = StackNavigator({
+  ClubStack: {
+    screen: ClubStackView,
+    navigationOptions: {
+      header: null
+    },
   Login: { 
     screen: LoginView,
     navigationOptions: {
@@ -43,11 +47,7 @@ const App = StackNavigator({
       header: null
     }
   },
-  ClubStack: {
-    screen: ClubStackView,
-    navigationOptions: {
-      header: null
-    }
+  
   }
 });
 

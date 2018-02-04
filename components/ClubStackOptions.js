@@ -11,7 +11,6 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity
 } from 'react-native';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
@@ -24,7 +23,7 @@ export default class ClubStackOptions extends Component {
                     <Image source={require('../img/settings.png')}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button}>
-                    <Text>Start a Club!</Text>
+                    <Text style={styles.text}>Start a Club!</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -36,16 +35,28 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'center'
-
+        marginLeft: 20
     },
     settings: {
-        width: 40,
-        height: 40,
+        width: 100,
+        height: 50,
+        marginBottom: 75
+        
 
     },
     button: {
-        width: 300,
+        width: 350,
+        backgroundColor: '#FFFFFF',
+        borderWidth: 1,
+        borderColor: '#000000',
+        marginBottom: 70       
         
-    }
+    },
+    text: {
+        fontSize: 25,
+        fontFamily: 'fjallaone',
+        color: '#000000',
+        textAlign: 'center'
+        
+    },
 });

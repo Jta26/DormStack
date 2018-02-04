@@ -6,5 +6,9 @@
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

@@ -11,7 +11,6 @@ import {
   KeyboardAvoidingView,
   TouchableOpacity
 } from 'react-native';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 //Custom Components
