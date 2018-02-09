@@ -15,13 +15,13 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
 export default class ClubStackitem extends Component {
-
+    
     render() {
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.button}>
                     <Image source={require('../img/clubtestimg.png')} style={styles.image}/>
-                    <Text style={styles.text}>I.T. Club</Text>
+                    <Text style={styles.text}>Testing</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -30,7 +30,8 @@ export default class ClubStackitem extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        
+        borderWidth: 1,
+        borderColor: 'red'
     },
     button: {
         alignItems: 'center',
@@ -43,9 +44,13 @@ const styles = StyleSheet.create({
         height: 75,
     },
     text: {
-        color: '#000000',
+        color: '#ffffff',
+        textShadowColor: '#000000',
+        textShadowOffset: {width: 1, height: 1},
+        textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 15,
-        fontFamily: 'fjallaone'
+        fontFamily: 'fjallaone',
+        width: 150
     }
 });

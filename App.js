@@ -18,7 +18,8 @@ import {StackNavigator} from 'react-navigation';
 import LoginView from './Views/LoginView';
 import RegisterView from './Views/RegisterView';
 import ClubStackView from './Views/ClubStackView';
-
+import CreateClub from './Views/CreateClubView'
+import CreateClubView from './Views/CreateClubView';
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
   authDomain: "club-stack.firebaseapp.com",
@@ -28,13 +29,8 @@ firebase.initializeApp({
   messagingSenderId: "294725688831"
 });
 
-
 const App = StackNavigator({
-  ClubStack: {
-    screen: ClubStackView,
-    navigationOptions: {
-      header: null
-    },
+
   Login: { 
     screen: LoginView,
     navigationOptions: {
@@ -47,6 +43,17 @@ const App = StackNavigator({
       header: null
     }
   },
+  CreateClub: {
+    screen: CreateClubView,
+    navigationOptions: {
+      header: null
+    }
+  },
+  ClubStack: {
+    screen: ClubStackView,
+    navigationOptions: {
+      header: null
+    },
   
   }
 });

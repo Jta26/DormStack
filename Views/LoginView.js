@@ -20,6 +20,7 @@ import Login from '../components/Login';
 import RegisterView from './RegisterView';
 
 const LoginView = ({navigation}) => {
+
     return(
         <View style={styles.container}>
           <View>

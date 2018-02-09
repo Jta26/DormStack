@@ -16,13 +16,17 @@ import { StackNavigator } from 'react-navigation';
 
 export default class ClubStackOptions extends Component {
 
+    onCreateClubPress = () => {
+        this.props.navigation.navigate('CreateClub');
+    }
+
     render() {
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.settings}>
                     <Image source={require('../img/settings.png')}/>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={styles.button} onPress={this.onCreateClubPress.bind(this)}>
                     <Text style={styles.text}>Start a Club!</Text>
                 </TouchableOpacity>
             </View>
@@ -35,7 +39,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        marginLeft: 20
+        marginLeft: 20,
+        
     },
     settings: {
         width: 100,
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
 
     },
     button: {
-        width: 350,
+        width: 250,
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',

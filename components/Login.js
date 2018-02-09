@@ -7,10 +7,13 @@ import {
     View,
     TextInput,
     TouchableOpacity,
-    ActivityIndicator
+    ActivityIndicator,
+    AsyncStorage
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
+
+import Logout from './Logout';
 
 //Views
 import LoginView from '../Views/LoginView';
@@ -18,16 +21,42 @@ import RegisterView from '../Views/RegisterView';
 
 
 export default class Login extends Component {
-    state = {email: '', password: '', error: '', loading: false};
+    state = {email: '', password: '', error: '', loading: true, user: null};
+    
+    componentWillMount() {
+        var user = firebase.auth().currentUser;
+        firebase.auth().onAuthStateChanged((user) => {
+            this.setState({loading: true, user: user});
+            if (!user) {
+                this.setState({loading: false});
+            }
+            else {
+                this.setState({loading: false, user: user});
+                this.props.navigation.navigate('ClubStack');
+            }
+            
+        });
+        
+    }
     onLoginPress = () => {
+        
        this.setState({error: '', loading: true});
+       
        const { email, password } = this.state;
+       var user = firebase.auth().currentUser;
+
+       if (user) {
+           this.setState({loading: false, user: user});
+           this.props.navigation.navigate('ClubStack');
+       }
+       
        firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
-            this.setState({error: '', loading: false}); 
-            this.props.navigation.navigate('ClubStack')})
-       .catch((error) => {
+            this.setState({error: '', loading: false});
+            this.props.navigation.navigate('ClubStack');
 
+        })
+       .catch((error) => {
            var errMessage = '';
            if (error.message == 'The email address is badly formatted.'){
                errMessage = 'Please Enter a Valid Email';
@@ -39,8 +68,12 @@ export default class Login extends Component {
                 errMessage = 'User Not Found';                   
            }
            this.setState({ error: errMessage, loading: false});
+        
        });
     };
+    onRegisterPress = () => {
+        this.props.navigation.navigate('Register');
+    }
     render() {
         const navigation = this.props.navigation;
         return(
@@ -70,7 +103,7 @@ export default class Login extends Component {
                     <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={() => navigation.navigate('Register')}>
+                    onPress={this.onRegisterPress.bind(this)}>
                     <Text style={styles.text}>Register</Text>
                 </TouchableOpacity>
             </View>

@@ -12,6 +12,7 @@
             "platform": "android",
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/.vscode/.react",
+            "trace": "verbose"
             
         },
         {

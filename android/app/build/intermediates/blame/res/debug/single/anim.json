@@ -4,12 +4,12 @@
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
-        "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
-        "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/anim/catalyst_push_up_out.xml"
-    },
-    {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
+        "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
@@ -25,7 +25,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_slide_up.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_slide_up.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_fade_out.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_fade_out.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
@@ -133,7 +133,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_push_up_in.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_push_up_in.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
@@ -157,7 +157,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_push_up_out.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_push_up_out.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
@@ -169,7 +169,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_fade_in.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_fade_in.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
@@ -185,7 +185,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.2/res/anim/catalyst_slide_down.xml"
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/anim/catalyst_slide_down.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",

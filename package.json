@@ -1,5 +1,5 @@
 {
-  "name": "ClubStack",
+  "name": "clubstack",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "firebase": "^4.9.0",
     "react": "^16.2.0",
-    "react-native": "^0.52.2",
+    "react-native": "^0.53.0",
     "react-native-firebase": "^3.2.3",
     "react-native-textinput-effects": "^0.4.2",
     "react-native-vector-icons": "^4.5.0",
