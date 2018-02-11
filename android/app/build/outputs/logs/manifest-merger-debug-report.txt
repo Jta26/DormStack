@@ -17,6 +17,8 @@ ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/An
 		ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [com.google.android.gms:play-services-gcm:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-iid:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.0/AndroidManifest.xml:21:5-66
 	android:name
 		ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
@@ -26,9 +28,20 @@ MERGED from [com.facebook.react:react-native:0.53.0] /home/joellinux/Desktop/Dev
 		ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [clubstack:react-native-vector-icons:unspecified] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/clubstack/react-native-vector-icons/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.gms:play-services-gcm:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-iid:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.0/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/AndroidManifest.xml:17:5-43
 MERGED from [com.facebook.react:react-native:0.53.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:21:5-23:58
 MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/AndroidManifest.xml:14:5-16:41
 MERGED from [com.facebook.fresco:fresco:1.3.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:drawee:1.3.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/AndroidManifest.xml:5:5-7:41
@@ -37,6 +50,8 @@ MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /home/joellinux/Desktop/De
 MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:1.3.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.1.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:2:3-70
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:11:9-38
 		INJECTED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml
@@ -47,9 +62,19 @@ MERGED from [com.facebook.soloader:soloader:0.1.0] /home/joellinux/Desktop/Devel
 		INJECTED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml
 application
 ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:13:5-30:19
+MERGED from [com.google.android.gms:play-services-gcm:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-iid:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.0/AndroidManifest.xml:23:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.0/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/AndroidManifest.xml:19:5-21:19
 MERGED from [com.facebook.react:react-native:0.53.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/AndroidManifest.xml:25:5-20
 MERGED from [com.facebook.soloader:soloader:0.1.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:3:3-17
 MERGED from [org.webkit:android-jsc:r174650] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/org.webkit/android-jsc/r174650/AndroidManifest.xml:2:3-17
 	android:label
@@ -86,6 +111,25 @@ activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:29:7-84
 	android:name
 		ADDED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:29:17-81
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-gcm:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/AndroidManifest.xml:20:5-81
+MERGED from [com.google.android.gms:play-services-iid:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.0/AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from [com.google.android.gms:play-services-gcm:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/AndroidManifest.xml:20:22-79
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.0.0] /home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/AndroidManifest.xml:20:20-65
 android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 IMPLIED from /home/joellinux/Desktop/Development/ClubStack/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_PHONE_STATE

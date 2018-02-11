@@ -1,4 +1,4 @@
-#Tue Feb 06 20:41:24 EST 2018
+#Sun Feb 11 00:28:51 EST 2018
 base.0=/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

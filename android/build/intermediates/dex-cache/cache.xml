@@ -39,30 +39,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_a14586f8f1f1cfc95bfa477e2bebae1609419c93.jar" />
+        sha1="6688016b1c2ab0daad89bb59ca9b7acbd1c80412">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-11.0.0_1faa969301c22bc15489c3d6561d001a26e102ad.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/11.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_8c2db81ec3c41724775e68a31518210f4c3c18b3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_ed05f9064b7414b235cc653a719e30469cd3f8a8.jar" />
+        sha1="d410043f93e71bb0179ba86b85726dd080f14b79">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-11.0.0_e72fe62d9e5caeb58c9a3358a98c9bd6caab6cf6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -75,12 +66,120 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_f793440a6f2d6d37191f2614285c73f13c15d94c.jar" />
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.2.0_960cbee58e0e1c02e1627139cc676841e076ed32.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d68bbf92de9721b02a31a3833abfdc90144c7e39">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-11.0.0_018be96e25a913432ce0f22e8840bd38e0f5143f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e72c498ef3e345135b6bfdf7fc83c6b905228ade">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-11.0.0_8c88dc66846acc448474a005d03a0ef5beabe819.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.2.0_1c46ea5ede489b241df37b27b4afa9c1b844369a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3d05ef7ec1cf00769ae040a3ad6128164e115398.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_de567601614b7b099c4f2831ad30147fa21f7eac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_19de873a0aebe1a55f2519c865d4c80db314446d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.2.0_cb79549f587a29d2be40f907379925d05e68082d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_f226cecc462faded5ff2142f28583d7df885c322.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_e25dc5448600d65a764e8c3c9001ec644860ace8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/clubstack/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8065a43b1a868d17519e67d7651e13a99862d3ce">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/clubstack-react-native-vector-icons-unspecified_c25ce840396e942c38509993d7753f868c8eeb26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.2.0_0572928e03e89fd8d7203d68bd667d66ecdf58d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_8c2db81ec3c41724775e68a31518210f4c3c18b3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -90,6 +189,15 @@
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_81e95be08462403080b60d3163172b9a251891ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/11.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6bade648cc46af0ffc636586806c60dba1b7fdf8">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-11.0.0_4cfe761334bd5a1fc07c0c11f4d82ba56334e638.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,12 +228,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3d05ef7ec1cf00769ae040a3ad6128164e115398.jar" />
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.2.0_e5a9520ba75779719362085d7e4836cd84a514c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.2.0/support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.2.0_45b99c8c39f748f11a106c9b23a8be261114fd82.jar" />
     </item>
     <item
         is-multidex="false"
@@ -138,12 +255,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.2.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_de567601614b7b099c4f2831ad30147fa21f7eac.jar" />
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.2.0_fef4036680c8df320faa6a8ef130ee30ecc2624b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -156,39 +273,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_19de873a0aebe1a55f2519c865d4c80db314446d.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
         <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_f5895bad7ad57829eadacf3e1fcd32b2267c1fb2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_f226cecc462faded5ff2142f28583d7df885c322.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_e25dc5448600d65a764e8c3c9001ec644860ace8.jar" />
     </item>
 
 </items>

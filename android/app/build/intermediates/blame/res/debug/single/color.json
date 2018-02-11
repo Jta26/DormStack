@@ -40,8 +40,16 @@
         "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
@@ -106,5 +114,9 @@
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/color/common_google_signin_btn_text_light.xml"
     }
 ]

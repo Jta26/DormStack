@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
   Picker
 } from 'react-native';
-import * as firebase from 'firebase';
+import * as firebase from 'react';
 import { StackNavigator } from 'react-navigation';
 
 import CreateClub from '../components/CreateClub'

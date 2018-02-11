@@ -10,28 +10,50 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   TouchableOpacity,
-  Picker
+  Picker,
+  ActivityIndicator
 } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
-
 import { Hoshi } from 'react-native-textinput-effects'
+
 
 export default class CreateClub extends Component {
 
     state = {error: '', loading: false, clubType:'', clubName: '', clubDesc: ''}
+
+    uuidv4 = () => {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
      
     onCreatePress = () => {
+        const {clubType, clubName, clubDesc} = this.state;
+        if (clubType == "") {
+            this.setState({error: 'Please Select a Club Type.'});
+            return;
+        }
+        if (clubName == '') {
+            this.setState({error: 'Please Enter a Club Name.'});
+            return;
+        }
+        if (clubDesc == '') {
+            this.setState({error: 'Please Enter a Description for Your Club.'});
+            return;
+        }
+
         var user = firebase.auth().currentUser;
         var database = firebase.database();
-        const {clubType, clubName, clubDesc} = this.state;
-
-        
+ 
+        var clubId = this.uuidv4();
+       
         database.ref('users/' + user.uid).once('value').then(function(snapshot) {
             //Parses JSON data and stores it in variable.
             var userDB = JSON.parse(JSON.stringify(snapshot.val()));
             //Creates The Club
-            database.ref('school/' + userDB.campus + '/' + clubName).set({
+            database.ref('school/' + userDB.campus + '/' + clubId).set({
                 name: clubName,
                 description: clubDesc,
                 type: clubType,
@@ -41,12 +63,13 @@ export default class CreateClub extends Component {
             database.ref('school/' + userDB.campus + '/' + clubName + '/members/' + user.uid).set({
                 role: 0
             });
+            alert('club created');
            
         });
-        alert('Club Created');
+
     }
     onClubCreate = () => {
-        //Forward User to Club's Page
+        alert('club created');
 
     }
 
@@ -60,7 +83,7 @@ export default class CreateClub extends Component {
                 selectedValue = {this.state.clubType}
                 onValueChange = {(itemValue) => this.setState({clubType: itemValue})}
                 mode={'dropdown'}>
-                    <Picker.Item label="Select Club Type" value=""/> 
+                    <Picker.Item label="Select Club Type" value=''/> 
                     <Picker.Item label="Academic" value="Academic"/>
                     <Picker.Item label="Recreational" value="Recreational"/>
                     
@@ -90,7 +113,9 @@ export default class CreateClub extends Component {
                 >
                     <Text style={styles.text}>Create Club</Text>
                 </TouchableOpacity>
-                <Text style={styles.errortext}></Text>
+                
+                <Text style={styles.errortext}>{this.state.error}</Text>
+                <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
             </View>
         );
     }

@@ -12,8 +12,24 @@
         "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
@@ -42,6 +58,10 @@
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
@@ -112,6 +132,14 @@
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_tab_indicator_material.xml"
     },
@@ -126,6 +154,10 @@
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -146,6 +178,10 @@
     {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
@@ -176,6 +212,10 @@
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
         "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_btn_colored_material.xml"
     },
@@ -190,6 +230,10 @@
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
@@ -216,6 +260,10 @@
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_edit_text_material.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
         "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_list_selector_holo_dark.xml"
     },
@@ -224,8 +272,16 @@
         "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_textfield_search_material.xml"
     },
     {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
         "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
