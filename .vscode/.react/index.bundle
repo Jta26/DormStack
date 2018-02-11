@@ -99196,7 +99196,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
       return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ClubStackView.__proto__ || Object.getPrototypeOf(ClubStackView)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
         fname: '',
-        lname: ''
+        lname: '',
+        school: '',
+        clubs: ''
       }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -99212,23 +99214,39 @@ __d(function (global, require, module, exports, _dependencyMap) {
             fname: snapshot.val()
           });
         });
-      }
-    }, {
-      key: "onPressButtonTest",
-      value: function onPressButtonTest() {
-        alert('test');
-        this.props.navigation.navigate('CreateClub');
+        database.ref('users/' + user.uid + '/campus').once('value').then(function (snapshot) {
+          this.setState({
+            school: snapshot.val()
+          });
+        });
+        database.ref('school/' + school).on('value', function (snapshot) {
+          _this2.setState({
+            clubs: snapshot.val()
+          });
+        });
       }
     }, {
       key: "render",
       value: function render() {
+        var items = [];
+
+        for (i = 0; i < 100; i++) {
+          items.push(_react3.default.createElement(_ClubStackItem2.default, {
+            title: "testing",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 68
+            }
+          }));
+        }
+
         return _react3.default.createElement(
           _reactNative.View,
           {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 77
             }
           },
           _react3.default.createElement(
@@ -99237,7 +99255,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               contentContainerStyle: styles.clubstack,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 63
+                lineNumber: 78
               }
             },
             _react3.default.createElement(
@@ -99246,146 +99264,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 style: styles.title,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 64
+                  lineNumber: 79
                 }
               },
               "Welcome to the ClubStack, ",
               this.state.fname,
               "!"
             ),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 65
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 66
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 67
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 68
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 69
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 70
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 71
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 72
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 73
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 74
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 75
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 76
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 77
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 78
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 79
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 80
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 81
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 82
-              }
-            }),
-            _react3.default.createElement(_ClubStackItem2.default, {
-              style: styles.clubstackitem,
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 83
-              }
-            })
+            items
           ),
           _react3.default.createElement(
             _reactNative.View,
@@ -99393,14 +99279,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: styles.settings,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 90
+                lineNumber: 86
               }
             },
             _react3.default.createElement(_ClubStackOptions2.default, {
               navigation: this.props.navigation,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 91
+                lineNumber: 87
               }
             })
           )
@@ -99442,23 +99328,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _react = require(_dependencyMap[0], "react");
 
-    var firebase = _interopRequireWildcard(_react);
+    var _react2 = _interopRequireDefault(_react);
 
     var _reactNative = require(_dependencyMap[1], "react-native");
 
-    var _reactNavigation = require(_dependencyMap[2], "react-navigation");
+    var _firebase = require(_dependencyMap[2], "firebase");
 
-    var _CreateClub = require(_dependencyMap[3], "../components/CreateClub");
+    var firebase = _interopRequireWildcard(_firebase);
+
+    var _reactNavigation = require(_dependencyMap[3], "react-navigation");
+
+    var _CreateClub = require(_dependencyMap[4], "../components/CreateClub");
 
     var _CreateClub2 = _interopRequireDefault(_CreateClub);
 
-    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
     function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
     var CreateClubView = function CreateClubView(_ref) {
         var navigation = _ref.navigation;
-        return firebase.default.createElement(
+        return _react2.default.createElement(
             _reactNative.View,
             {
                 style: styles.container,
@@ -99467,7 +99357,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     lineNumber: 25
                 }
             },
-            firebase.default.createElement(
+            _react2.default.createElement(
                 _reactNative.Text,
                 {
                     style: styles.title,
@@ -99478,7 +99368,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 },
                 "Start a New Club!"
             ),
-            firebase.default.createElement(
+            _react2.default.createElement(
                 _reactNative.KeyboardAvoidingView,
                 {
                     keyboardVerticalOffset: 0,
@@ -99489,7 +99379,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         lineNumber: 28
                     }
                 },
-                firebase.default.createElement(_CreateClub2.default, {
+                _react2.default.createElement(_CreateClub2.default, {
                     navigation: navigation,
                     __source: {
                         fileName: _jsxFileName,
@@ -99497,7 +99387,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     }
                 })
             ),
-            firebase.default.createElement(
+            _react2.default.createElement(
                 _reactNative.Text,
                 {
                     __source: {
@@ -99531,7 +99421,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = CreateClubView;
-},719,[108,12,633,720],"clubstack/Views/CreateClubView.js");
+},719,[108,12,488,633,720],"clubstack/Views/CreateClubView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -99614,6 +99504,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         v = c == 'x' ? r : r & 0x3 | 0x8;
                     return v.toString(16);
                 });
+            }, _this.onClubCreate = function () {
+                _this.props.navigation.navigate('ClubStack');
             }, _this.onCreatePress = function () {
                 var _this$state = _this.state,
                     clubType = _this$state.clubType,
@@ -99656,13 +99548,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         description: clubDesc,
                         type: clubType
                     });
-                    database.ref('school/' + userDB.campus + '/' + clubName + '/members/' + user.uid).set({
+                    database.ref('school/' + userDB.campus + '/' + clubId + '/members/' + user.uid).set({
                         role: 0
                     });
-                    alert('club created');
+                    this.onClubCreate();
                 });
-            }, _this.onClubCreate = function () {
-                alert('club created');
             }, _temp), _possibleConstructorReturn(_this, _ret);
         }
 
@@ -99676,7 +99566,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 81
+                            lineNumber: 79
                         }
                     },
                     _react3.default.createElement(
@@ -99691,7 +99581,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             mode: 'dropdown',
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 82
+                                lineNumber: 80
                             }
                         },
                         _react3.default.createElement(_reactNative.Picker.Item, {
@@ -99699,7 +99589,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             value: "",
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 86
+                                lineNumber: 84
                             }
                         }),
                         _react3.default.createElement(_reactNative.Picker.Item, {
@@ -99707,7 +99597,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             value: "Academic",
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 87
+                                lineNumber: 85
                             }
                         }),
                         _react3.default.createElement(_reactNative.Picker.Item, {
@@ -99715,7 +99605,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             value: "Recreational",
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 88
+                                lineNumber: 86
                             }
                         })
                     ),
@@ -99735,7 +99625,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 91
+                            lineNumber: 89
                         }
                     }),
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -99758,7 +99648,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 99
+                            lineNumber: 97
                         }
                     }),
                     _react3.default.createElement(
@@ -99768,7 +99658,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onCreatePress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 110
+                                lineNumber: 108
                             }
                         },
                         _react3.default.createElement(
@@ -99777,7 +99667,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 114
+                                    lineNumber: 112
                                 }
                             },
                             "Create Club"
@@ -99789,7 +99679,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.errortext,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 117
+                                lineNumber: 115
                             }
                         },
                         this.state.error
@@ -99800,7 +99690,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         animating: this.state.loading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 118
+                            lineNumber: 116
                         }
                     })
                 );
@@ -99909,6 +99799,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }
 
         _createClass(ClubStackitem, [{
+            key: "componentWillMount",
+            value: function componentWillMount() {}
+        }, {
             key: "render",
             value: function render() {
                 return _react3.default.createElement(
@@ -99917,7 +99810,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 21
+                            lineNumber: 24
                         }
                     },
                     _react3.default.createElement(
@@ -99926,7 +99819,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.button,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 22
+                                lineNumber: 25
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
@@ -99934,7 +99827,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.image,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 23
+                                lineNumber: 26
                             }
                         }),
                         _react3.default.createElement(
@@ -99943,10 +99836,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 24
+                                    lineNumber: 27
                                 }
                             },
-                            "Testing"
+                            this.props.title
                         )
                     )
                 );

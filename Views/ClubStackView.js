@@ -40,50 +40,46 @@ import ClubStackOptions from '../components/ClubStackOptions';
 
 
 export default class ClubStackView extends Component {
-  state = {fname: '', lname: '', }
+  state = {fname: '', lname: '', school: '', clubs: ''}
  
   componentWillMount() {
     var database = firebase.database();
     var user = firebase.auth().currentUser;
+  
     database.ref('users/' + user.uid + '/firstname').on('value', snapshot => {
       this.setState({fname: snapshot.val()});
     });
-  }
-
-  onPressButtonTest() {
-    alert('test');
-    this.props.navigation.navigate('CreateClub')
+    database.ref('users/' + user.uid + '/campus').once('value').then(function(snapshot) {
+      this.setState({school: snapshot.val()});
+    });
+    database.ref('school/' + school).on('value', snapshot => {
+      this.setState({clubs: snapshot.val()});
+    });
+    
   }
   
     //Get Clubs from Database
     render() {
 
+      var items = [];
+      for(i = 0; i < 100; i++) {
+      
+       items.push(
+        <ClubStackItem
+          title='testing'
+        />
+       )
+        
+        
+    }
+
     return(
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.clubstack}>
           <Text style={styles.title}>Welcome to the ClubStack, {this.state.fname}!</Text>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
-          <ClubStackItem style={styles.clubstackitem}/>
           
         
-
+          {items}
           
           
         </ScrollView>

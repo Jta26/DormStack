@@ -15,13 +15,16 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
 export default class ClubStackitem extends Component {
-    
+    //props ClubImage, ClubTitle
+    componentWillMount() {
+
+    }
     render() {
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.button}>
                     <Image source={require('../img/clubtestimg.png')} style={styles.image}/>
-                    <Text style={styles.text}>Testing</Text>
+                    <Text style={styles.text}>{this.props.title}</Text>
                 </TouchableOpacity>
             </View>
         );

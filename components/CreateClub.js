@@ -28,7 +28,9 @@ export default class CreateClub extends Component {
           return v.toString(16);
         });
       }
-     
+    onClubCreate = () => {
+        this.props.navigation.navigate('ClubStack');
+    }
     onCreatePress = () => {
         const {clubType, clubName, clubDesc} = this.state;
         if (clubType == "") {
@@ -57,21 +59,17 @@ export default class CreateClub extends Component {
                 name: clubName,
                 description: clubDesc,
                 type: clubType,
-                
             });
             //Sets the creator of the club to role 0 AKA President
-            database.ref('school/' + userDB.campus + '/' + clubName + '/members/' + user.uid).set({
+            database.ref('school/' + userDB.campus + '/' + clubId + '/members/' + user.uid).set({
                 role: 0
             });
-            alert('club created');
+            this.onClubCreate()
            
         });
 
     }
-    onClubCreate = () => {
-        alert('club created');
 
-    }
 
 
 
