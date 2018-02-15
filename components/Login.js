@@ -16,9 +16,8 @@ import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
 import Logout from './Logout';
 
 //Views
-import LoginView from '../Views/LoginView';
-import RegisterView from '../Views/RegisterView';
-
+import LoginView from '../views/LoginView';
+import RegisterView from '../views/RegisterView';
 
 export default class Login extends Component {
     state = {email: '', password: '', error: '', loading: true, user: null};
@@ -32,7 +31,7 @@ export default class Login extends Component {
             }
             else {
                 this.setState({loading: false, user: user});
-                this.props.navigation.navigate('ClubStack');
+                this.props.navigation.navigate('DormStack');
             }
             
         });
@@ -47,13 +46,13 @@ export default class Login extends Component {
 
        if (user) {
            this.setState({loading: false, user: user});
-           this.props.navigation.navigate('ClubStack');
+           this.props.navigation.navigate('DormStack');
        }
        
        firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
             this.setState({error: '', loading: false});
-            this.props.navigation.navigate('ClubStack');
+            this.props.navigation.navigate('DormStack');
 
         })
        .catch((error) => {
@@ -123,8 +122,6 @@ const styles = StyleSheet.create({
         borderColor: '#000000',
         marginTop: 30,
         padding: 20,
-        
-        
     },
     text: {
         fontSize: 20,

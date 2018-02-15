@@ -1,25 +1,25 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet,
   Text,
-  View,
-  Image,
-  Button,
-  TextInput,
-  ScrollView,
-  KeyboardAvoidingView,
-  TouchableOpacity
+  View
 } from 'react-native';
-import * as firebase from 'firebase';
-import {StackNavigator} from 'react-navigation';
+import { StackNavigator} from 'react-navigation';
+import firebase from 'firebase';
 
-//Seperate Views
-import LoginView from './Views/LoginView';
-import RegisterView from './Views/RegisterView';
-import ClubStackView from './Views/ClubStackView';
-import CreateClub from './Views/CreateClubView'
-import CreateClubView from './Views/CreateClubView';
+//Custom Views
+import LoginView from './views/LoginView'
+import RegisterView from './views/RegisterView'
+import CreateDormView from './views/CreateDormView'
+import DormStackView from './views/DormStackView'
+
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
   authDomain: "club-stack.firebaseapp.com",
@@ -28,6 +28,7 @@ firebase.initializeApp({
   storageBucket: "club-stack.appspot.com",
   messagingSenderId: "294725688831"
 });
+
 
 const App = StackNavigator({
 
@@ -43,14 +44,14 @@ const App = StackNavigator({
       header: null
     }
   },
-  CreateClub: {
-    screen: CreateClubView,
+  CreateDorm: {
+    screen: CreateDormView,
     navigationOptions: {
       header: null
     }
   },
-  ClubStack: {
-    screen: ClubStackView,
+  DormStack: {
+    screen: DormStackView,
     navigationOptions: {
       header: null
     },
@@ -58,4 +59,4 @@ const App = StackNavigator({
   }
 });
 
-export default App;
+export default App

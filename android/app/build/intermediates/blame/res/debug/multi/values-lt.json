@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml",
+        "outputFile": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 166
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 280,
+                        "startOffset": 55,
                         "endColumn": 115,
-                        "endOffset": 391
+                        "endOffset": 166
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 274
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 396,
+                        "startOffset": 171,
                         "endColumn": 107,
-                        "endOffset": 499
+                        "endOffset": 274
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 397
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 504,
+                        "startOffset": 279,
                         "endColumn": 122,
-                        "endOffset": 622
+                        "endOffset": 397
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 498
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 627,
+                        "startOffset": 402,
                         "endColumn": 100,
-                        "endOffset": 723
+                        "endOffset": 498
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 611
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 728,
+                        "startOffset": 503,
                         "endColumn": 112,
-                        "endOffset": 836
+                        "endOffset": 611
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 698
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 841,
+                        "startOffset": 616,
                         "endColumn": 86,
-                        "endOffset": 923
+                        "endOffset": 698
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 807
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 928,
+                        "startOffset": 703,
                         "endColumn": 108,
-                        "endOffset": 1032
+                        "endOffset": 807
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 928
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 1037,
+                        "startOffset": 812,
                         "endColumn": 120,
-                        "endOffset": 1153
+                        "endOffset": 928
                     }
                 }
             },
@@ -159,17 +159,17 @@
                     "startLine": 10,
                     "startColumn": 4,
                     "startOffset": 933,
-                    "endColumn": 84,
-                    "endOffset": 1013
+                    "endColumn": 81,
+                    "endOffset": 1010
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 1158,
-                        "endColumn": 84,
-                        "endOffset": 1238
+                        "startOffset": 933,
+                        "endColumn": 81,
+                        "endOffset": 1010
                     }
                 }
             },
@@ -177,18 +177,18 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 1018,
-                    "endColumn": 108,
-                    "endOffset": 1122
+                    "startOffset": 1015,
+                    "endColumn": 80,
+                    "endOffset": 1091
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 1243,
-                        "endColumn": 108,
-                        "endOffset": 1347
+                        "startOffset": 1015,
+                        "endColumn": 80,
+                        "endOffset": 1091
                     }
                 }
             },
@@ -196,18 +196,18 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 1127,
-                    "endColumn": 108,
-                    "endOffset": 1231
+                    "startOffset": 1096,
+                    "endColumn": 84,
+                    "endOffset": 1176
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 1352,
-                        "endColumn": 108,
-                        "endOffset": 1456
+                        "startOffset": 1096,
+                        "endColumn": 84,
+                        "endOffset": 1176
                     }
                 }
             },
@@ -215,18 +215,18 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 1236,
-                    "endColumn": 99,
-                    "endOffset": 1331
+                    "startOffset": 1181,
+                    "endColumn": 108,
+                    "endOffset": 1285
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1461,
-                        "endColumn": 99,
-                        "endOffset": 1556
+                        "startOffset": 1181,
+                        "endColumn": 108,
+                        "endOffset": 1285
                     }
                 }
             },
@@ -234,18 +234,18 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 1336,
-                    "endColumn": 109,
-                    "endOffset": 1441
+                    "startOffset": 1290,
+                    "endColumn": 108,
+                    "endOffset": 1394
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1561,
-                        "endColumn": 109,
-                        "endOffset": 1666
+                        "startOffset": 1290,
+                        "endColumn": 108,
+                        "endOffset": 1394
                     }
                 }
             },
@@ -253,18 +253,18 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1446,
-                    "endColumn": 103,
-                    "endOffset": 1545
+                    "startOffset": 1399,
+                    "endColumn": 99,
+                    "endOffset": 1494
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1671,
-                        "endColumn": 103,
-                        "endOffset": 1770
+                        "startOffset": 1399,
+                        "endColumn": 99,
+                        "endOffset": 1494
                     }
                 }
             },
@@ -272,18 +272,18 @@
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1550,
-                    "endColumn": 112,
-                    "endOffset": 1658
+                    "startOffset": 1499,
+                    "endColumn": 109,
+                    "endOffset": 1604
                 },
                 "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1775,
-                        "endColumn": 112,
-                        "endOffset": 1883
+                        "startOffset": 1499,
+                        "endColumn": 109,
+                        "endOffset": 1604
                     }
                 }
             },
@@ -291,712 +291,18 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1663,
-                    "endColumn": 129,
-                    "endOffset": 1788
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 129,
-                        "endOffset": 2013
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1793,
-                    "endColumn": 100,
-                    "endOffset": 1889
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 2018,
-                        "endColumn": 100,
-                        "endOffset": 2114
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1894,
-                    "endColumn": 100,
-                    "endOffset": 1990
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 2119,
-                        "endColumn": 100,
-                        "endOffset": 2215
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 115,
-                    "endOffset": 166
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 280,
-                        "endColumn": 115,
-                        "endOffset": 391
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 171,
-                    "endColumn": 107,
-                    "endOffset": 274
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 396,
-                        "endColumn": 107,
-                        "endOffset": 499
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 279,
-                    "endColumn": 122,
-                    "endOffset": 397
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 504,
-                        "endColumn": 122,
-                        "endOffset": 622
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 402,
-                    "endColumn": 100,
-                    "endOffset": 498
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 627,
-                        "endColumn": 100,
-                        "endOffset": 723
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 503,
-                    "endColumn": 112,
-                    "endOffset": 611
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 728,
-                        "endColumn": 112,
-                        "endOffset": 836
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 616,
-                    "endColumn": 86,
-                    "endOffset": 698
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 841,
-                        "endColumn": 86,
-                        "endOffset": 923
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 703,
-                    "endColumn": 108,
-                    "endOffset": 807
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 928,
-                        "endColumn": 108,
-                        "endOffset": 1032
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 812,
-                    "endColumn": 120,
-                    "endOffset": 928
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1037,
-                        "endColumn": 120,
-                        "endOffset": 1153
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 933,
-                    "endColumn": 84,
-                    "endOffset": 1013
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1158,
-                        "endColumn": 84,
-                        "endOffset": 1238
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 1018,
-                    "endColumn": 108,
-                    "endOffset": 1122
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1243,
-                        "endColumn": 108,
-                        "endOffset": 1347
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1127,
-                    "endColumn": 108,
-                    "endOffset": 1231
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1352,
-                        "endColumn": 108,
-                        "endOffset": 1456
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1236,
-                    "endColumn": 99,
-                    "endOffset": 1331
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1461,
-                        "endColumn": 99,
-                        "endOffset": 1556
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1336,
-                    "endColumn": 109,
-                    "endOffset": 1441
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1561,
-                        "endColumn": 109,
-                        "endOffset": 1666
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1446,
+                    "startOffset": 1609,
                     "endColumn": 103,
-                    "endOffset": 1545
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1671,
-                        "endColumn": 103,
-                        "endOffset": 1770
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1550,
-                    "endColumn": 112,
-                    "endOffset": 1658
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1775,
-                        "endColumn": 112,
-                        "endOffset": 1883
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1663,
-                    "endColumn": 129,
-                    "endOffset": 1788
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 129,
-                        "endOffset": 2013
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1793,
-                    "endColumn": 100,
-                    "endOffset": 1889
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 2018,
-                        "endColumn": 100,
-                        "endOffset": 2114
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1894,
-                    "endColumn": 100,
-                    "endOffset": 1990
-                },
-                "from": {
-                    "file": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 2119,
-                        "endColumn": 100,
-                        "endOffset": 2215
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lt/values-lt.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 105,
-                    "endColumn": 115,
-                    "endOffset": 216
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 280,
-                        "endColumn": 115,
-                        "endOffset": 391
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 221,
-                    "endColumn": 107,
-                    "endOffset": 324
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 396,
-                        "endColumn": 107,
-                        "endOffset": 499
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 329,
-                    "endColumn": 122,
-                    "endOffset": 447
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 504,
-                        "endColumn": 122,
-                        "endOffset": 622
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 452,
-                    "endColumn": 100,
-                    "endOffset": 548
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 627,
-                        "endColumn": 100,
-                        "endOffset": 723
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 553,
-                    "endColumn": 112,
-                    "endOffset": 661
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 728,
-                        "endColumn": 112,
-                        "endOffset": 836
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 666,
-                    "endColumn": 86,
-                    "endOffset": 748
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 841,
-                        "endColumn": 86,
-                        "endOffset": 923
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 753,
-                    "endColumn": 108,
-                    "endOffset": 857
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 928,
-                        "endColumn": 108,
-                        "endOffset": 1032
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 862,
-                    "endColumn": 120,
-                    "endOffset": 978
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1037,
-                        "endColumn": 120,
-                        "endOffset": 1153
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 983,
-                    "endColumn": 84,
-                    "endOffset": 1063
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1158,
-                        "endColumn": 84,
-                        "endOffset": 1238
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 1068,
-                    "endColumn": 108,
-                    "endOffset": 1172
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1243,
-                        "endColumn": 108,
-                        "endOffset": 1347
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1177,
-                    "endColumn": 108,
-                    "endOffset": 1281
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1352,
-                        "endColumn": 108,
-                        "endOffset": 1456
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1286,
-                    "endColumn": 99,
-                    "endOffset": 1381
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1461,
-                        "endColumn": 99,
-                        "endOffset": 1556
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1386,
-                    "endColumn": 109,
-                    "endOffset": 1491
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1561,
-                        "endColumn": 109,
-                        "endOffset": 1666
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1496,
-                    "endColumn": 103,
-                    "endOffset": 1595
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1671,
-                        "endColumn": 103,
-                        "endOffset": 1770
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1600,
-                    "endColumn": 112,
                     "endOffset": 1708
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1775,
-                        "endColumn": 112,
-                        "endOffset": 1883
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1713,
-                    "endColumn": 129,
-                    "endOffset": 1838
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1888,
-                        "endColumn": 129,
-                        "endOffset": 2013
+                        "startOffset": 1609,
+                        "endColumn": 103,
+                        "endOffset": 1708
                     }
                 }
             },
@@ -1004,18 +310,18 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1843,
-                    "endColumn": 100,
-                    "endOffset": 1939
+                    "startOffset": 1713,
+                    "endColumn": 112,
+                    "endOffset": 1821
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 2018,
-                        "endColumn": 100,
-                        "endOffset": 2114
+                        "startOffset": 1713,
+                        "endColumn": 112,
+                        "endOffset": 1821
                     }
                 }
             },
@@ -1023,18 +329,18 @@
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1944,
-                    "endColumn": 108,
-                    "endOffset": 2048
+                    "startOffset": 1826,
+                    "endColumn": 129,
+                    "endOffset": 1951
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 4,
-                        "startColumn": 0,
-                        "startOffset": 283,
-                        "endColumn": 104,
-                        "endOffset": 387
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1826,
+                        "endColumn": 129,
+                        "endOffset": 1951
                     }
                 }
             },
@@ -1042,18 +348,18 @@
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 2053,
-                    "endColumn": 183,
-                    "endOffset": 2232
+                    "startOffset": 1956,
+                    "endColumn": 100,
+                    "endOffset": 2052
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 5,
-                        "startColumn": 0,
-                        "startOffset": 388,
-                        "endColumn": 183,
-                        "endOffset": 571
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1956,
+                        "endColumn": 100,
+                        "endOffset": 2052
                     }
                 }
             },
@@ -1061,18 +367,18 @@
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 2237,
-                    "endColumn": 133,
-                    "endOffset": 2366
+                    "startOffset": 2057,
+                    "endColumn": 82,
+                    "endOffset": 2135
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 6,
-                        "startColumn": 0,
-                        "startOffset": 572,
-                        "endColumn": 129,
-                        "endOffset": 701
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2057,
+                        "endColumn": 82,
+                        "endOffset": 2135
                     }
                 }
             },
@@ -1080,284 +386,18 @@
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 2371,
-                    "endColumn": 108,
-                    "endOffset": 2475
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 0,
-                        "startOffset": 702,
-                        "endColumn": 104,
-                        "endOffset": 806
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 23,
-                    "startColumn": 4,
-                    "startOffset": 2480,
-                    "endColumn": 211,
-                    "endOffset": 2687
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 0,
-                        "startOffset": 807,
-                        "endColumn": 211,
-                        "endOffset": 1018
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 24,
-                    "startColumn": 4,
-                    "startOffset": 2692,
-                    "endColumn": 131,
-                    "endOffset": 2819
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 0,
-                        "startOffset": 1019,
-                        "endColumn": 127,
-                        "endOffset": 1146
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 25,
-                    "startColumn": 4,
-                    "startOffset": 2824,
-                    "endColumn": 134,
-                    "endOffset": 2954
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 0,
-                        "startOffset": 1147,
-                        "endColumn": 130,
-                        "endOffset": 1277
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 26,
-                    "startColumn": 4,
-                    "startOffset": 2959,
-                    "endColumn": 217,
-                    "endOffset": 3172
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 0,
-                        "startOffset": 285,
-                        "endColumn": 217,
-                        "endOffset": 502
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 27,
-                    "startColumn": 4,
-                    "startOffset": 3177,
-                    "endColumn": 224,
-                    "endOffset": 3397
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 0,
-                        "startOffset": 1278,
-                        "endColumn": 224,
-                        "endOffset": 1502
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 28,
-                    "startColumn": 4,
-                    "startOffset": 3402,
-                    "endColumn": 110,
-                    "endOffset": 3508
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 0,
-                        "startOffset": 1503,
-                        "endColumn": 106,
-                        "endOffset": 1609
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 29,
-                    "startColumn": 4,
-                    "startOffset": 3513,
-                    "endColumn": 195,
-                    "endOffset": 3704
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 0,
-                        "startOffset": 1610,
-                        "endColumn": 195,
-                        "endOffset": 1805
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 30,
-                    "startColumn": 4,
-                    "startOffset": 3709,
-                    "endColumn": 135,
-                    "endOffset": 3840
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 0,
-                        "startOffset": 1806,
-                        "endColumn": 131,
-                        "endOffset": 1937
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 31,
-                    "startColumn": 4,
-                    "startOffset": 3845,
-                    "endColumn": 211,
-                    "endOffset": 4052
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 0,
-                        "startOffset": 1938,
-                        "endColumn": 211,
-                        "endOffset": 2149
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 32,
-                    "startColumn": 4,
-                    "startOffset": 4057,
-                    "endColumn": 179,
-                    "endOffset": 4232
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 0,
-                        "startOffset": 2150,
-                        "endColumn": 175,
-                        "endOffset": 2325
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 33,
-                    "startColumn": 4,
-                    "startOffset": 4237,
-                    "endColumn": 97,
-                    "endOffset": 4330
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 0,
-                        "startOffset": 2326,
-                        "endColumn": 93,
-                        "endOffset": 2419
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 34,
-                    "startColumn": 4,
-                    "startOffset": 4335,
-                    "endColumn": 95,
-                    "endOffset": 4426
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 0,
-                        "startOffset": 2420,
-                        "endColumn": 91,
-                        "endOffset": 2511
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 35,
-                    "startColumn": 4,
-                    "startOffset": 4431,
-                    "endColumn": 118,
-                    "endOffset": 4545
-                },
-                "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.0.0/res/values-lt/values.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 0,
-                        "startOffset": 2512,
-                        "endColumn": 114,
-                        "endOffset": 2626
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 36,
-                    "startColumn": 4,
-                    "startOffset": 4550,
+                    "startOffset": 2140,
                     "endColumn": 100,
-                    "endOffset": 4646
+                    "endOffset": 2236
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values-lt/values-lt.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-lt/values-lt.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 2119,
+                        "startOffset": 2140,
                         "endColumn": 100,
-                        "endOffset": 2215
+                        "endOffset": 2236
                     }
                 }
             }

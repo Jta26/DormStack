@@ -1,14 +1,10 @@
 [
     {
-        "merged": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/home/joel/Desktop/Development/ReactNative/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/xml/preferences.xml"
     },
     {
-        "merged": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/home/joel/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/xml/preferences.xml"
-    },
-    {
-        "merged": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/res/merged/debug/xml/preferences.xml",
-        "source": "/home/joellinux/Desktop/Development/ClubStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/xml/preferences.xml"
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/xml/provider_paths.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/res/xml/provider_paths.xml"
     }
 ]

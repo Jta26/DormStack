@@ -57,7 +57,7 @@ export default class Register extends Component {
                 lastname: last,
             });
             this.setState({error: '', loading: false}); 
-            this.props.navigation.navigate('ClubStack');
+            this.props.navigation.navigate('DormStack');
         })
        .catch((error) => {
            alert(error);
