@@ -25,28 +25,28 @@ import DormStackOptions from '../components/DormStackOptions';
 
 export default class DormStackView extends Component {
   
-  state = {fname: '', lname: '',email : '', school: '', dorms: []}
+  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: []}
  
   componentWillMount() {
-    this.setState({dorms: []});
     var database = firebase.database();
     var user = firebase.auth().currentUser;
-    database.ref('users/' + user.uid).on('value', snapshot => {
-      this.setState({fname: snapshot.val().firstname, lname: snapshot.val().lastname, school: snapshot.val().campus, email: snapshot.val().email });
+    alert('test');
+    database.ref('users/' + user.uid).once('value').then(snapshot => {
+      this.setState({User:{
+        first: snapshot.val().firstname,
+        last: snapshot.val().lastname,
+        school: snapshot.val().campus,
+        uid: firebase.auth().currentUser.uid,
+      }});
     });
-    database.ref('school/' + this.state.school).once('value', snapshot => {
-        snapshot.forEach((child) => {
-          child.forEach((childSnap) => {
-            dormarr = this.state.dorms;
-            dormarr.push(childSnap);
-              this.setState({dorms: dormarr});
-          });
-          
-        }) 
+    database.ref('school/' + this.state.school).on('value', snapshot => {
+      snapshot.forEach((dorm) => {
+        alert(JSON.stringify(dorm));
+      })
     });
+
   }
-  
-    //Get Dorms from Database
+
   render() {
 
     
@@ -59,9 +59,9 @@ export default class DormStackView extends Component {
           <Text style={styles.title}>Welcome to the DormStack</Text>
           <Text style={styles.title}>{this.state.fname} {this.state.lname}</Text>
         
-        {this.state.dorms.map(dorm => {
+        {this.state.Dorms.map(Dorm => {
           
-          return <DormStackItem title={dorm.val().name}/>
+          return <DormStackItem title={Dorm.val().name}/>
           
           
         })}

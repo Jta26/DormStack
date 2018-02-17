@@ -17,64 +17,139 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import { Hoshi } from 'react-native-textinput-effects';
 import ImagePicker from 'react-native-image-crop-picker';
+import RNFetchBlob from 'react-native-fetch-blob';
 
 import DormStackItem from './DormStackItem';
 import SelectImage from './SelectImage';
 
 export default class CreateDorm extends Component {
 
-    state = {error: '', loading: false, DormImage: '', DormName: '', DormDesc: '', isImage: false}
-
+    state = {
+        error: '', 
+        loading: false,
+        Dorm: {dormId: '', dormName: '', dormDesc: '', dormImage: ''}, 
+        User: {uid: '', school: '', first: '', last: ''}
+    }
+    
     uuidv4 = () => {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
           var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
           return v.toString(16);
         });
-      }
+    }
     onDormCreate = () => {
         this.props.navigation.navigate('DormStack');
+        this.setState({loading: false});
+    }
+
+    StoreImage = (database, Dorm, User) => {
+        const Blob = RNFetchBlob.polyfill.Blob;
+        const fs = RNFetchBlob.fs;
+        window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
+        window.Blob = Blob;
+        
+    
+        var image = JSON.parse(Dorm.dormImage);
+        var imagePath = image.path;
+
+
+        let uploadBlob = null;
+        const imageRef = firebase.storage().ref(Dorm.dormId).child(Dorm.dormName + '.jpg');
+        let mime = 'image/jpg';
+        fs.readFile(imagePath, 'base64')
+        .then((data) => {
+            return Blob.build(data, {type: `${mime};BASE64`});
+        })
+        .then((blob) => {
+            uploadBlob = blob;
+            imageRef.put(blob, {contentType: mime}).then((snapshot) => {
+                //Sets path of Image to variable
+                var imageUrl = snapshot.ref.fullPath;
+                //Create New Dorm in Database
+                this.MakeDorm(database, Dorm, User, imageUrl);
+            });
+        });
+    }
+    MakeDorm = (database, Dorm, User, ImageUrl) => {
+        database.ref('school/' + User.school + '/' + Dorm.dormId).set({
+            name: Dorm.dormName,
+            description: Dorm.dormDesc,
+            images: [
+                {
+                    url: ImageUrl
+                }
+            ],
+            members: [
+                {
+                    uid: User.uid,
+                    role: 0
+                },
+            ]
+
+        });
+        this.onDormCreate();
     }
     onCreatePress = () => {
-        const {DormName, DormDesc} = this.state;
-        if (DormName == '') {
-            this.setState({error: 'Please Enter a Dorm Name.'});
-            return;
-        }
-        if (DormDesc == '') {
-            this.setState({error: 'Please Enter a Description for Your Dorm.'});
-            return;
-        }
-
-        var user = firebase.auth().currentUser;
+        this.setState({loading:true});
+        //Firebase Database Variable.
         var database = firebase.database();
- 
-        var DormId = this.uuidv4();
-       
-        database.ref('users/' + user.uid).once('value').then(function(snapshot) {
-            //Parses JSON data and stores it in variable.
-            var userDB = JSON.parse(JSON.stringify(snapshot.val()));
-            //Creates The Dorm
-            database.ref('school/' + userDB.campus + '/' + DormId).set({
-                name: DormName,
-                description: DormDesc,
+        //Generates dormId and sets it's state variable.
+        var dormId = this.uuidv4();
+        this.setState({Dorm: {
+            dormId: dormId,
+            dormName: this.state.Dorm.dormName,
+            dormDesc: this.state.Dorm.dormDesc,
+            dormImage: this.state.Dorm.dormImage
+        }})
+        
+        //Gets the User's from firebase.auth() and then retrieves school from the database and sets its state.
+        database.ref('users/' + firebase.auth().currentUser.uid).once('value').then((snapshot) => {
+            this.setState({
+                User: {
+                    uid: firebase.auth().currentUser.uid,
+                    school: snapshot.val().campus,
+                    first: snapshot.val().firstname,
+                    last: snapshot.val().lastname
+                },
+                
             });
-            //Sets the creator of the Dorm to role 0 AKA President
-            database.ref('school/' + userDB.campus + '/' + DormId + '/members/' + user.uid).set({
-                role: 0
+            //Gets the User and new Dorm Objects from the state.
+            const {Dorm, User} = this.state;
+            //Verifies that there is a Dorm Name, if not, returns.
+            if (Dorm.dormName == '') {
+                this.setState({error: 'Please Enter a Dorm Name.', loading: false});
+                return;
+            }
+            //Verifies that there is a DormId, if not, returns.
+            if (Dorm.dormId == '') {
+                this.setState({error: 'Dorm ID failed to set. This is an internal issue', loading: false});
+                return;
+            };
+            //Verifies that there is a Dorm Description, if not, returns.
+            if (Dorm.dormDesc == '') {
+                this.setState({error: 'Please Enter a Description for Your Dorm.', loading: false});
+                return;
+            }
+            //Verifies that there is a Dorm Image, if not, returns.
+            if (Dorm.dormImage == '') {
+                this.setState({error: 'Please Select an Image for your Section.', loading: false});
+                return;
+            }
+            //Verifies that there is a user uid set, if not, returns.
+            if (User.uid == '') {
+                this.setState({error: 'Could Not Verify User. This is an internal issue.', loading: false});
+                return;
+            }
+            //Verifies that there is a user school, if not, returns.
+            if (User.school == '') {
+                this.setState({error: 'Could Not Verify School. This is an internal issue', loading: false});
+            }
+            //Executes 
+            this.StoreImage(database, Dorm, User);
             });
-
-            
-           
-        });
-        this.onDormCreate()
 
     }
 
-
-
-
-
-        
     render() {
         return(
             <View>
@@ -83,7 +158,15 @@ export default class CreateDorm extends Component {
                         borderColor={'black'}
                         labelStyle={{ color: 'black' }}
                         inputStyle={{ color: 'black' }}     
-                        onChangeText={DormName => this.setState({DormName})}
+                        onChangeText={(dormName) => {
+                            this.setState({Dorm: {
+                                dormId: this.state.Dorm.dormId,
+                                dormName: dormName,
+                                dormDesc: this.state.Dorm.dormDesc,
+                                dormImage: this.state.Dorm.dormImage
+                            }});
+                        }
+                    }
             
                     />
                     <Hoshi      
@@ -93,23 +176,39 @@ export default class CreateDorm extends Component {
                         inputStyle={{ color: 'black' }}
                         multiline={true}
                         style={{marginTop:20}}     
-                        onChangeText={DormDesc => this.setState({DormDesc})}
+                        onChangeText={(dormDesc) => {
+                            this.setState({Dorm: {
+                                dormId: this.state.Dorm.dormId,
+                                dormName: this.state.Dorm.dormName,
+                                dormDesc: dormDesc,
+                                dormImage: this.state.Dorm.dormImage
+                            }});
+                        }
+                        }
             
                     />
-                    <SelectImage/>
-
+                    <SelectImage
+                        dormId={this.state.dormId}
+                        stateDormImageJSON={DormImageJSON => {
+                            this.setState({Dorm: {
+                                dormId: this.state.Dorm.dormId,
+                                dormName: this.state.Dorm.dormName,
+                                dormDesc: this.state.Dorm.dormDesc,
+                                dormImage: DormImageJSON.DormImageJSON
+                            }
+                    })}}
+                    />
                     
-                    
-                   
-                    
-                <TouchableOpacity   
+                <TouchableOpacity
+                disabled={this.state.loading}
+                activeOpacity={this.state.loading ? 1 : 0.2}
                 style={styles.button}
                 onPress={this.onCreatePress.bind(this)}
                 >
                     <Text style={styles.text}>Create Dorm</Text>
                 </TouchableOpacity>
-                
                 <Text style={styles.errortext}>{this.state.error}</Text>
+                <Text style={{textAlign: 'center'}}>Hint: You will be the Resident Advisor :)</Text>
                 <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
             </View>
         );
@@ -148,9 +247,9 @@ const styles = StyleSheet.create({
         fontFamily: 'fjallaone',
         color: 'red'
     },
-    dormstackitem: {
+    image: {
         // backgroundColor: '#CDB87D',
-        backgroundColor: '#1C2957',
+        height: 10
        
 
         

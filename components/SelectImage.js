@@ -17,47 +17,46 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import { Hoshi } from 'react-native-textinput-effects';
 import ImagePicker from 'react-native-image-crop-picker';
-
+import RNFetchBlob from 'react-native-fetch-blob';
 
 export default class SelectImage extends Component {
-    state = {DormImage: '', isImage: true}
-
-
+    
+    state = {DormImageBase64: '', isImage: false}
 
     TakePhoto = () => {
-        
         ImagePicker.openCamera({
             width: 400,
             height: 400,
             cropping: true,
             includeBase64: true
         }).then(image => {
-            this.setState({isImage: false, DormImage: image.data});
+            this.setState({DormImageBase64: image.data, isImage: true});
+         
+            this.props.stateDormImageJSON({DormImageJSON: JSON.stringify(image)});
         });
+
     }
     PickImage = () => {
-        
         ImagePicker.openPicker({
             width: 400,
             height: 400,
             cropping: true,
             includeBase64: true
         }).then(image => {
-            this.setState({isImage: false, DormImage: image.data});
+            this.setState({DormImageBase64: image.data, isImage: true});
+            this.props.stateDormImageJSON({DormImageJSON: JSON.stringify(image)});
         });
     }
 
-
-
-    test = () => {
-        if (this.state.isImage) {
+    renderImage = () => {
+        if (!this.state.isImage) {
             return (
                 <View>
                     <TouchableOpacity style={styles.button} onPress={this.TakePhoto.bind(this)}>
                     <Text style={styles.text}>Take Photo</Text>
                     </TouchableOpacity>
                     <Text style={styles.text}>Or</Text>
-                    <TouchableOpacity style={styles.button} onPress={this.PickImage.bind(this)}>
+                    <TouchableOpacity style={styles.button} onPress={this.PickImage.bind(this)}> 
                     <Text style={styles.text}>Select Image</Text>
                     </TouchableOpacity>
                     <Text style={{textAlign: 'center'}}>You should probably just take a selfie anyways.</Text>
@@ -66,12 +65,13 @@ export default class SelectImage extends Component {
         }
         else {
             return (
-                <View>
-                    <TouchableOpacity>
-                        <Image></Image>
-                    </TouchableOpacity>
+                <View style={{alignItems: 'center'}}>
+                    
                     <Text style={styles.text}>Selected Image</Text>
-                    <Image style={{width: 65, height: 65, textAlign: 'center'}} source={{uri: 'data:image/jpg;base64,' + this.state.DormImage}}></Image>
+                    <TouchableOpacity onPress={() => this.setState({isImage: false})}>
+                        <Image style={{width: 100, height: 100, marginTop: 10, borderWidth: 4, borderColor: '#000000'}} source={{uri: 'data:image/jpg;base64,' + this.state.DormImageBase64}}></Image>
+                    </TouchableOpacity>
+                    <Text style={{textAlign: 'center'}}>Click it to choose another.</Text>
                 </View>
             );
         }
@@ -80,7 +80,7 @@ export default class SelectImage extends Component {
         return(
             <View style={styles.container}>
                 
-                {this.test()}
+                {this.renderImage()}
 
                 
                     

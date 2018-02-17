@@ -30,7 +30,7 @@ const CreateDormView = ({navigation}) => {
                 navigation={navigation}
                 />
             </KeyboardAvoidingView>
-            <Text>Hint: You will be the Resident Advisor :)</Text>
+
         </View>
     )
      
