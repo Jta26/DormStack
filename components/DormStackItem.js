@@ -26,7 +26,9 @@ export default class DormStackitem extends Component {
             this.setState({url: url});
         });
     }
-    
+    CheckMembership = () => {
+        
+    }
     render() {
         return(
             <View style={styles.container}>

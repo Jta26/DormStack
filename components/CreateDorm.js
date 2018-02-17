@@ -84,7 +84,10 @@ export default class CreateDorm extends Component {
                     uid: User.uid,
                     role: 0
                 },
-            ]
+            ],
+            events: [],
+            motd: '',
+            
 
         });
         this.onDormCreate();

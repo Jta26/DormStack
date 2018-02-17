@@ -99552,7 +99552,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     members: [{
                         uid: User.uid,
                         role: 0
-                    }]
+                    }],
+                    events: [],
+                    motd: ''
                 });
 
                 _this.onDormCreate();
@@ -99657,7 +99659,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 155
+                            lineNumber: 158
                         }
                     },
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -99681,7 +99683,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 156
+                            lineNumber: 159
                         }
                     }),
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -99709,7 +99711,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 172
+                            lineNumber: 175
                         }
                     }),
                     _react3.default.createElement(_SelectImage2.default, {
@@ -99726,7 +99728,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 190
+                            lineNumber: 193
                         }
                     }),
                     _react3.default.createElement(
@@ -99738,7 +99740,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onCreatePress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 202
+                                lineNumber: 205
                             }
                         },
                         _react3.default.createElement(
@@ -99747,7 +99749,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 208
+                                    lineNumber: 211
                                 }
                             },
                             "Create Dorm"
@@ -99759,7 +99761,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.errortext,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 210
+                                lineNumber: 213
                             }
                         },
                         this.state.error
@@ -99772,7 +99774,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 211
+                                lineNumber: 214
                             }
                         },
                         "Hint: You will be the Resident Advisor :)"
@@ -99783,7 +99785,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         animating: this.state.loading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 212
+                            lineNumber: 215
                         }
                     })
                 );
@@ -111481,8 +111483,6 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -111529,7 +111529,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
           uid: '',
           school: ''
         },
-        Dorms: []
+        Dorms: [],
+        test: ''
       }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -111538,6 +111539,9 @@ __d(function (global, require, module, exports, _dependencyMap) {
       value: function componentWillMount() {
         var _this2 = this;
 
+        this.setState({
+          Dorm: []
+        });
         var database = firebase.database();
         database.ref('users/' + firebase.auth().currentUser.uid).once('value').then(function (snapshot) {
           _this2.setState({
@@ -111549,12 +111553,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
             }
           });
         });
-        database.ref('/school/' + this.state.User.school).on('value', function (snapshot) {
-          snapshot.forEach(function (dorm) {
-            dorm.forEach(function (dorm) {
-              _this2.setState({
-                Dorms: [].concat(_toConsumableArray(_this2.state.Dorms), [dorm])
-              });
+        database.ref('/school/' + this.state.User.school).once('value').then(function (snapshot) {
+          snapshot.child(_this2.state.User.school).forEach(function (dorm) {
+            var arrDorm = _this2.state.Dorms.slice();
+
+            arrDorm.push(dorm);
+
+            _this2.setState({
+              Dorms: arrDorm
             });
           });
         });

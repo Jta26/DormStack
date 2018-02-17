@@ -25,9 +25,10 @@ import DormStackOptions from '../components/DormStackOptions';
 
 export default class DormStackView extends Component {
   
-  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: []}
+  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: [], test: ''}
  
   componentWillMount() {
+    this.setState({Dorm: []});
     var database = firebase.database();
     database.ref('users/' + firebase.auth().currentUser.uid).once('value').then(snapshot => {
       this.setState({User:{
@@ -37,13 +38,12 @@ export default class DormStackView extends Component {
         uid: firebase.auth().currentUser.uid,
       }});
     });
-    database.ref('/school/' + this.state.User.school).on('value', snapshot => {
-      snapshot.forEach((dorm) => {
-        dorm.forEach((dorm) => {
-          this.setState({
-            Dorms: [...this.state.Dorms, dorm]
-          });
-        });
+    database.ref('/school/' + this.state.User.school).once('value').then(snapshot => {
+  
+      snapshot.child(this.state.User.school).forEach((dorm) => {
+        var arrDorm = this.state.Dorms.slice();
+        arrDorm.push(dorm);
+        this.setState({Dorms: arrDorm});
       });
     });
 
