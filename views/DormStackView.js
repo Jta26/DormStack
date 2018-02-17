@@ -29,9 +29,7 @@ export default class DormStackView extends Component {
  
   componentWillMount() {
     var database = firebase.database();
-    var user = firebase.auth().currentUser;
-    alert('test');
-    database.ref('users/' + user.uid).once('value').then(snapshot => {
+    database.ref('users/' + firebase.auth().currentUser.uid).once('value').then(snapshot => {
       this.setState({User:{
         first: snapshot.val().firstname,
         last: snapshot.val().lastname,
@@ -39,31 +37,30 @@ export default class DormStackView extends Component {
         uid: firebase.auth().currentUser.uid,
       }});
     });
-    database.ref('school/' + this.state.school).on('value', snapshot => {
+    database.ref('/school/' + this.state.User.school).on('value', snapshot => {
       snapshot.forEach((dorm) => {
-        alert(JSON.stringify(dorm));
-      })
+        dorm.forEach((dorm) => {
+          this.setState({
+            Dorms: [...this.state.Dorms, dorm]
+          });
+        });
+      });
     });
 
   }
 
   render() {
 
-    
-      
-    
-
     return(
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.Dormstack}>
           <Text style={styles.title}>Welcome to the DormStack</Text>
-          <Text style={styles.title}>{this.state.fname} {this.state.lname}</Text>
-        
-        {this.state.Dorms.map(Dorm => {
-          
-          return <DormStackItem title={Dorm.val().name}/>
-          
-          
+          <Text style={styles.title}>{this.state.User.first} {this.state.User.last}</Text>
+      
+        {this.state.Dorms.map(dorm => {
+          return <View style={styles.Dormstackitem}>
+                  <DormStackItem image={dorm.val().images[0].url} title={dorm.val().name}/>
+                </View>
         })}
           
           
@@ -89,11 +86,19 @@ const styles = StyleSheet.create({
     
   },
   Dormstack: {
+    marginBottom: 1000,
+    alignItems: 'center'
+
   },
   Dormstackitem: {
+
     // backgroundColor: '#CDB87D',
-    backgroundColor: '#1C2957',
-    width: 250,
+    // backgroundColor: '#1C2957',
+    borderWidth: 1,
+    borderColor: '#000000',
+    width: 350,
+    marginTop: 5,
+    marginBottom: 5
   },
   title: {
     textAlign: 'center',

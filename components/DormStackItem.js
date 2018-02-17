@@ -16,14 +16,22 @@ import { StackNavigator } from 'react-navigation';
 
 export default class DormStackitem extends Component {
     //props DormImage, DormTitle
-    componentWillMount() {
 
+    state = {url: ''}
+
+    componentWillMount() {
+        var storage = firebase.storage();
+
+        storage.ref(this.props.image).getDownloadURL().then((url) => {
+            this.setState({url: url});
+        });
     }
+    
     render() {
         return(
             <View style={styles.container}>
                 <TouchableOpacity style={styles.button}>
-                    <Image source={{uri: 'data:image/jpg;base64,' + this.props.image}} style={styles.image}/>
+                    <Image source={{uri: this.state.url}} style={styles.image}/>
                     <Text style={styles.text}>{this.props.title}</Text>
                 </TouchableOpacity>
             </View>
@@ -33,24 +41,20 @@ export default class DormStackitem extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        borderWidth: 4,
-        borderColor: '#cdb87d',
-        height: 75
+        height: 75,
     },
     button: {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        
     },
     image: {
-        width: 65,
-        height: 65,
+        width: 75,
+        height: 75,
+
     },
     text: {
-        color: '#ffffff',
-        textShadowColor: '#000000',
-        textShadowOffset: {width: 1, height: 1},
+        color: '#000000',
         textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 15,

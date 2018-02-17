@@ -23,7 +23,7 @@ const CreateDormView = ({navigation}) => {
     
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Create a New Section for Your Schools Dorm!</Text>
+            <Text style={styles.title}>Create a New Dorm for Your School's DormStack</Text>
             
             <KeyboardAvoidingView keyboardVerticalOffset={250} behavior={'height'} style={styles.createDorm}>
                 <CreateDorm 
