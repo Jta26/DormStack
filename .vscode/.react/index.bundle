@@ -58567,6 +58567,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _DormStackView2 = _interopRequireDefault(_DormStackView);
 
+  var _DormView = require(_dependencyMap[8], "./views/DormView");
+
+  var _DormView2 = _interopRequireDefault(_DormView);
+
+  var _DormStackSettingsView = require(_dependencyMap[9], "./views/DormStackSettingsView");
+
+  var _DormStackSettingsView2 = _interopRequireDefault(_DormStackSettingsView);
+
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   _firebase2.default.initializeApp({
@@ -58602,10 +58610,22 @@ __d(function (global, require, module, exports, _dependencyMap) {
       navigationOptions: {
         header: null
       }
+    },
+    Dorm: {
+      screen: _DormView2.default,
+      navigationOptions: {
+        header: null
+      }
+    },
+    DormStackSettings: {
+      screen: _DormStackSettingsView2.default,
+      navigationOptions: {
+        header: null
+      }
     }
   });
   exports.default = App;
-},487,[108,12,488,555,700,716,719,751],"DormStack/App.js");
+},487,[108,12,488,555,700,717,720,752,755,757],"DormStack/App.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = {
     get createNavigationContainer() {
@@ -95738,7 +95758,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   });
 
   exports.default = LoginView;
-},700,[108,12,555,488,701,716,718],"DormStack/views/LoginView.js");
+},700,[108,12,555,488,701,717,719],"DormStack/views/LoginView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -95766,15 +95786,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _reactNativeTextinputEffects = require(_dependencyMap[5], "react-native-textinput-effects");
 
-    var _Logout = require(_dependencyMap[6], "./Logout");
+    var _reactNativeLoadingSpinnerOverlay = require(_dependencyMap[6], "react-native-loading-spinner-overlay");
+
+    var _reactNativeLoadingSpinnerOverlay2 = _interopRequireDefault(_reactNativeLoadingSpinnerOverlay);
+
+    var _Logout = require(_dependencyMap[7], "./Logout");
 
     var _Logout2 = _interopRequireDefault(_Logout);
 
-    var _LoginView = require(_dependencyMap[7], "../views/LoginView");
+    var _LoginView = require(_dependencyMap[8], "../views/LoginView");
 
     var _LoginView2 = _interopRequireDefault(_LoginView);
 
-    var _RegisterView = require(_dependencyMap[8], "../views/RegisterView");
+    var _RegisterView = require(_dependencyMap[9], "../views/RegisterView");
 
     var _RegisterView2 = _interopRequireDefault(_RegisterView);
 
@@ -95825,8 +95849,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 email: '',
                 password: '',
                 error: '',
-                loading: true,
-                user: null
+                loading: true
             }, _this.onLoginPress = function () {
                 _this.setState({
                     error: '',
@@ -95880,7 +95903,14 @@ __d(function (global, require, module, exports, _dependencyMap) {
             value: function componentWillMount() {
                 var _this2 = this;
 
-                var user = firebase.auth().currentUser;
+                var user;
+
+                try {
+                    user = firebase.auth().currentUser;
+                } catch (ex) {
+                    alert(ex);
+                }
+
                 firebase.auth().onAuthStateChanged(function (user) {
                     _this2.setState({
                         loading: true,
@@ -95913,7 +95943,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 79
+                            lineNumber: 86
                         }
                     },
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -95932,7 +95962,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 80
+                            lineNumber: 87
                         }
                     }),
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -95952,7 +95982,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 87
+                            lineNumber: 94
                         }
                     }),
                     _react3.default.createElement(
@@ -95962,7 +95992,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onLoginPress,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 95
+                                lineNumber: 102
                             }
                         },
                         _react3.default.createElement(
@@ -95971,7 +96001,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 99
+                                    lineNumber: 106
                                 }
                             },
                             "Login"
@@ -95983,18 +96013,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.errortext,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 101
+                                lineNumber: 108
                             }
                         },
                         this.state.error
                     ),
-                    _react3.default.createElement(_reactNative.ActivityIndicator, {
-                        size: "large",
-                        color: "black",
-                        animating: this.state.loading,
+                    _react3.default.createElement(_reactNativeLoadingSpinnerOverlay2.default, {
+                        style: {
+                            flex: 1
+                        },
+                        visible: this.state.loading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 102
+                            lineNumber: 109
                         }
                     }),
                     _react3.default.createElement(
@@ -96004,7 +96035,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onRegisterPress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 103
+                                lineNumber: 110
                             }
                         },
                         _react3.default.createElement(
@@ -96013,7 +96044,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 106
+                                    lineNumber: 113
                                 }
                             },
                             "Register"
@@ -96051,7 +96082,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             color: 'red'
         }
     });
-},701,[108,175,488,12,555,702,715,700,716],"DormStack/components/Login.js");
+},701,[108,175,488,12,555,702,715,716,700,717],"DormStack/components/Login.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -98661,6 +98692,252 @@ __d(function (global, require, module, exports, _dependencyMap) {
   });
 },714,[108,127,12,704],"react-native-textinput-effects/lib/Fumi.js");
 __d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../../react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _class,
+      _temp,
+      _jsxFileName = "/home/joellinux/Desktop/Development/DormStack/node_modules/react-native-loading-spinner-overlay/src/index.js";
+
+  var _propTypes = require(_dependencyMap[2], "prop-types");
+
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+
+  var _reactNative = require(_dependencyMap[3], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Spinner: {
+      displayName: "Spinner"
+    }
+  };
+
+  var _reactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/joellinux/Desktop/Development/DormStack/node_modules/react-native-loading-spinner-overlay/src/index.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _reactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: 'transparent',
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0
+    },
+    background: {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    textContainer: {
+      flex: 1,
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+      position: 'absolute'
+    },
+    textContent: {
+      top: 80,
+      height: 50,
+      fontSize: 20,
+      fontWeight: 'bold'
+    }
+  });
+
+  var ANIMATION = ['none', 'slide', 'fade'];
+  var SIZES = ['small', 'normal', 'large'];
+
+  var Spinner = _wrapComponent("Spinner")((_temp = _class = function (_React$Component) {
+    _inherits(Spinner, _React$Component);
+
+    function Spinner(props) {
+      _classCallCheck(this, Spinner);
+
+      var _this = _possibleConstructorReturn(this, (Spinner.__proto__ || Object.getPrototypeOf(Spinner)).call(this, props));
+
+      _this.state = {
+        visible: _this.props.visible,
+        textContent: _this.props.textContent
+      };
+      return _this;
+    }
+
+    _createClass(Spinner, [{
+      key: "close",
+      value: function close() {
+        this.setState({
+          visible: false
+        });
+      }
+    }, {
+      key: "componentWillReceiveProps",
+      value: function componentWillReceiveProps(nextProps) {
+        var visible = nextProps.visible,
+            textContent = nextProps.textContent;
+        this.setState({
+          visible: visible,
+          textContent: textContent
+        });
+      }
+    }, {
+      key: "_handleOnRequestClose",
+      value: function _handleOnRequestClose() {
+        if (this.props.cancelable) {
+          this.close();
+        }
+      }
+    }, {
+      key: "_renderDefaultContent",
+      value: function _renderDefaultContent() {
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.background,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 112
+            }
+          },
+          _react3.default.createElement(_reactNative.ActivityIndicator, {
+            color: this.props.color,
+            size: this.props.size,
+            style: {
+              flex: 1
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 113
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: styles.textContainer,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 118
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: [styles.textContent, this.props.textStyle],
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 119
+                }
+              },
+              this.state.textContent
+            )
+          )
+        );
+      }
+    }, {
+      key: "_renderSpinner",
+      value: function _renderSpinner() {
+        var _this2 = this;
+
+        var visible = this.state.visible;
+        if (!visible) return null;
+
+        var spinner = _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: [styles.container, {
+              backgroundColor: this.props.overlayColor
+            }],
+            key: "spinner_" + Date.now(),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 131
+            }
+          },
+          this.props.children ? this.props.children : this._renderDefaultContent()
+        );
+
+        return _react3.default.createElement(
+          _reactNative.Modal,
+          {
+            animationType: this.props.animation,
+            onRequestClose: function onRequestClose() {
+              return _this2._handleOnRequestClose();
+            },
+            supportedOrientations: ['landscape', 'portrait'],
+            transparent: true,
+            visible: visible,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 140
+            }
+          },
+          spinner
+        );
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        return this._renderSpinner();
+      }
+    }]);
+
+    return Spinner;
+  }(_react3.default.Component), _class.propTypes = {
+    visible: _propTypes2.default.bool,
+    cancelable: _propTypes2.default.bool,
+    textContent: _propTypes2.default.string,
+    animation: _propTypes2.default.oneOf(ANIMATION),
+    color: _propTypes2.default.string,
+    size: _propTypes2.default.oneOf(SIZES),
+    overlayColor: _propTypes2.default.string
+  }, _class.defaultProps = {
+    visible: false,
+    cancelable: false,
+    textContent: '',
+    animation: 'none',
+    color: 'white',
+    size: 'large',
+    overlayColor: 'rgba(0, 0, 0, 0.25)'
+  }, _temp));
+
+  exports.default = Spinner;
+},715,[108,175,127,12],"react-native-loading-spinner-overlay/src/index.js");
+__d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
@@ -98735,9 +99012,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     alert('Account Successfully Logged Out');
 
                     _this.props.navigation.navigate('Login');
-                }).catch(function () {
-                    alert('error logging out user ' + firebase.auth().currentUser.uid);
-                });
+                }).catch(function () {});
             }, _temp), _possibleConstructorReturn(_this, _ret);
         }
 
@@ -98799,7 +99074,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             color: '#000000'
         }
     });
-},715,[108,175,488,12,555,702],"DormStack/components/Logout.js");
+},716,[108,175,488,12,555,702],"DormStack/components/Logout.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -98891,7 +99166,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = RegisterView;
-},716,[108,12,555,488,717],"DormStack/views/RegisterView.js");
+},717,[108,12,555,488,718],"DormStack/views/RegisterView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -98918,6 +99193,10 @@ __d(function (global, require, module, exports, _dependencyMap) {
     var firebase = _interopRequireWildcard(_firebase);
 
     var _reactNativeTextinputEffects = require(_dependencyMap[5], "react-native-textinput-effects");
+
+    var _reactNativeLoadingSpinnerOverlay = require(_dependencyMap[6], "react-native-loading-spinner-overlay");
+
+    var _reactNativeLoadingSpinnerOverlay2 = _interopRequireDefault(_reactNativeLoadingSpinnerOverlay);
 
     function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -99255,10 +99534,11 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         this.state.error
                     ),
-                    _react3.default.createElement(_reactNative.ActivityIndicator, {
-                        size: "large",
-                        color: "black",
-                        animating: this.state.loading,
+                    _react3.default.createElement(_reactNativeLoadingSpinnerOverlay2.default, {
+                        style: {
+                            flex: 1
+                        },
+                        visible: this.state.loading,
                         __source: {
                             fileName: _jsxFileName,
                             lineNumber: 130
@@ -99300,7 +99580,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             color: 'red'
         }
     });
-},717,[108,175,488,12,555,702],"DormStack/components/Register.js");
+},718,[108,175,488,12,555,702,715],"DormStack/components/Register.js");
 __d(function (global, require, module, exports, _dependencyMap) {
 	module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
 		"__packager_asset": true,
@@ -99312,7 +99592,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 		"name": "logo2",
 		"type": "png"
 	});
-},718,[161],"img/logo2.png");
+},719,[161],"img/logo2.png");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -99359,7 +99639,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         lineNumber: 26
                     }
                 },
-                "Create a New Dorm for Your School's DormStack"
+                "Add a Dorm to Your School's DormStack"
             ),
             _react2.default.createElement(
                 _reactNative.KeyboardAvoidingView,
@@ -99404,7 +99684,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
 
     exports.default = CreateDormView;
-},719,[108,12,555,488,720],"DormStack/views/CreateDormView.js");
+},720,[108,12,555,488,721],"DormStack/views/CreateDormView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -99440,11 +99720,15 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
     var _reactNativeFetchBlob2 = _interopRequireDefault(_reactNativeFetchBlob);
 
-    var _DormStackItem = require(_dependencyMap[8], "./DormStackItem");
+    var _reactNativeLoadingSpinnerOverlay = require(_dependencyMap[8], "react-native-loading-spinner-overlay");
+
+    var _reactNativeLoadingSpinnerOverlay2 = _interopRequireDefault(_reactNativeLoadingSpinnerOverlay);
+
+    var _DormStackItem = require(_dependencyMap[9], "./DormStackItem");
 
     var _DormStackItem2 = _interopRequireDefault(_DormStackItem);
 
-    var _SelectImage = require(_dependencyMap[9], "./SelectImage");
+    var _SelectImage = require(_dependencyMap[10], "./SelectImage");
 
     var _SelectImage2 = _interopRequireDefault(_SelectImage);
 
@@ -99659,7 +99943,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                     {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 158
+                            lineNumber: 156
                         }
                     },
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -99683,7 +99967,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 159
+                            lineNumber: 157
                         }
                     }),
                     _react3.default.createElement(_reactNativeTextinputEffects.Hoshi, {
@@ -99711,7 +99995,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 175
+                            lineNumber: 173
                         }
                     }),
                     _react3.default.createElement(_SelectImage2.default, {
@@ -99728,7 +100012,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         },
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 193
+                            lineNumber: 191
                         }
                     }),
                     _react3.default.createElement(
@@ -99740,7 +100024,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onCreatePress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 205
+                                lineNumber: 203
                             }
                         },
                         _react3.default.createElement(
@@ -99749,7 +100033,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 211
+                                    lineNumber: 209
                                 }
                             },
                             "Create Dorm"
@@ -99761,7 +100045,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             style: styles.errortext,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 213
+                                lineNumber: 211
                             }
                         },
                         this.state.error
@@ -99774,18 +100058,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 214
+                                lineNumber: 212
                             }
                         },
                         "Hint: You will be the Resident Advisor :)"
                     ),
-                    _react3.default.createElement(_reactNative.ActivityIndicator, {
-                        size: "large",
-                        color: "black",
-                        animating: this.state.loading,
+                    _react3.default.createElement(_reactNativeLoadingSpinnerOverlay2.default, {
+                        style: {
+                            flex: 1
+                        },
+                        visible: this.state.loading,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 215
+                            lineNumber: 213
                         }
                     })
                 );
@@ -99832,7 +100117,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             height: 10
         }
     });
-},720,[108,175,12,555,488,702,721,722,749,750],"DormStack/components/CreateDorm.js");
+},721,[108,175,12,555,488,702,722,723,715,750,751],"DormStack/components/CreateDorm.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -99847,7 +100132,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
   exports.default = _reactNative.NativeModules.ImageCropPicker;
-},721,[108,12],"react-native-image-crop-picker/index.js");
+},722,[108,12],"react-native-image-crop-picker/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100344,7 +100629,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     polyfill: _polyfill2.default,
     JSONStream: _jsonStream2.default
   };
-},722,[12,723,724,725,729,731,732,744,745,746,747],"react-native-fetch-blob/index.js");
+},723,[12,724,725,726,730,732,733,745,746,747,748],"react-native-fetch-blob/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100374,7 +100659,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       return String(uri).replace(/^RNFetchBlob-file\:\/\//, '');
     }
   };
-},723,[],"react-native-fetch-blob/utils/uri.js");
+},724,[],"react-native-fetch-blob/utils/uri.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100399,7 +100684,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }(Promise);
 
   exports.default = StatefulPromise;
-},724,[],"react-native-fetch-blob/class/StatefulPromise.js");
+},725,[],"react-native-fetch-blob/class/StatefulPromise.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100677,7 +100962,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     asset: asset,
     df: df
   };
-},725,[12,726,727,728,730],"react-native-fetch-blob/fs.js");
+},726,[12,727,728,729,731],"react-native-fetch-blob/fs.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100766,7 +101051,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   exports.default = RNFetchBlobSession;
-},726,[12],"react-native-fetch-blob/class/RNFetchBlobSession.js");
+},727,[12],"react-native-fetch-blob/class/RNFetchBlobSession.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100833,7 +101118,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   exports.default = RNFetchBlobWriteStream;
-},727,[12],"react-native-fetch-blob/class/RNFetchBlobWriteStream.js");
+},728,[12],"react-native-fetch-blob/class/RNFetchBlobWriteStream.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100922,7 +101207,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   exports.default = RNFetchBlobReadStream;
-},728,[12,729],"react-native-fetch-blob/class/RNFetchBlobReadStream.js");
+},729,[12,730],"react-native-fetch-blob/class/RNFetchBlobReadStream.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100932,7 +101217,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   function getUUID() {
     return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   }
-},729,[],"react-native-fetch-blob/utils/uuid.js");
+},730,[],"react-native-fetch-blob/utils/uuid.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -100950,7 +101235,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   };
 
   exports.default = RNFetchBlobFile;
-},730,[12],"react-native-fetch-blob/class/RNFetchBlobFile.js");
+},731,[12],"react-native-fetch-blob/class/RNFetchBlobFile.js");
 __d(function (global, require, module, exports, _dependencyMap) {
 	;
 
@@ -101068,7 +101353,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 			root.base64 = base64;
 		}
 	})(this);
-},731,[],"base-64/base64.js");
+},732,[],"base-64/base64.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -101113,7 +101398,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     FileReader: _FileReader2.default,
     Fetch: _Fetch2.default
   };
-},732,[733,736,737,739,740,741,742],"react-native-fetch-blob/polyfill/index.js");
+},733,[734,737,738,740,741,742,743],"react-native-fetch-blob/polyfill/index.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -101427,7 +101712,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       return Promise.resolve(size);
     });
   }
-},733,[722,725,729,734,735],"react-native-fetch-blob/polyfill/Blob.js");
+},734,[723,726,730,735,736],"react-native-fetch-blob/polyfill/Blob.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -101512,7 +101797,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   exports.default = Log;
-},734,[],"react-native-fetch-blob/utils/log.js");
+},735,[],"react-native-fetch-blob/utils/log.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -101588,7 +101873,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }();
 
   exports.default = EventTarget;
-},735,[734],"react-native-fetch-blob/polyfill/EventTarget.js");
+},736,[735],"react-native-fetch-blob/polyfill/EventTarget.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -101640,7 +101925,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }(_Blob3.default);
 
   exports.default = File;
-},736,[725,733],"react-native-fetch-blob/polyfill/File.js");
+},737,[726,734],"react-native-fetch-blob/polyfill/File.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102146,7 +102431,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   XMLHttpRequest.binaryContentTypes = ['image/', 'video/', 'audio/'];
   exports.default = XMLHttpRequest;
-},737,[722,738,734,733,739,723],"react-native-fetch-blob/polyfill/XMLHttpRequest.js");
+},738,[723,739,735,734,740,724],"react-native-fetch-blob/polyfill/XMLHttpRequest.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102314,7 +102599,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }(_EventTarget3.default);
 
   exports.default = XMLHttpRequestEventTarget;
-},738,[735,734],"react-native-fetch-blob/polyfill/XMLHttpRequestEventTarget.js");
+},739,[736,735],"react-native-fetch-blob/polyfill/XMLHttpRequestEventTarget.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102372,7 +102657,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }(_Event3.default);
 
   exports.default = ProgressEvent;
-},739,[740],"react-native-fetch-blob/polyfill/ProgressEvent.js");
+},740,[741],"react-native-fetch-blob/polyfill/ProgressEvent.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102385,7 +102670,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   };
 
   exports.default = Event;
-},740,[],"react-native-fetch-blob/polyfill/Event.js");
+},741,[],"react-native-fetch-blob/polyfill/Event.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102518,7 +102803,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   }(_EventTarget3.default);
 
   exports.default = FileReader;
-},741,[722,739,735,733,734,725],"react-native-fetch-blob/polyfill/FileReader.js");
+},742,[723,740,736,734,735,726],"react-native-fetch-blob/polyfill/FileReader.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102730,7 +103015,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         return Promise.resolve(resp.json());
     }
   }
-},742,[722,734,725,743,733],"react-native-fetch-blob/polyfill/Fetch.js");
+},743,[723,735,726,744,734],"react-native-fetch-blob/polyfill/Fetch.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -102743,7 +103028,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     });
     return unescape(x);
   };
-},743,[],"react-native-fetch-blob/utils/unicode.js");
+},744,[],"react-native-fetch-blob/utils/unicode.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   /**
    * @license
@@ -109913,7 +110198,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
         root._ = _;
       }
   }).call(this);
-},744,[],"lodash/lodash.js");
+},745,[],"lodash/lodash.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -109941,7 +110226,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     getContentIntent: getContentIntent,
     addCompleteDownload: addCompleteDownload
   };
-},745,[12],"react-native-fetch-blob/android.js");
+},746,[12],"react-native-fetch-blob/android.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -109968,7 +110253,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
     previewDocument: previewDocument,
     excludeFromBackupKey: excludeFromBackupKey
   };
-},746,[12],"react-native-fetch-blob/ios.js");
+},747,[12],"react-native-fetch-blob/ios.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -110024,7 +110309,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
   };
 
   exports.default = OboeExtended;
-},747,[748,737,723],"react-native-fetch-blob/json-stream.js");
+},748,[749,738,724],"react-native-fetch-blob/json-stream.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   !function (a, b, c, d, e, f) {
     function g(a, b) {
@@ -110970,7 +111255,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       return self;
     }
   }(), Object, Array, Error, JSON);
-},748,[],"react-native-fetch-blob/lib/oboe-browser.min.js");
+},749,[],"react-native-fetch-blob/lib/oboe-browser.min.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -111050,7 +111335,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 var _this2 = this;
 
                 var storage = firebase.storage();
-                storage.ref(this.props.image).getDownloadURL().then(function (url) {
+                storage.ref(this.props.Dorm.val().images[0].url).getDownloadURL().then(function (url) {
                     _this2.setState({
                         url: url
                     });
@@ -111059,22 +111344,30 @@ __d(function (global, require, module, exports, _dependencyMap) {
         }, {
             key: "render",
             value: function render() {
+                var _this3 = this;
+
                 return _react3.default.createElement(
                     _reactNative.View,
                     {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 32
+                            lineNumber: 30
                         }
                     },
                     _react3.default.createElement(
                         _reactNative.TouchableOpacity,
                         {
                             style: styles.button,
+                            onPress: function onPress() {
+                                _this3.props.navigation.navigate('Dorm', {
+                                    Dorm: _this3.props.Dorm,
+                                    User: _this3.props.User
+                                });
+                            },
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 33
+                                lineNumber: 31
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
@@ -111096,7 +111389,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                     lineNumber: 35
                                 }
                             },
-                            this.props.title
+                            this.props.Dorm.val().name
                         )
                     )
                 );
@@ -111119,18 +111412,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
         },
         image: {
             width: 75,
-            height: 75
+            height: 75,
+            marginRight: 10
         },
         text: {
             color: '#000000',
             textShadowRadius: 2,
             textAlign: 'center',
-            fontSize: 15,
+            fontSize: 20,
             fontFamily: 'fjallaone',
             width: 150
         }
     });
-},749,[108,175,12,555,488],"DormStack/components/DormStackItem.js");
+},750,[108,175,12,555,488],"DormStack/components/DormStackItem.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -111350,8 +111644,12 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             _reactNative.TouchableOpacity,
                             {
                                 onPress: function onPress() {
-                                    return _this.setState({
+                                    _this.setState({
                                         isImage: false
+                                    });
+
+                                    _this.props.stateDormImageJSON({
+                                        DormImageJSON: ''
                                     });
                                 },
                                 __source: {
@@ -111441,7 +111739,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             borderWidth: 1
         }
     });
-},750,[108,175,12,555,488,702,721,722],"DormStack/components/SelectImage.js");
+},751,[108,175,12,555,488,702,722,723],"DormStack/components/SelectImage.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -111467,15 +111765,19 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
   var _reactNavigation = require(_dependencyMap[4], "react-navigation");
 
-  var _CreateDormView = require(_dependencyMap[5], "./CreateDormView");
+  var _reactNativeLoadingSpinnerOverlay = require(_dependencyMap[5], "react-native-loading-spinner-overlay");
+
+  var _reactNativeLoadingSpinnerOverlay2 = _interopRequireDefault(_reactNativeLoadingSpinnerOverlay);
+
+  var _CreateDormView = require(_dependencyMap[6], "./CreateDormView");
 
   var _CreateDormView2 = _interopRequireDefault(_CreateDormView);
 
-  var _DormStackItem = require(_dependencyMap[6], "../components/DormStackItem");
+  var _DormStackItem = require(_dependencyMap[7], "../components/DormStackItem");
 
   var _DormStackItem2 = _interopRequireDefault(_DormStackItem);
 
-  var _DormStackOptions = require(_dependencyMap[7], "../components/DormStackOptions");
+  var _DormStackOptions = require(_dependencyMap[8], "../components/DormStackOptions");
 
   var _DormStackOptions2 = _interopRequireDefault(_DormStackOptions);
 
@@ -111530,7 +111832,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
           school: ''
         },
         Dorms: [],
-        test: ''
+        loading: true
       }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -111562,19 +111864,25 @@ __d(function (global, require, module, exports, _dependencyMap) {
             _this2.setState({
               Dorms: arrDorm
             });
+
+            _this2.setState({
+              loading: false
+            });
           });
         });
       }
     }, {
       key: "render",
       value: function render() {
+        var _this3 = this;
+
         return _react3.default.createElement(
           _reactNative.View,
           {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 55
+              lineNumber: 57
             }
           },
           _react3.default.createElement(
@@ -111583,7 +111891,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
               contentContainerStyle: styles.Dormstack,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 56
+                lineNumber: 58
               }
             },
             _react3.default.createElement(
@@ -111592,7 +111900,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 style: styles.title,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 57
+                  lineNumber: 59
                 }
               },
               "Welcome to the DormStack"
@@ -111603,7 +111911,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                 style: styles.title,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 58
+                  lineNumber: 60
                 }
               },
               this.state.User.first,
@@ -111617,15 +111925,16 @@ __d(function (global, require, module, exports, _dependencyMap) {
                   style: styles.Dormstackitem,
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 61
+                    lineNumber: 63
                   }
                 },
                 _react3.default.createElement(_DormStackItem2.default, {
-                  image: dorm.val().images[0].url,
-                  title: dorm.val().name,
+                  navigation: _this3.props.navigation,
+                  Dorm: dorm,
+                  User: _this3.state.User,
                   __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 62
+                    lineNumber: 64
                   }
                 })
               );
@@ -111637,17 +111946,27 @@ __d(function (global, require, module, exports, _dependencyMap) {
               style: styles.settings,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 68
+                lineNumber: 70
               }
             },
             _react3.default.createElement(_DormStackOptions2.default, {
               navigation: this.props.navigation,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 71
               }
             })
-          )
+          ),
+          _react3.default.createElement(_reactNativeLoadingSpinnerOverlay2.default, {
+            style: {
+              flex: 1
+            },
+            visible: this.state.loading,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 76
+            }
+          })
         );
       }
     }]);
@@ -111683,7 +112002,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
       marginBottom: 40
     }
   });
-},751,[108,175,12,555,488,719,749,752],"DormStack/views/DormStackView.js");
+},752,[108,175,12,555,488,715,720,750,753],"DormStack/views/DormStackView.js");
 __d(function (global, require, module, exports, _dependencyMap) {
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -111754,6 +112073,8 @@ __d(function (global, require, module, exports, _dependencyMap) {
 
             return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DormStackOptions.__proto__ || Object.getPrototypeOf(DormStackOptions)).call.apply(_ref, [this].concat(args))), _this), _this.onCreateDormPress = function () {
                 _this.props.navigation.navigate('CreateDorm');
+            }, _this.onDormStackSettingsPress = function () {
+                _this.props.navigation.navigate('DormStackSettings');
             }, _temp), _possibleConstructorReturn(_this, _ret);
         }
 
@@ -111766,23 +112087,24 @@ __d(function (global, require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 25
+                            lineNumber: 27
                         }
                     },
                     _react3.default.createElement(
                         _reactNative.TouchableOpacity,
                         {
                             style: styles.settings,
+                            onPress: this.onDormStackSettingsPress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 26
+                                lineNumber: 28
                             }
                         },
                         _react3.default.createElement(_reactNative.Image, {
                             source: require(_dependencyMap[5], '../img/settings.png'),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 27
+                                lineNumber: 29
                             }
                         })
                     ),
@@ -111793,7 +112115,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                             onPress: this.onCreateDormPress.bind(this),
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 29
+                                lineNumber: 31
                             }
                         },
                         _react3.default.createElement(
@@ -111802,7 +112124,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
                                 style: styles.text,
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 30
+                                    lineNumber: 32
                                 }
                             },
                             "Add a Dorm!"
@@ -111843,7 +112165,7 @@ __d(function (global, require, module, exports, _dependencyMap) {
             textAlign: 'center'
         }
     });
-},752,[108,175,12,555,488,753],"DormStack/components/DormStackOptions.js");
+},753,[108,175,12,555,488,754],"DormStack/components/DormStackOptions.js");
 __d(function (global, require, module, exports, _dependencyMap) {
   module.exports = require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
     "__packager_asset": true,
@@ -111855,7 +112177,570 @@ __d(function (global, require, module, exports, _dependencyMap) {
     "name": "settings",
     "type": "png"
   });
-},753,[161],"img/settings.png");
+},754,[161],"img/settings.png");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/home/joellinux/Desktop/Development/DormStack/views/DormView.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _firebase = require(_dependencyMap[3], "firebase");
+
+    var firebase = _interopRequireWildcard(_firebase);
+
+    var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+    var _HorizontalPhotoScroll = require(_dependencyMap[5], "../components/HorizontalPhotoScroll");
+
+    var _HorizontalPhotoScroll2 = _interopRequireDefault(_HorizontalPhotoScroll);
+
+    function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        DormView: {
+            displayName: "DormView"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/home/joellinux/Desktop/Development/DormStack/views/DormView.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var DormView = _wrapComponent("DormView")(function (_Component) {
+        _inherits(DormView, _Component);
+
+        function DormView() {
+            var _ref;
+
+            var _temp, _this, _ret;
+
+            _classCallCheck(this, DormView);
+
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DormView.__proto__ || Object.getPrototypeOf(DormView)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                User: {
+                    first: '',
+                    last: '',
+                    uid: '',
+                    email: '',
+                    school: ''
+                },
+                Dorm: {
+                    name: '',
+                    id: '',
+                    desc: '',
+                    images: [],
+                    members: []
+                }
+            }, _this.CheckMembership = function (User, Dorm) {
+                Dorm.members.forEach(function (element) {
+                    if (User.uid == Dorm.dormId) {
+                        return true;
+                    }
+                });
+                return false;
+            }, _this.onMembershipValidate = function (isValidated) {
+                if (isValidated) {
+                    _this.props.navigation.navigate('Dorm');
+                } else {
+                    _this.props.navigation.navigate('DormPreview');
+                }
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+
+        _createClass(DormView, [{
+            key: "componentWillMount",
+            value: function componentWillMount() {}
+        }, {
+            key: "render",
+            value: function render() {
+                var params = this.props.navigation.state.params;
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 75
+                        }
+                    },
+                    _react3.default.createElement(_HorizontalPhotoScroll2.default, {
+                        Dorm: params.Dorm,
+                        User: params.User,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 76
+                        }
+                    })
+                );
+            }
+        }]);
+
+        return DormView;
+    }(_react2.Component));
+
+    exports.default = DormView;
+},755,[108,175,12,555,488,756],"DormStack/views/DormView.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/joellinux/Desktop/Development/DormStack/components/HorizontalPhotoScroll.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = require(_dependencyMap[2], "react-native");
+
+  var _firebase = require(_dependencyMap[3], "firebase");
+
+  var firebase = _interopRequireWildcard(_firebase);
+
+  var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+  function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    HorizontalPhotoScroll: {
+      displayName: "HorizontalPhotoScroll"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/joellinux/Desktop/Development/DormStack/components/HorizontalPhotoScroll.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var _Dimensions$get = _reactNative.Dimensions.get('window'),
+      width = _Dimensions$get.width;
+
+  var HorizontalPhotoScroll = _wrapComponent("HorizontalPhotoScroll")(function (_Component) {
+    _inherits(HorizontalPhotoScroll, _Component);
+
+    function HorizontalPhotoScroll() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, HorizontalPhotoScroll);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = HorizontalPhotoScroll.__proto__ || Object.getPrototypeOf(HorizontalPhotoScroll)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        images: []
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(HorizontalPhotoScroll, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        var _this2 = this;
+
+        setTimeout(function () {
+          _this2.scrollView.scrollTo({
+            x: -30
+          });
+        }, 1);
+        var Dorm = this.props.Dorm;
+        var storage = firebase.storage();
+        Dorm.val().images.forEach(function (image) {
+          storage.ref(image.url).getDownloadURL().then(function (url) {
+            var arrImages = _this2.state.images.slice();
+
+            arrImages.push(url);
+
+            _this2.setState({
+              images: arrImages
+            });
+          });
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this3 = this;
+
+        return _react3.default.createElement(
+          _reactNative.ScrollView,
+          {
+            ref: function ref(scrollView) {
+              _this3.scrollView = scrollView;
+            },
+            style: styles.container,
+            horizontal: true,
+            decelerationRate: 0,
+            snapToInterval: width - 60,
+            snapToAlignment: "center",
+            contentInset: {
+              top: 0,
+              left: 30,
+              bottom: 0,
+              right: 30
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 43
+            }
+          },
+          this.state.images.map(function (url) {
+            return _react3.default.createElement(_reactNative.Image, {
+              style: styles.image,
+              source: {
+                uri: url
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 58
+              }
+            });
+          })
+        );
+      }
+    }]);
+
+    return HorizontalPhotoScroll;
+  }(_react2.Component));
+
+  exports.default = HorizontalPhotoScroll;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {},
+    image: {
+      width: width - 300,
+      height: width - 300,
+      borderRadius: 90,
+      margin: 10
+    }
+  });
+},756,[108,175,12,555,488],"DormStack/components/HorizontalPhotoScroll.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/home/joellinux/Desktop/Development/DormStack/views/DormStackSettingsView.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _firebase = require(_dependencyMap[3], "firebase");
+
+    var firebase = _interopRequireWildcard(_firebase);
+
+    var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+    var _Logout = require(_dependencyMap[5], "../components/Logout");
+
+    var _Logout2 = _interopRequireDefault(_Logout);
+
+    var _DisplayUser = require(_dependencyMap[6], "../components/DisplayUser");
+
+    var _DisplayUser2 = _interopRequireDefault(_DisplayUser);
+
+    var _DormStackView = require(_dependencyMap[7], "../views/DormStackView");
+
+    var _DormStackView2 = _interopRequireDefault(_DormStackView);
+
+    function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        DormStackSettingsView: {
+            displayName: "DormStackSettingsView"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/home/joellinux/Desktop/Development/DormStack/views/DormStackSettingsView.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var DormStackSettingsView = _wrapComponent("DormStackSettingsView")(function (_Component) {
+        _inherits(DormStackSettingsView, _Component);
+
+        function DormStackSettingsView() {
+            _classCallCheck(this, DormStackSettingsView);
+
+            return _possibleConstructorReturn(this, (DormStackSettingsView.__proto__ || Object.getPrototypeOf(DormStackSettingsView)).apply(this, arguments));
+        }
+
+        _createClass(DormStackSettingsView, [{
+            key: "render",
+            value: function render() {
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 30
+                        }
+                    },
+                    _react3.default.createElement(_DisplayUser2.default, {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 31
+                        }
+                    }),
+                    _react3.default.createElement(_Logout2.default, {
+                        navigation: this.props.navigation,
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 32
+                        }
+                    })
+                );
+            }
+        }]);
+
+        return DormStackSettingsView;
+    }(_react2.Component));
+
+    exports.default = DormStackSettingsView;
+},757,[108,175,12,555,488,716,758,752],"DormStack/views/DormStackSettingsView.js");
+__d(function (global, require, module, exports, _dependencyMap) {
+    Object.defineProperty(exports, "__esModule", {
+        value: true
+    });
+
+    var _react2 = require(_dependencyMap[0], "react");
+
+    var _react3 = _interopRequireDefault(_react2);
+
+    var _index = require(_dependencyMap[1], "./../node_modules/react-transform-hmr/lib/index.js");
+
+    var _index2 = _interopRequireDefault(_index);
+
+    var _jsxFileName = "/home/joellinux/Desktop/Development/DormStack/components/DisplayUser.js";
+
+    var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+    var _reactNative = require(_dependencyMap[2], "react-native");
+
+    var _firebase = require(_dependencyMap[3], "firebase");
+
+    var firebase = _interopRequireWildcard(_firebase);
+
+    var _reactNavigation = require(_dependencyMap[4], "react-navigation");
+
+    function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+    function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+    function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+    function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+    function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+    var _components = {
+        DisplayUser: {
+            displayName: "DisplayUser"
+        }
+    };
+
+    var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+        filename: "/home/joellinux/Desktop/Development/DormStack/components/DisplayUser.js",
+        components: _components,
+        locals: [module],
+        imports: [_react3.default]
+    });
+
+    function _wrapComponent(id) {
+        return function (Component) {
+            return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+        };
+    }
+
+    var DisplayUser = _wrapComponent("DisplayUser")(function (_Component) {
+        _inherits(DisplayUser, _Component);
+
+        function DisplayUser() {
+            var _ref;
+
+            var _temp, _this, _ret;
+
+            _classCallCheck(this, DisplayUser);
+
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
+
+            return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DisplayUser.__proto__ || Object.getPrototypeOf(DisplayUser)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                User: {
+                    first: '',
+                    last: '',
+                    email: '',
+                    uid: '',
+                    school: ''
+                }
+            }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+
+        _createClass(DisplayUser, [{
+            key: "componentWillMount",
+            value: function componentWillMount() {
+                var _this2 = this;
+
+                firebase.database().ref('users/' + firebase.auth().currentUser.uid).once('value').then(function (snapshot) {
+                    _this2.setState({
+                        User: {
+                            first: snapshot.val().firstname,
+                            last: snapshot.val().lastname,
+                            email: snapshot.val().email,
+                            uid: firebase.auth().currentUser.uid,
+                            school: snapshot.val().campus
+                        }
+                    });
+                });
+            }
+        }, {
+            key: "render",
+            value: function render() {
+                return _react3.default.createElement(
+                    _reactNative.View,
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 40
+                        }
+                    },
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 41
+                            }
+                        },
+                        "Name: ",
+                        this.state.User.first,
+                        " ",
+                        this.state.User.last
+                    ),
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 42
+                            }
+                        },
+                        "Email: ",
+                        this.state.User.email
+                    ),
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 43
+                            }
+                        },
+                        "School: ",
+                        this.state.User.school
+                    ),
+                    _react3.default.createElement(
+                        _reactNative.Text,
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 44
+                            }
+                        },
+                        "User ID: ",
+                        this.state.User.uid
+                    )
+                );
+            }
+        }]);
+
+        return DisplayUser;
+    }(_react2.Component));
+
+    exports.default = DisplayUser;
+},758,[108,175,12,555,488],"DormStack/components/DisplayUser.js");
 require(23);
 require(11);
 //# sourceMappingURL=index.map

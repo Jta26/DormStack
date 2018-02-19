@@ -19,11 +19,13 @@ export default class DormStackOptions extends Component {
     onCreateDormPress = () => {
         this.props.navigation.navigate('CreateDorm');
     }
-
+    onDormStackSettingsPress = () => {
+        this.props.navigation.navigate('DormStackSettings');
+    }
     render() {
         return(
             <View style={styles.container}>
-                <TouchableOpacity style={styles.settings}>
+                <TouchableOpacity style={styles.settings} onPress={this.onDormStackSettingsPress.bind(this)}>
                     <Image source={require('../img/settings.png')}/>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={this.onCreateDormPress.bind(this)}>

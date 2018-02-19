@@ -21,7 +21,7 @@ export default class Logout extends Component {
             this.props.navigation.navigate('Login');
         })
         .catch(() => {
-            alert('error logging out user ' + firebase.auth().currentUser.uid);
+            
         });
         
     }

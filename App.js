@@ -15,10 +15,12 @@ import { StackNavigator} from 'react-navigation';
 import firebase from 'firebase';
 
 //Custom Views
-import LoginView from './views/LoginView'
-import RegisterView from './views/RegisterView'
-import CreateDormView from './views/CreateDormView'
-import DormStackView from './views/DormStackView'
+import LoginView from './views/LoginView';
+import RegisterView from './views/RegisterView';
+import CreateDormView from './views/CreateDormView';
+import DormStackView from './views/DormStackView';
+import DormView from './views/DormView';
+import DormStackSettingsView from './views/DormStackSettingsView';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
@@ -28,7 +30,6 @@ firebase.initializeApp({
   storageBucket: "club-stack.appspot.com",
   messagingSenderId: "294725688831"
 });
-
 
 const App = StackNavigator({
 
@@ -54,9 +55,21 @@ const App = StackNavigator({
     screen: DormStackView,
     navigationOptions: {
       header: null
-    },
-  
-  }
+    }
+  },
+  Dorm: {
+    screen: DormView,
+    navigationOptions: {
+      header: null
+    }
+  },
+  DormStackSettings: {
+    screen: DormStackSettingsView,
+    navigationOptions: {
+      header: null
+    }
+  },
+
 });
 
 export default App

@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 //Views
 import CreateDorm from './CreateDormView';
@@ -25,7 +26,7 @@ import DormStackOptions from '../components/DormStackOptions';
 
 export default class DormStackView extends Component {
   
-  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: [], test: ''}
+  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: [], loading: true}
  
   componentWillMount() {
     this.setState({Dorm: []});
@@ -44,6 +45,7 @@ export default class DormStackView extends Component {
         var arrDorm = this.state.Dorms.slice();
         arrDorm.push(dorm);
         this.setState({Dorms: arrDorm});
+        this.setState({loading: false})
       });
     });
 
@@ -59,10 +61,10 @@ export default class DormStackView extends Component {
       
         {this.state.Dorms.map(dorm => {
           return <View style={styles.Dormstackitem}>
-                  <DormStackItem image={dorm.val().images[0].url} title={dorm.val().name}/>
+                  <DormStackItem navigation={this.props.navigation} Dorm={dorm} User={this.state.User}/>
                 </View>
         })}
-          
+        
           
         </ScrollView>
         <View style={styles.settings}>
@@ -70,8 +72,8 @@ export default class DormStackView extends Component {
           navigation={this.props.navigation}
           />
         
-            </View>
-        
+        </View>
+        <Spinner style={{flex:1}} visible={this.state.loading} />
        
       </View>
       

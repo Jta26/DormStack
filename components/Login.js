@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
-
+import Spinner from 'react-native-loading-spinner-overlay';
 import Logout from './Logout';
 
 //Views
@@ -20,10 +20,17 @@ import LoginView from '../views/LoginView';
 import RegisterView from '../views/RegisterView';
 
 export default class Login extends Component {
-    state = {email: '', password: '', error: '', loading: true, user: null};
+    state = {email: '', password: '', error: '', loading: true};
     
     componentWillMount() {
-        var user = firebase.auth().currentUser;
+        var user;
+        try {
+            user = firebase.auth().currentUser;
+        }
+        catch (ex) {
+            alert(ex);
+        }
+        
         firebase.auth().onAuthStateChanged((user) => {
             this.setState({loading: true, user: user});
             if (!user) {
@@ -99,7 +106,7 @@ export default class Login extends Component {
                     <Text style={styles.text}>Login</Text>
                     </TouchableOpacity>
                     <Text style={styles.errortext}>{this.state.error}</Text>
-                    <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
+                    <Spinner style={{flex:1}} visible={this.state.loading} />
                 <TouchableOpacity
                     style={styles.button}
                     onPress={this.onRegisterPress.bind(this)}>

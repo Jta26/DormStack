@@ -68,7 +68,7 @@ export default class SelectImage extends Component {
                 <View style={{alignItems: 'center'}}>
                     
                     <Text style={styles.text}>Selected Image</Text>
-                    <TouchableOpacity onPress={() => this.setState({isImage: false})}>
+                    <TouchableOpacity onPress={() => {this.setState({isImage: false}); this.props.stateDormImageJSON({DormImageJSON: ''})}}>
                         <Image style={{width: 100, height: 100, marginTop: 10, borderWidth: 4, borderColor: '#000000'}} source={{uri: 'data:image/jpg;base64,' + this.state.DormImageBase64}}></Image>
                     </TouchableOpacity>
                     <Text style={{textAlign: 'center'}}>Click it to choose another.</Text>

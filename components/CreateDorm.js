@@ -18,7 +18,7 @@ import { StackNavigator } from 'react-navigation';
 import { Hoshi } from 'react-native-textinput-effects';
 import ImagePicker from 'react-native-image-crop-picker';
 import RNFetchBlob from 'react-native-fetch-blob';
-
+import Spinner from 'react-native-loading-spinner-overlay';
 import DormStackItem from './DormStackItem';
 import SelectImage from './SelectImage';
 
@@ -47,11 +47,9 @@ export default class CreateDorm extends Component {
         const fs = RNFetchBlob.fs;
         window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
         window.Blob = Blob;
-        
     
         var image = JSON.parse(Dorm.dormImage);
         var imagePath = image.path;
-
 
         let uploadBlob = null;
         const imageRef = firebase.storage().ref(Dorm.dormId).child(Dorm.dormName + '.jpg');
@@ -87,7 +85,7 @@ export default class CreateDorm extends Component {
             ],
             events: [],
             motd: '',
-            
+
 
         });
         this.onDormCreate();
@@ -212,7 +210,7 @@ export default class CreateDorm extends Component {
                 </TouchableOpacity>
                 <Text style={styles.errortext}>{this.state.error}</Text>
                 <Text style={{textAlign: 'center'}}>Hint: You will be the Resident Advisor :)</Text>
-                <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
+                <Spinner style={{flex:1}} visible={this.state.loading} />
             </View>
         );
     }

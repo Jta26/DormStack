@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
-
+import Spinner from 'react-native-loading-spinner-overlay';
 
 export default class Register extends Component {
     
@@ -127,7 +127,7 @@ export default class Register extends Component {
                     <Text style={styles.text}>Register</Text>
                 </TouchableOpacity>
                 <Text style={styles.errortext}>{this.state.error}</Text>
-                <ActivityIndicator size="large" color="black" animating={this.state.loading}/>
+                <Spinner style={{flex:1}} visible={this.state.loading} />
             </View>
         );
     }
