@@ -76,7 +76,7 @@ export default class Register extends Component {
                 mode={'dropdown'}>
                     <Picker.Item label="Select University" value=""/> 
                     <Picker.Item label="University of Pittsburgh" value="University of Pittsburgh"/>
-                    <Picker.Item label="University of Pittsburgh at Bradford" value="University of Pittsburgh at B  radford"/>
+                    <Picker.Item label="University of Pittsburgh at Bradford" value="University of Pittsburgh at Bradford"/>
                     <Picker.Item label="University of Pittsburgh at Greensburg" value="University of Pittsburgh at Greensburg"/>
                     <Picker.Item label="University of Pittsburgh at Titusville" value="University of Pittsburgh at Titusville"/>
                     <Picker.Item label="University of Pittsburgh at Johnstown" value="University of Pittsburgh at Johnstown"/>

@@ -27,22 +27,14 @@ export default class CreateDorm extends Component {
     state = {
         error: '', 
         loading: false,
-        Dorm: {dormId: '', dormName: '', dormDesc: '', dormImage: ''}, 
+        Dorm: {dormName: '', dormDesc: '', dormImage: ''}, 
         User: {uid: '', school: '', first: '', last: ''}
-    }
-    
-    uuidv4 = () => {
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-          return v.toString(16);
-        });
     }
     onDormCreate = () => {
         this.props.navigation.navigate('DormStack');
         this.setState({loading: false});
     }
-
-    StoreImage = (database, Dorm, User) => {
+    StoreImage = (database, dormKey, Dorm, User) => {
         const Blob = RNFetchBlob.polyfill.Blob;
         const fs = RNFetchBlob.fs;
         window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
@@ -52,7 +44,7 @@ export default class CreateDorm extends Component {
         var imagePath = image.path;
 
         let uploadBlob = null;
-        const imageRef = firebase.storage().ref(Dorm.dormId).child(Dorm.dormName + '.jpg');
+        const imageRef = firebase.storage().ref(dormKey).child(Dorm.dormName + '.jpg');
         let mime = 'image/jpg';
         fs.readFile(imagePath, 'base64')
         .then((data) => {
@@ -64,40 +56,33 @@ export default class CreateDorm extends Component {
                 //Sets path of Image to variable
                 var imageUrl = snapshot.ref.fullPath;
                 //Create New Dorm in Database
-                this.MakeDorm(database, Dorm, User, imageUrl);
+                database.ref('school/' + User.school + '/' + dormKey + '/images').push({
+                    url: imageUrl
+                });
+                this.onDormCreate();
             });
         });
     }
     MakeDorm = (database, Dorm, User, ImageUrl) => {
-        database.ref('school/' + User.school + '/' + Dorm.dormId).set({
+        var dormRef = database.ref('school/' + User.school).push({
             name: Dorm.dormName,
             description: Dorm.dormDesc,
-            images: [
-                {
-                    url: ImageUrl
-                }
-            ],
-            members: [
-                {
-                    uid: User.uid,
-                    role: 0
-                },
-            ],
-            events: [],
             motd: '',
-
-
         });
-        this.onDormCreate();
+        var dormKey = dormRef.key;
+        database.ref('school/' + User.school + '/' + dormKey + '/members').push({
+            uid: User.uid,
+            role: 0
+        });
+        this.StoreImage(database, dormKey, Dorm, User);
     }
     onCreatePress = () => {
         this.setState({loading:true});
         //Firebase Database Variable.
         var database = firebase.database();
         //Generates dormId and sets it's state variable.
-        var dormId = this.uuidv4();
+        
         this.setState({Dorm: {
-            dormId: dormId,
             dormName: this.state.Dorm.dormName,
             dormDesc: this.state.Dorm.dormDesc,
             dormImage: this.state.Dorm.dormImage
@@ -121,11 +106,6 @@ export default class CreateDorm extends Component {
                 this.setState({error: 'Please Enter a Dorm Name.', loading: false});
                 return;
             }
-            //Verifies that there is a DormId, if not, returns.
-            if (Dorm.dormId == '') {
-                this.setState({error: 'Dorm ID failed to set. This is an internal issue', loading: false});
-                return;
-            };
             //Verifies that there is a Dorm Description, if not, returns.
             if (Dorm.dormDesc == '') {
                 this.setState({error: 'Please Enter a Description for Your Dorm.', loading: false});
@@ -146,7 +126,7 @@ export default class CreateDorm extends Component {
                 this.setState({error: 'Could Not Verify School. This is an internal issue', loading: false});
             }
             //Executes 
-            this.StoreImage(database, Dorm, User);
+            this.MakeDorm(database, Dorm, User);
             });
 
     }

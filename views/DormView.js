@@ -13,7 +13,9 @@ import {
   } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
+
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
+import Title from '../components/Title';
 
 export default class DormView extends Component {
     //Goals for this class
@@ -23,24 +25,13 @@ export default class DormView extends Component {
     //4. The Non Verified page will display a button to join, which will forward them to another View with the Dorm and User Object as a prop.
 
     state = {
-        User: {
-            first: '', 
-            last: '', 
-            uid: '', 
-            email: '', 
-            school: ''
-        }, 
-        Dorm: {
-            name: '', 
-            id: '', 
-            desc: '', 
-            images: [], 
-            members:[]}
-        };
+        Dorm: this.props.navigation.state.params.Dorm,
+        User: this.props.navigation.state.params.User
+    }
+
 
     componentWillMount() {
         
-
 
     }
 
@@ -63,7 +54,6 @@ export default class DormView extends Component {
     }
 
     render() {
-        var params = this.props.navigation.state.params;
         //View Design
         //Title
         //ImgScroller
@@ -72,13 +62,36 @@ export default class DormView extends Component {
         //Options
        
         return(
-            <View>
-                <HorizontalPhotoScroll
-                    Dorm={params.Dorm}
-                    User={params.User}
+            <View style={styles.container}>
+                <Title
+                    title={this.state.Dorm.name}
                 />
+                <HorizontalPhotoScroll
+                    Dorm={this.state.Dorm}
+                    User={this.state.User}
+                />
+                <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AddImage', {Dorm: this.state.Dorm, User: this.state.User})}>
+                    <Text>Add Image</Text>
+                </TouchableOpacity>
             </View>
         );
     }
 
 }
+
+const styles = StyleSheet.create({
+    container : {
+        backgroundColor: '#ffffff'
+    },
+    button: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#ffffff',
+        borderWidth: 1,
+        borderColor: '#000000',
+        
+        padding: 20,
+        height: 35
+    },
+});

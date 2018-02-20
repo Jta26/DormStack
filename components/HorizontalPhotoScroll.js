@@ -28,14 +28,18 @@ export default class HorizontalPhotoScroll extends Component {
         setTimeout(() => {this.scrollView.scrollTo({x: -30}) }, 1);
         //Firebase Storage Object
         var Dorm = this.props.Dorm;
+        var User = this.props.User;
         var storage = firebase.storage();
-        Dorm.val().images.forEach(image => {
-            storage.ref(image.url).getDownloadURL().then((url) => {
+        var database = firebase.database();
+        database.ref('school/' + User.school + '/' + Dorm.key + '/images').once('value').then(snapshot => {
+          snapshot.forEach(child => {
+              storage.ref(child.val().url).getDownloadURL().then(url => {
                 var arrImages = this.state.images.slice();
                 arrImages.push(url);
                 this.setState({images: arrImages});
-            })
-        });
+              });
+          });
+      });
     }
 
     render() {
@@ -65,16 +69,16 @@ export default class HorizontalPhotoScroll extends Component {
     
     const styles = StyleSheet.create({
       container: {
-        // borderTopColor: '#000000',
-        // borderTopWidth: 7,
-        // borderBottomColor: '#000000',
-        // borderBottomWidth: 7,
+        borderTopColor: '#000000',
+        borderTopWidth: 3,
+        borderBottomColor: '#000000',
+        borderBottomWidth: 3,
       },
       image: {
         width: width - 300,  
         height: width - 300,
-        borderRadius: 90,
-        margin: 10
+       
+        
         //paddingHorizontal : 30
       },
     });

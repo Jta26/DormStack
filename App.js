@@ -21,6 +21,7 @@ import CreateDormView from './views/CreateDormView';
 import DormStackView from './views/DormStackView';
 import DormView from './views/DormView';
 import DormStackSettingsView from './views/DormStackSettingsView';
+import AddDormImageView from './views/AddDormImageView'
 
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
@@ -59,6 +60,12 @@ const App = StackNavigator({
   },
   Dorm: {
     screen: DormView,
+    navigationOptions: {
+      header: null
+    }
+  },
+  AddImage: {
+    screen: AddDormImageView,
     navigationOptions: {
       header: null
     }

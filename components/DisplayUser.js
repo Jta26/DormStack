@@ -21,7 +21,7 @@ export default class DisplayUser extends Component {
 
     state = {User: {first: '', last: '', email: '', uid: '', school:''}}
 
-    componentWillMount() {
+    componentDidMount() {
         firebase.database().ref('users/' + firebase.auth().currentUser.uid).once('value').then(snapshot => {
             this.setState({
                 User: {

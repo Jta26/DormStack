@@ -21,9 +21,19 @@ export default class DormStackitem extends Component {
 
     componentWillMount() {
         var storage = firebase.storage();
-        storage.ref(this.props.Dorm.val().images[0].url).getDownloadURL().then((url) => {
-            this.setState({url: url});
-        });
+        var database = firebase.database();
+        var User = this.props.User;
+        var Dorm = this.props.Dorm;
+        database.ref('school/' + User.school + '/' + Dorm.key + '/images').orderByKey().limitToFirst(1)
+        .once('value', (snapshot) => {
+            snapshot.forEach(child => {
+                storage.ref(child.val().url).getDownloadURL().then(url => {
+                    this.setState({url: url});
+                })
+            })
+        })
+        
+   
     }
     render() {
         return(
@@ -32,7 +42,7 @@ export default class DormStackitem extends Component {
                     this.props.navigation.navigate('Dorm', {Dorm: this.props.Dorm, User: this.props.User})
                 }}>
                     <Image source={{uri: this.state.url}} style={styles.image}/>
-                    <Text style={styles.text}>{this.props.Dorm.val().name}</Text>
+                    <Text style={styles.text}>{this.props.Dorm.name}</Text>
                 </TouchableOpacity>
             </View>
             

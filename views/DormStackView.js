@@ -22,16 +22,22 @@ import CreateDorm from './CreateDormView';
 import DormStackItem from '../components/DormStackItem';
 import DormStackOptions from '../components/DormStackOptions';
 
-
-
 export default class DormStackView extends Component {
   
-  state = {User: {first: '', last: '', uid: '', school: ''}, Dorms: [], loading: true}
+  state = {
+    User: {first: '', last: '', uid: '', school: ''},
+    Dorm: {key: '', name: '', desc: '', motd: '', members: [], images: []},
+    Dorms: [], 
+    loading: false
+  }
  
   componentWillMount() {
+    //Resets Dorm Array on Load;
     this.setState({Dorm: []});
+    //Initializes Firebase Database
     var database = firebase.database();
-    database.ref('users/' + firebase.auth().currentUser.uid).once('value').then(snapshot => {
+    //Event Listener for Retrieving User Data
+    database.ref('users/' + firebase.auth().currentUser.uid).on('value', snapshot => {
       this.setState({User:{
         first: snapshot.val().firstname,
         last: snapshot.val().lastname,
@@ -39,16 +45,26 @@ export default class DormStackView extends Component {
         uid: firebase.auth().currentUser.uid,
       }});
     });
-    database.ref('/school/' + this.state.User.school).once('value').then(snapshot => {
-  
+    //Event Listener for retrieving Dorms Data
+    database.ref('school/').once('value').then(snapshot => {
       snapshot.child(this.state.User.school).forEach((dorm) => {
+        //Fills out the Dorm Object for easy use
+        var Dorm = {
+          key: dorm.key,
+          name: dorm.val().name,
+          desc: dorm.val().description,
+          motd: dorm.val().motd,
+          member:dorm.val().members,
+          images:dorm.val().images
+        }
+        
         var arrDorm = this.state.Dorms.slice();
-        arrDorm.push(dorm);
+        arrDorm.push(Dorm);
         this.setState({Dorms: arrDorm});
-        this.setState({loading: false})
+        this.setState({loading: false});
       });
     });
-
+    // database.ref('school/' + this.state.User.school).on('child-added', )
   }
 
   render() {
@@ -61,7 +77,7 @@ export default class DormStackView extends Component {
       
         {this.state.Dorms.map(dorm => {
           return <View style={styles.Dormstackitem}>
-                  <DormStackItem navigation={this.props.navigation} Dorm={dorm} User={this.state.User}/>
+                    <DormStackItem navigation={this.props.navigation} Dorm={dorm} User={this.state.User}/>
                 </View>
         })}
         

@@ -48,8 +48,6 @@ const styles = StyleSheet.create({
         width: 100,
         height: 50,
         marginBottom: 75
-        
-
     },
     button: {
         width: 250,
