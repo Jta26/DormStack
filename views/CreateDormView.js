@@ -37,7 +37,7 @@ const CreateDormView = ({navigation}) => {
 }
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF',
+      backgroundColor: '#FFFFFF',
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'center',

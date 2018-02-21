@@ -45,7 +45,7 @@ export default class DormStackView extends Component {
         uid: firebase.auth().currentUser.uid,
       }});
     });
-    //Event Listener for retrieving Dorms Data
+    // Event Listener for retrieving Dorms Data
     database.ref('school/').once('value').then(snapshot => {
       snapshot.child(this.state.User.school).forEach((dorm) => {
         //Fills out the Dorm Object for easy use
@@ -64,7 +64,7 @@ export default class DormStackView extends Component {
         this.setState({loading: false});
       });
     });
-    // database.ref('school/' + this.state.User.school).on('child-added', )
+
   }
 
   render() {
@@ -109,7 +109,6 @@ const styles = StyleSheet.create({
 
   },
   Dormstackitem: {
-
     // backgroundColor: '#CDB87D',
     // backgroundColor: '#1C2957',
     borderWidth: 1,

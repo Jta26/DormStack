@@ -70,9 +70,9 @@ export default class HorizontalPhotoScroll extends Component {
     const styles = StyleSheet.create({
       container: {
         borderTopColor: '#000000',
-        borderTopWidth: 3,
+        borderTopWidth: 2,
         borderBottomColor: '#000000',
-        borderBottomWidth: 3,
+        borderBottomWidth: 2,
       },
       image: {
         width: width - 300,  

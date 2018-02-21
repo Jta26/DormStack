@@ -28,6 +28,12 @@ export default class AddDormImageView extends Component {
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User
     }
+    uuidv4 = () => {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
     AddDormImage = () => {
         if (UserImage = '') {
             this.setState({error: 'Please Select an Image'});
@@ -42,9 +48,7 @@ export default class AddDormImageView extends Component {
         var image = JSON.parse(this.state.UserImage.DormImageJSON);
         
         var imagePath = image.path;
-        alert(imagePath);
         var Dorm = this.props.navigation.state.params.Dorm;
-
         let uploadBlob = null;
         const imageRef = firebase.storage().ref(Dorm.key + '/' + this.uuidv4() + ".jpg");
         let mime = 'image/jpg';
@@ -73,18 +77,19 @@ export default class AddDormImageView extends Component {
 
     render() {
         return(
-            <View>
-                <Title
-                    title={'Add an Image to Your Dorm!'}
-                />
-                <SelectImage
-                    stateDormImageJSON={dormImageJSON => {
-                        this.setState({UserImage: dormImageJSON});
-                    }}
-                />
-                <TouchableOpacity style={styles.button} onPress={this.AddDormImage.bind(this)}>
-                    <Text>Add Image</Text>
-                </TouchableOpacity>
+            <View style={styles.container}>
+                <Text style={styles.title}>Add an Image to {this.state.Dorm.name}</Text>
+                <View style={styles.selectImage}>
+                    <SelectImage
+                        stateDormImageJSON={dormImageJSON => {
+                            this.setState({UserImage: dormImageJSON});
+                        }}
+                    />
+                
+                    <TouchableOpacity style={styles.button} onPress={this.AddDormImage.bind(this)}>
+                        <Text style={styles.text}>Add Image</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         );
     }
@@ -94,12 +99,12 @@ const styles = StyleSheet.create({
 
     container: {
         backgroundColor: '#FFFFFF',
-      flex: 1,
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-    createDorm: {
+    selectImage: {
         width: 300
     },
     title: {
@@ -116,10 +121,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
-        
+        marginTop: 20,
         padding: 20,
         height: 35
     },
+    text: {
+        color: '#000000',
+        textShadowRadius: 2,
+        textAlign: 'center',
+        fontSize: 20,
+        fontFamily: 'fjallaone',
+        width: 150
+    }
 
 
 });

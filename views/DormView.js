@@ -16,6 +16,7 @@ import { StackNavigator } from 'react-navigation';
 
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
 import Title from '../components/Title';
+import Motd from '../components/Motd';
 
 export default class DormView extends Component {
     //Goals for this class
@@ -70,18 +71,29 @@ export default class DormView extends Component {
                     Dorm={this.state.Dorm}
                     User={this.state.User}
                 />
-                <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AddImage', {Dorm: this.state.Dorm, User: this.state.User})}>
-                    <Text>Add Image</Text>
-                </TouchableOpacity>
+                <Motd
+                   
+                    motd={this.state.Dorm.desc}
+                />
+                <View style={{justifyContent: 'center',
+        alignItems: 'center'}}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AddImage', {Dorm: this.state.Dorm, User: this.state.User})}>
+                        <Text style={styles.text}>Add Image</Text>
+                    </TouchableOpacity>
+                </View>
+
             </View>
         );
     }
-
 }
-
 const styles = StyleSheet.create({
     container : {
-        backgroundColor: '#ffffff'
+        backgroundColor: '#ffffff',
+        
+    },
+    motd: {
+        borderColor: '#000000',
+        borderWidth: 3
     },
     button: {
         flex: 1,
@@ -90,8 +102,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         borderWidth: 1,
         borderColor: '#000000',
-        
         padding: 20,
-        height: 35
+        height: 35,
+        width: 200,
     },
+    text: {
+        color: '#000000',
+        textShadowRadius: 2,
+        textAlign: 'center',
+        fontSize: 20,
+        fontFamily: 'fjallaone',
+        width: 150
+    }
 });

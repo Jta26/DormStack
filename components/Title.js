@@ -29,11 +29,14 @@ export default class Title extends Component {
 
 const styles = StyleSheet.create({
     title: {
+        borderTopWidth: 4,
+        borderBottomWidth: 2,
         textAlign: 'center',
         fontFamily:'fjallaone',
-        margin: 10,
+        paddingTop: 10,
         fontSize: 40,
         color: '#000000',
+        justifyContent: 'space-between'
     }
     
 });
