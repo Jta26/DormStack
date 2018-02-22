@@ -16,7 +16,7 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
 
-const { width } = Dimensions.get('window');
+const {height, width } = Dimensions.get('window');
 
 export default class HorizontalPhotoScroll extends Component {
 
@@ -69,16 +69,15 @@ export default class HorizontalPhotoScroll extends Component {
     
     const styles = StyleSheet.create({
       container: {
-        borderTopColor: '#000000',
-        borderTopWidth: 2,
-        borderBottomColor: '#000000',
-        borderBottomWidth: 2,
+
+          
+       
       },
       image: {
-        width: width - 300,  
-        height: width - 300,
-       
-        
+        width: height * .25,  
+        height: height * .25,
+        borderWidth: 2,
+        borderColor: '#000000'
         //paddingHorizontal : 30
       },
     });

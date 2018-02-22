@@ -21,7 +21,7 @@ import Title from '../components/Title';
 export default class AddDormImageView extends Component {
     //Props
     //Dorm
-
+    
     state = {
         UserImage: '',
         error: '',

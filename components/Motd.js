@@ -9,10 +9,13 @@ import {
     TextInput,
     ScrollView,
     KeyboardAvoidingView,
-    TouchableOpacity
+    TouchableOpacity,
+    Dimensions
   } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
+
+const {height, width} = Dimensions.get('window');
 
 export default class Motd extends Component {
     
@@ -24,10 +27,6 @@ export default class Motd extends Component {
             </View>
         );
     }
-
-
-
-
 }
 
 const styles = StyleSheet.create({
@@ -35,20 +34,22 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         borderColor: '#000000',
         borderTopWidth: 2,
-        borderBottomWidth: 2,
-        padding: 10
+        height: height * .1,
+       
     },
     motdtitle: {
         color: '#000000',
         fontSize: 17,
         fontFamily: 'fjallaone',
-        textDecorationLine: 'underline'
-        
+        textDecorationLine: 'underline',
+        marginTop: 5,
+        marginLeft: 5
     },
     motd: {
         color: '#000000',
         fontSize: 15,
         fontFamily: 'fjallaone',
+        marginLeft: 10
 
 
     }

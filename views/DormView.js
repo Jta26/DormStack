@@ -9,7 +9,8 @@ import {
     TextInput,
     ScrollView,
     KeyboardAvoidingView,
-    TouchableOpacity
+    TouchableOpacity,
+    Dimensions
   } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
@@ -17,6 +18,9 @@ import { StackNavigator } from 'react-navigation';
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
 import Title from '../components/Title';
 import Motd from '../components/Motd';
+import EventScroll from '../components/EventScroll';
+
+const {height, width} = Dimensions.get('window');
 
 export default class DormView extends Component {
     //Goals for this class
@@ -27,11 +31,13 @@ export default class DormView extends Component {
 
     state = {
         Dorm: this.props.navigation.state.params.Dorm,
-        User: this.props.navigation.state.params.User
+        User: this.props.navigation.state.params.User,
+
     }
 
-
+    
     componentWillMount() {
+       
         
 
     }
@@ -66,21 +72,24 @@ export default class DormView extends Component {
             <View style={styles.container}>
                 <Title
                     title={this.state.Dorm.name}
+                    navigation={this.props.navigation}
+                    Dorm={this.state.Dorm}
+                    User={this.state.User}
                 />
                 <HorizontalPhotoScroll
+                    style={styles.photoScroll}
                     Dorm={this.state.Dorm}
                     User={this.state.User}
                 />
                 <Motd
-                   
+                    style={styles.Motd}
                     motd={this.state.Dorm.desc}
                 />
-                <View style={{justifyContent: 'center',
-        alignItems: 'center'}}>
-                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('AddImage', {Dorm: this.state.Dorm, User: this.state.User})}>
-                        <Text style={styles.text}>Add Image</Text>
-                    </TouchableOpacity>
-                </View>
+                <EventScroll
+                    style={styles.eventScroll}
+                    Dorm={this.state.Dorm}
+                    User={this.state.User}
+                />
 
             </View>
         );
@@ -93,7 +102,14 @@ const styles = StyleSheet.create({
     },
     motd: {
         borderColor: '#000000',
-        borderWidth: 3
+        borderWidth: 3,
+        height: height / 6
+    },
+    photoScroll: {
+        
+    },
+    eventScroll: {
+      
     },
     button: {
         flex: 1,

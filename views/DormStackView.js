@@ -25,9 +25,10 @@ import DormStackOptions from '../components/DormStackOptions';
 export default class DormStackView extends Component {
   
   state = {
-    User: {first: '', last: '', uid: '', school: ''},
+    User: {first: '', last: '', uid: '', school: '', },
     Dorm: {key: '', name: '', desc: '', motd: '', members: [], images: []},
     Dorms: [], 
+    DormsJoined: [],
     loading: false
   }
  
@@ -54,7 +55,7 @@ export default class DormStackView extends Component {
           name: dorm.val().name,
           desc: dorm.val().description,
           motd: dorm.val().motd,
-          member:dorm.val().members,
+          members:dorm.val().members,
           images:dorm.val().images
         }
         
@@ -100,8 +101,7 @@ export default class DormStackView extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffffff',
-    
+    backgroundColor: '#ffffff',  
   },
   Dormstack: {
     marginBottom: 1000,
