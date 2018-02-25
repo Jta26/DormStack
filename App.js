@@ -1,8 +1,7 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+// * DormStack *
+//Created by Joel Austin
+//2018 Pitt Mobile App Challenge
+//https://github.com/Jta26/DormStack
 
 import React, { Component } from 'react';
 import {

@@ -20,28 +20,19 @@ import LoginView from '../views/LoginView';
 import RegisterView from '../views/RegisterView';
 
 export default class Login extends Component {
-    state = {email: '', password: '', error: '', loading: true};
+    state = {email: '', password: '', error: '', loading: false};
     
     componentWillMount() {
-        var user;
-        try {
-            user = firebase.auth().currentUser;
-        }
-        catch (ex) {
-            alert(ex);
-        }
-        
-        firebase.auth().onAuthStateChanged((user) => {
-            this.setState({loading: true, user: user});
-            if (!user) {
-                this.setState({loading: false});
-            }
-            else {
-                this.setState({loading: false, user: user});
-                this.props.navigation.navigate('DormStack');
-            }
-            
-        });
+        this.setState({loading: true});
+        var user = firebase.auth().currentUser;
+       if (user) {
+        this.setState({loading: false});
+        this.props.navigation.navigate('DormStack');
+        return; 
+       }
+       else {
+        this.setState({loading: false});
+       }
         
     }
     onLoginPress = () => {
@@ -50,11 +41,6 @@ export default class Login extends Component {
        
        const { email, password } = this.state;
        var user = firebase.auth().currentUser;
-
-       if (user) {
-           this.setState({loading: false, user: user});
-           this.props.navigation.navigate('DormStack');
-       }
        
        firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {

@@ -9,19 +9,56 @@ import {
     TouchableOpacity,
     ActivityIndicator,
     Picker,
-
+    ScrollView,
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
 import Spinner from 'react-native-loading-spinner-overlay';
+import RNFetchBlob from 'react-native-fetch-blob';
+
+import SelectImage from './SelectImage';
 
 export default class Register extends Component {
     
-    state = {error: '', campus: '', first:'', last: '', email:'', password: '', passConfirm: '', loading: false};
+    state = {error: '', campus: '', first:'', last: '', email:'', password: '', passConfirm: '', loading: false, UserImage: ''};
+
+    uuidv4 = () => {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
+      //Adds Profile Picture to the Storage
+    AddProfilePic = () => {
+        var storage = firebase.storage();
+        const Blob = RNFetchBlob.polyfill.Blob;
+        const fs = RNFetchBlob.fs;
+        window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
+        window.Blob = Blob;
     
+        var image = JSON.parse(this.state.UserImage.DormImageJSON);
+        
+        var imagePath = image.path;
+        let uploadBlob = null;
+        const imageRef = firebase.storage().ref('profilepics/' + this.uuidv4() + ".jpg");
+        let mime = 'image/jpg';
+        fs.readFile(imagePath, 'base64')
+        .then((data) => {
+            return Blob.build(data, {type: `${mime};BASE64`});
+        })
+        .then((blob) => {
+            uploadBlob = blob;
+            imageRef.put(blob, {contentType: mime}).then((snapshot) => {
+                //Sets path of Image to variable
+                var imageUrl = snapshot.ref.fullPath;
+                //Create New Dorm in Database
+                this.onAccountCreate(imageUrl);
+            });
+        });
+    }   
     onRegisterPress = () => {
         this.setState({error: '', loading: true});
-        const {first, last, email, password, passConfirm} = this.state;
+        const {first, last, email, password, passConfirm, UserImage} = this.state;
         if(!first || !last) {
             this.setState({error: 'Please Enter Both First and Last Names', loading: false});
             return;
@@ -34,18 +71,19 @@ export default class Register extends Component {
             this.setState({error: 'Please Enter an Email', loading: false});
             return;
         }
-
+        if (!UserImage) {
+            this.setState({error: 'Please Select a Profile Picture'});
+        }
+        
         firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(this.onAccountCreate.bind(this))
+        .then(this.AddProfilePic())
         .catch((error) => {
             this.setState({error: error.message, loading: false});
             return;
         });
     }
-    onAccountCreate = () => {
+    onAccountCreate = (imageUrl) => {
         var database = firebase.database();
-        
-        
         const {first, campus, last ,email, password} = this.state;
         firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
@@ -55,17 +93,18 @@ export default class Register extends Component {
                 campus: campus,
                 firstname: first,
                 lastname: last,
+                profilepic: imageUrl 
             });
             this.setState({error: '', loading: false}); 
             this.props.navigation.navigate('DormStack');
         })
        .catch((error) => {
+           this.setState({error: '', loading: false});
            alert(error);
-       });
-        
-        
-        
+       });   
     }
+
+
     render() {
         
         return(
@@ -119,7 +158,12 @@ export default class Register extends Component {
                         inputStyle={{ color: 'black' }}     
                         onChangeText={passConfirm => this.setState({ passConfirm })}
                     />
-                    
+                    <SelectImage
+                    stateDormImageJSON={dormImageJSON => {
+                        this.setState({UserImage: dormImageJSON});
+                    }}
+                    />
+
                     
                 <TouchableOpacity 
                 onPress={this.onRegisterPress.bind(this)}   
@@ -145,7 +189,6 @@ const styles = StyleSheet.create({
         height: 35
     },
     text: {
-        
         fontSize: 20,
         fontFamily: 'fjallaone',
         color: '#000000'

@@ -9,7 +9,7 @@ import {
   TextInput,
   ScrollView,
   KeyboardAvoidingView,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
@@ -20,18 +20,18 @@ const RegisterView = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Join the DormStack!</Text>
-        <KeyboardAvoidingView keyboardVerticalOffset={100} behavior={'padding'} style={styles.register}>
+        <ScrollView contentContainerStyle={{height: 2000}}>
                 <Register
                     navigation={navigation}
                 />
-        </KeyboardAvoidingView>
+        </ScrollView>
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF',
+    backgroundColor: '#FFFFFF',
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'center',
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         fontSize: 35,
         color: '#000000',
+        textDecorationLine: 'underline'
     }
 });
 export default RegisterView;

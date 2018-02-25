@@ -25,7 +25,7 @@ import DormStackOptions from '../components/DormStackOptions';
 export default class DormStackView extends Component {
   
   state = {
-    User: {first: '', last: '', uid: '', school: '', },
+    User: {first: '', last: '', uid: '', school: '', profilepic: '' },
     Dorm: {key: '', name: '', desc: '', motd: '', members: [], images: []},
     Dorms: [], 
     DormsJoined: [],
@@ -45,6 +45,7 @@ export default class DormStackView extends Component {
         last: snapshot.val().lastname,
         school: snapshot.val().campus,
         uid: firebase.auth().currentUser.uid,
+        profilepic: snapshot.val().profilepic
       }});
     });
     // Event Listener for retrieving Dorms Data
@@ -66,7 +67,7 @@ export default class DormStackView extends Component {
         this.setState({loading: false});
       });
     });
-   
+    this.setState({loading: false});
   }
 
   render() {
