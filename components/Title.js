@@ -83,8 +83,11 @@ export default class Title extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        borderTopWidth: 4,
-        borderBottomWidth: 2,
+        backgroundColor: '#ffffff',
+        elevation: 3,
+        shadowColor: '#000000',
+        shadowOffset: {width: 0, height: -3},
+        shadowOpacity: 1.00,
         flexDirection: 'row',
         justifyContent: 'space-between',
         height: height * .1
@@ -96,7 +99,6 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         fontSize: 40,
         color: '#000000',
-      
     },
     optionsPicker: {
         width: 40,

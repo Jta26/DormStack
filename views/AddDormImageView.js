@@ -14,7 +14,7 @@ import {
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import RNFetchBlob from 'react-native-fetch-blob';
-
+import Spinner from 'react-native-loading-spinner-overlay'
 import SelectImage from '../components/SelectImage';
 import Title from '../components/Title';
 
@@ -23,8 +23,11 @@ export default class AddDormImageView extends Component {
     //Dorm
     
     state = {
-        UserImage: '',
+        UserImage: {
+            DormImageJSON: ''
+        },
         error: '',
+        loading: false,
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User
     }
@@ -35,10 +38,11 @@ export default class AddDormImageView extends Component {
         });
       }
     AddDormImage = () => {
-        if (UserImage = '') {
+        if (this.state.UserImage.DormImageJSON == '') {
             this.setState({error: 'Please Select an Image'});
             return;
         }
+        this.setState({loading: true})
         var storage = firebase.storage();
         const Blob = RNFetchBlob.polyfill.Blob;
         const fs = RNFetchBlob.fs;
@@ -72,6 +76,7 @@ export default class AddDormImageView extends Component {
         database.ref('school/' + User.school + '/' + Dorm.key + '/images').push({
             url: imageUrl
         });
+        this.setState({loading: false});
         this.props.navigation.navigate('Dorm', {navigation: this.props.navigation, Dorm: this.state.Dorm, User: this.state.User});
     }
 
@@ -86,9 +91,16 @@ export default class AddDormImageView extends Component {
                         }}
                     />
                 
-                    <TouchableOpacity style={styles.button} onPress={this.AddDormImage.bind(this)}>
+                    <TouchableOpacity 
+                    style={styles.button} 
+                    onPress={this.AddDormImage.bind(this)}
+                    disabled={this.state.loading}
+                    activeOpacity={this.state.loading ? 1 : 0.2}
+                    >
                         <Text style={styles.text}>Add Image</Text>
                     </TouchableOpacity>
+                    <Text style={styles.errortext}>{this.state.error}</Text>
+                    <Spinner style={{flex:1}} visible={this.state.loading} />
                 </View>
             </View>
         );
@@ -132,6 +144,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'fjallaone',
         width: 150
+    },
+    errortext: {
+        color: 'red',
+        fontFamily: 'fjallaone',
+        textAlign: 'center'
     }
 
 

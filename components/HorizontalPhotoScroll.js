@@ -59,7 +59,7 @@ export default class HorizontalPhotoScroll extends Component {
               right: 30,
             }}>
            {this.state.images.map(url => {
-               return <Image style={styles.image} source={{uri: url}}/>
+               return <TouchableOpacity onPress={() => this.props.navigation.navigate('Image', {image: {uri: url}})}><Image style={styles.image} source={{uri: url}}/></TouchableOpacity>
            })}
 
           </ScrollView>
@@ -76,8 +76,7 @@ export default class HorizontalPhotoScroll extends Component {
       image: {
         width: height * .25,  
         height: height * .25,
-        borderWidth: 2,
-        borderColor: '#000000'
+
         //paddingHorizontal : 30
       },
     });

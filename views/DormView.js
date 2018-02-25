@@ -32,7 +32,6 @@ export default class DormView extends Component {
     state = {
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User,
-
     }
 
     
@@ -70,16 +69,17 @@ export default class DormView extends Component {
        
         return(
             <View style={styles.container}>
-                <Title
-                    title={this.state.Dorm.name}
-                    navigation={this.props.navigation}
-                    Dorm={this.state.Dorm}
-                    User={this.state.User}
-                />
+                    <Title
+                        title={this.state.Dorm.name}
+                        navigation={this.props.navigation}
+                        Dorm={this.state.Dorm}
+                        User={this.state.User}
+                    /> 
                 <HorizontalPhotoScroll
                     style={styles.photoScroll}
                     Dorm={this.state.Dorm}
                     User={this.state.User}
+                    navigation={this.props.navigation}
                 />
                 <Motd
                     style={styles.Motd}

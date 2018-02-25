@@ -29,14 +29,19 @@ export default class EventScroll extends Component {
     componentWillMount() {
         var Dorm = this.props.Dorm;
         var User = this.props.User;
+        var eventsArr;
         var database = firebase.database();
-        database.ref('school/' + User.school + '/' + Dorm.key + '/events').on('child_added', snapshot => {
-            var eventsArr = this.state.events.slice();
-            eventsArr.push(snapshot.val());
-            this.setState({events: eventsArr});
+        database.ref('school/' + User.school + '/' + Dorm.key + '/events').on('value', snapshot => {
+            snapshot.forEach(events => {
+                eventsArr = this.state.events.slice();
+                eventsArr.push(events);
+                this.setState({events: eventsArr});
+            })
         });
 
     }
+
+
     
     render() {
         
@@ -47,18 +52,25 @@ export default class EventScroll extends Component {
                  
                     {this.state.events.map(event => {
                         var isGoing = false;
-                        for (user in event.going) {
-                            var value = event.going[user].uid
+                        var eventkey= event.key;
+                        for (user in event.val().going) {
+                            var value = event.val().going[user].uid
                             if (value == this.props.User.uid) {
-                                isGoing = true;
+                                isGoing = true; 
                             }
+                            
+                            
                         }
+
                         return(
                             <Event
-                                name={event.name}
-                                date={event.date}
-                                description={event.description}
+                                Dorm={this.props.Dorm}
+                                User={this.props.User}
+                                name={event.val().name}
+                                date={event.val().date}
+                                description={event.val().description}
                                 isGoing={isGoing}
+                                eventKey={event.key}
                             />
                         );
                     })}
@@ -71,8 +83,6 @@ export default class EventScroll extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#ffffff',
-        borderColor: '#000000',
-        borderBottomWidth: 2,
         
  
     },
@@ -80,11 +90,10 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 17,
         fontFamily: 'fjallaone',
-        textDecorationLine: 'underline',
         paddingTop: 10,
         paddingLeft: 5,
-        borderBottomWidth: 3,
-        borderBottomColor: '#000000',
+        backgroundColor: '#ffffff',
+        elevation: 5
     },
     eventsScroll: {
         height: height * .47,

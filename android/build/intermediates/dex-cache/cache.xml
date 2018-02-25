@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-photo-view/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d2db2ea04fdcef16fc0ceeb5f040fb83c12de2ad">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-photo-view-unspecified_5b2f38a5adb201f8aee3a8f581451bb53c601b33.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         optimize="true"
@@ -324,6 +333,15 @@
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
         <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_331c234fb18c34c4a988aa77e4e84109a066819e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e5ceac4d4c5f5559d813fb8e0419203a51b40462">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/me.relex-photodraweeview-1.0.0_16c3ba47a675fcc363c602826bb0072a3efab16e.jar" />
     </item>
     <item
         is-multidex="false"

@@ -16,18 +16,24 @@ import StackNavigator from 'react-navigation';
 
 export default class Event extends Component {
 
-    state = {goingURL: require('../img/question.png')}
+    state = {isGoing: this.props.isGoing, goingURL: require('../img/question.png')}
 
     componentWillMount() {
         if (this.props.isGoing) {
-            this.setState({goingURL: require('../img/verified.png')});
+            this.setState({isGoing: true, goingURL: require('../img/verified.png')});
         }
         
     }
     RegisterGoing = () => {
+        if (this.state.isGoing) {
+            return;
+        }
         var database = firebase.database();
-        
-
+        database.ref('school/' + this.props.User.school + '/' + this.props.Dorm.key + '/events/' + this.props.eventKey + '/going').push({
+            uid: this.props.User.uid
+        });
+        this.setState({isGoing: true, goingURL: require('../img/verified.png')});
+        alert(this.props.isGoing)
     }
 
     render() {
@@ -39,7 +45,7 @@ export default class Event extends Component {
                 </View>
                 <Text style={styles.eventDesc}>{this.props.description}</Text>
                 <View style={styles.bodyContainer}>
-                <TouchableOpacity style={styles.going}>
+                <TouchableOpacity style={styles.going} onPress={this.RegisterGoing.bind(this)}>
                         <Text style={{fontFamily: 'fjallaone', color: '#000000'}}>Going:</Text>
                         <Image style={styles.goingimg} source={this.state.goingURL}/>
                     </TouchableOpacity>
@@ -57,22 +63,23 @@ export default class Event extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        borderTopWidth: 1,
+      
         borderBottomWidth:1,
         borderColor: "#000000",
+        
     },
     bodyContainer: {
         flex:1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: 5,
+        padding: 10,
         flexDirection: 'row'
     },
     eventTitle: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        padding: 5
+        padding: 10
 
     },
     eventName: {
@@ -91,7 +98,7 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontFamily: 'fjallaone',
         fontSize: 15,
-        paddingHorizontal: 5,
+        paddingHorizontal: 10,
         paddingBottom: 5
     },
     seeGoing: {
@@ -102,7 +109,11 @@ const styles = StyleSheet.create({
     },
     goingimg: {
         width: 30,
-        height: 30
+        height: 30,
+        backgroundColor: '#ffffff',
+       
+        
+        
     },
     goingText: {textAlign: 'right', paddingTop: 20, color: '#000000', fontFamily: 'fjallaone'}
 });

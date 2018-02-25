@@ -30,6 +30,8 @@ ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/An
 		ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml:8:22-62
 uses-sdk
 ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml:10:5-12:41
+MERGED from [DormStack:react-native-photo-view:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-photo-view/unspecified/AndroidManifest.xml:6:5-8:41
+MERGED from [me.relex:photodraweeview:1.0.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/AndroidManifest.xml:7:5-44
 MERGED from [DormStack:react-native-fetch-blob:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-fetch-blob/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [DormStack:react-native-image-crop-picker:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.yalantis:ucrop:2.2.1-native] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/AndroidManifest.xml:8:5-10:41
@@ -64,6 +66,8 @@ MERGED from [com.facebook.soloader:soloader:0.1.0] /home/joellinux/Desktop/Devel
 		INJECTED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml
 application
 ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml:14:5-31:19
+MERGED from [DormStack:react-native-photo-view:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-photo-view/unspecified/AndroidManifest.xml:10:5-11:19
+MERGED from [me.relex:photodraweeview:1.0.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/AndroidManifest.xml:9:5-12:19
 MERGED from [DormStack:react-native-fetch-blob:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-fetch-blob/unspecified/AndroidManifest.xml:11:5-12:19
 MERGED from [DormStack:react-native-image-crop-picker:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/AndroidManifest.xml:12:5-27:19
 MERGED from [com.facebook.react:react-native:0.53.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/AndroidManifest.xml:13:5-20

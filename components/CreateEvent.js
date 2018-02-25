@@ -14,6 +14,7 @@ import {
 import firebase from 'firebase';
 import StackNavigator from 'react-navigation';
 import { Hoshi } from 'react-native-textinput-effects';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 import DatePicker from 'react-native-datepicker';
 
@@ -24,13 +25,16 @@ export default class CreateEvent extends Component {
             name: '',
             date: Date.now(),
             description: '',
+            
         },
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User,
-        error: ''
+        error: '',
+        loading: false
     };
     
-    MakeDorm = () => {
+    MakeEvent = () => {
+        this.setState({loading: true});
         var database = firebase.database();
         if (this.state.Event.name == '') {
             this.setState({error: 'Please Enter an Event Name.'});
@@ -46,7 +50,8 @@ export default class CreateEvent extends Component {
         }
         var eventRef = database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events').push(this.state.Event);
         database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events/' + eventRef.key + '/going').push({uid: this.state.User.uid});
-
+        this.setState({loading: false});
+        this.props.navigation.navigate('Dorm', {navigation: this.props.navigation, Dorm: this.state.Dorm, User: this.state.User})
     }
 
     render() {
@@ -96,11 +101,11 @@ export default class CreateEvent extends Component {
                             description: this.state.Event.description
                         }})}}
                     />
-                    <TouchableOpacity onPress={this.MakeDorm.bind(this)}>
+                    <TouchableOpacity onPress={this.MakeEvent.bind(this)}>
                         <Text>Create Event</Text>
                     </TouchableOpacity>
                     <Text>{this.state.error}</Text>
-
+                    <Spinner style={{flex:1}} visible={this.state.loading} />
             </View>
         )
     }

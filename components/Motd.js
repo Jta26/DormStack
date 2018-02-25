@@ -32,8 +32,10 @@ export default class Motd extends Component {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#ffffff',
-        borderColor: '#000000',
-        borderTopWidth: 2,
+        elevation: 5,
+        shadowColor: '#000000',
+        shadowOffset: {width: 0, height: -3},
+        shadowOpacity: 1.00,
         height: height * .1,
        
     },
@@ -41,7 +43,6 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 17,
         fontFamily: 'fjallaone',
-        textDecorationLine: 'underline',
         marginTop: 5,
         marginLeft: 5
     },

@@ -33,6 +33,7 @@ export default class DormStackView extends Component {
   }
  
   componentWillMount() {
+    this.setState({loading: true});
     //Resets Dorm Array on Load;
     this.setState({Dorm: []});
     //Initializes Firebase Database
@@ -65,7 +66,7 @@ export default class DormStackView extends Component {
         this.setState({loading: false});
       });
     });
-
+   
   }
 
   render() {
