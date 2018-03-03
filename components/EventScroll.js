@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     eventstitle: {
         color: '#000000',
         fontSize: 17,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         paddingTop: 10,
         paddingLeft: 5,
         backgroundColor: '#ffffff',

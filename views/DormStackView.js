@@ -130,14 +130,14 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    fontFamily:'fjallaone',
+    fontFamily:'Fjalla One',
     fontSize: 30,
     marginTop: 20,
     color: '#000000',
   },
   titlename: {
     textAlign: 'center',
-    fontFamily:'fjallaone',
+    fontFamily:'Fjalla One',
     fontSize: 25,
     color: '#000000',
     marginTop: 10,

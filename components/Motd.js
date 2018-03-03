@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
     motdtitle: {
         color: '#000000',
         fontSize: 17,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         marginTop: 5,
         marginLeft: 5
     },
     motd: {
         color: '#000000',
         fontSize: 15,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         marginLeft: 10
 
 

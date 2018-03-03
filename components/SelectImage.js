@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
         
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: '#000000'
     },
     picker: {

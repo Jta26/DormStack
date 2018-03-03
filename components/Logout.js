@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: '#000000'
     }
 });

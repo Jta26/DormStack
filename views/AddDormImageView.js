@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
-        fontFamily:'fjallaone',
+        fontFamily:'Fjalla One',
         marginBottom: 20,
         fontSize: 40,
         color: '#000000',
@@ -142,12 +142,12 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         width: 150
     },
     errortext: {
         color: 'red',
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         textAlign: 'center'
     }
 

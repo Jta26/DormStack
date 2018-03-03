@@ -73,14 +73,14 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         textDecorationLine: 'underline',
         fontSize: 25,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         width: 150
     },
     text: {
         color: '#000000',
         textShadowRadius: 2,
         fontSize: 15,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         width: 200
     }
 });

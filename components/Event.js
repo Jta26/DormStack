@@ -46,7 +46,7 @@ export default class Event extends Component {
                 <Text style={styles.eventDesc}>{this.props.description}</Text>
                 <View style={styles.bodyContainer}>
                 <TouchableOpacity style={styles.going} onPress={this.RegisterGoing.bind(this)}>
-                        <Text style={{fontFamily: 'fjallaone', color: '#000000'}}>Going:</Text>
+                        <Text style={{fontFamily: 'Fjalla One', color: '#000000'}}>Going:</Text>
                         <Image style={styles.goingimg} source={this.state.goingURL}/>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.seeGoing} onPress={() => 
@@ -87,17 +87,17 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         color: '#000000',
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
     },
     eventDate: {
         textAlign: 'right',
         color: '#000000',
         fontSize: 15,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
     },
     eventDesc: {
         color: '#000000',
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         fontSize: 15,
         paddingHorizontal: 10,
         paddingBottom: 5
@@ -116,5 +116,5 @@ const styles = StyleSheet.create({
         
         
     },
-    goingText: {textAlign: 'right', paddingTop: 20, color: '#000000', fontFamily: 'fjallaone'}
+    goingText: {textAlign: 'right', paddingTop: 20, color: '#000000', fontFamily: 'Fjalla One'}
 });

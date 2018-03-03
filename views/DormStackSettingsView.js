@@ -33,7 +33,7 @@ export default class DormStackSettingsView extends Component {
             headerTitleStyle: {
                 fontWeight: 'normal',
                 fontSize: 20,
-                fontFamily: 'fjallaone',       
+                fontFamily: 'Fjalla One',       
             }
         }
     } 

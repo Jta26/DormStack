@@ -48,8 +48,6 @@ export default class MemberListView extends Component {
         
 
     }
-    
-
     render() {
         return(
             <View>
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         
     }
 

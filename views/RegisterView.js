@@ -24,7 +24,7 @@ export default class RegisterView extends Component {
         headerTitleStyle: {
             fontWeight: 'normal',
             fontSize: 30,
-            fontFamily: 'fjallaone',
+            fontFamily: 'Fjalla One',
             
         }
     }
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
-        fontFamily:'fjallaone',
+        fontFamily:'Fjalla One',
         marginBottom: 20,
         fontSize: 35,
         color: '#000000',

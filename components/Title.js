@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'left',
         marginLeft: 10,
-        fontFamily:'fjallaone',
+        fontFamily:'Fjalla One',
         paddingTop: 10,
         fontSize: 40,
         color: '#000000',

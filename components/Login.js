@@ -119,12 +119,12 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: '#000000'
     },
     errortext: {
         textAlign: 'center',
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: 'red'
     }
 });

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     },
     title: {
         textAlign: 'center',
-        fontFamily:'fjallaone',
+        fontFamily:'Fjalla One',
         marginBottom: 20,
         fontSize: 40,
         color: '#000000',

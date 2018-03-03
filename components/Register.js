@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: '#000000'
     },
     picker: {
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     },
     errortext: {
         textAlign: 'center',
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         color: 'red'
     }
 });

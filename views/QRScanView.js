@@ -26,8 +26,7 @@ export default class QRScanView extends Component {
         onRead={this.onScan.bind(this)}
         topContent={(
           <View>
-              <Text>You are not a part of this Dorm Yet!</Text>
-              <Text>You can Join by contacting an RA and getting their QR Code.</Text>
+
               <Text>Scan it Below</Text>
           </View>
         )}

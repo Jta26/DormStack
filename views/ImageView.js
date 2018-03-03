@@ -28,7 +28,7 @@ export default class ImageView extends Component {
             headerTitleStyle: {
                 fontWeight: 'normal',
                 fontSize: 30,
-                fontFamily: 'fjallaone',       
+                fontFamily: 'Fjalla One',       
             }
         }
     }  

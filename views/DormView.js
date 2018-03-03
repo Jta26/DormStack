@@ -14,12 +14,16 @@ import {
   } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
+import Spinner from 'react-native-loading-spinner-overlay';
+import QRCodeScanner from 'react-native-qrcode-scanner';
+
 
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
 import Title from '../components/Title';
 import Motd from '../components/Motd';
 import EventScroll from '../components/EventScroll';
-import QRCodeScanner from 'react-native-qrcode-scanner';
+import Member from '../components/Member';
+
 
 
 const {height, width} = Dimensions.get('window');
@@ -34,8 +38,10 @@ export default class DormView extends Component {
     state = {
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User,
-        DormMembers: '',
-        isValidated: false
+        isValidated: false,
+        Role: false,
+        loading: false,
+        RAs: []
     }
 
     static navigationOptions = ({ navigation }) => {
@@ -47,23 +53,28 @@ export default class DormView extends Component {
             headerTitleStyle: {
                 fontWeight: 'normal',
                 fontSize: 30,
-                fontFamily: 'fjallaone',       
+                fontFamily: 'Fjalla One',       
             }
         }
     }   
     componentWillMount() {
+        this.setState({loading: true});
        var database = firebase.database();
        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
        .once('value', (snapshot => {
-            snapshot.forEach((member) => {
-               
+            snapshot.forEach((member) => {    
                 if (this.CheckMembership(this.state.User, member.val().uid)) {
                     this.setState({isValidated: true});
+                    if (member.val().role == 0) {
+                        this.setState({ Role: true});
+                    }
                 }  
             });
-            
-
+            this.setState({loading: false})
        }));
+    }
+    onScan = (e) => {
+        alert(JSON.stringify(data));
     }
     CheckMembership = (User, uid) => {
         if (User.uid == uid) {
@@ -73,8 +84,11 @@ export default class DormView extends Component {
             return false
         }
     }
-    onMembershipValidate = () => {
+    GetRAs = () => {
 
+    }
+    onMembershipValidate = () => {
+        
         if (this.state.isValidated) {
             return (
                 <View>
@@ -99,9 +113,21 @@ export default class DormView extends Component {
                 </View>
             );
         }
-        else {
-           
+        else if (!this.state.isValidated) {
+            return(
+                <View>
+                    <Text>You are not a part of this Dorm Yet!</Text>
+                    <Text>You can Join by contacting an RA and getting their QR Code.</Text>
+                    <ScrollView>
+
+                    </ScrollView>
+                </View>
+            )
         }
+        else {
+            
+        }
+        
     }
     render() {
         //View Design
@@ -115,6 +141,7 @@ export default class DormView extends Component {
             <View style={styles.container}>
                     
                 {this.onMembershipValidate()}
+                <Spinner style={{flex:1}} visible={this.state.loading} />
             </View>
         );
     }
@@ -151,7 +178,7 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'fjallaone',
+        fontFamily: 'Fjalla One',
         width: 150
     }
 });
