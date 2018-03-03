@@ -10,23 +10,38 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   TouchableOpacity,
+  Dimensions
 } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 //Custom Components
 import Register from "../components/Register";
+import Title from '../components/Title';
 
-const RegisterView = ({navigation}) => {
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Join the DormStack!</Text>
-        <ScrollView contentContainerStyle={{height: 2000}}>
-                <Register
-                    navigation={navigation}
-                />
-        </ScrollView>
-        </View>
-    );
+export default class RegisterView extends Component {
+    static navigationOptions = {
+        title: 'Join the DormStack',
+        headerTitleStyle: {
+            fontWeight: 'normal',
+            fontSize: 30,
+            fontFamily: 'fjallaone',
+            
+        }
+    }
+    render() {
+        return (
+            <View style={styles.container}>
+    
+            <ScrollView contentContainerStyle={{height: 2000}}>
+                    <Register
+                        navigation={this.props.navigation}
+                    />
+            </ScrollView>
+            </View>
+        );
+
+    }
+    
 };
 
 const styles = StyleSheet.create({
@@ -38,7 +53,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     register: { 
-        width: 300,
+        width: 400,
     },
     title: {
         textAlign: 'center',
@@ -49,4 +64,3 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline'
     }
 });
-export default RegisterView;

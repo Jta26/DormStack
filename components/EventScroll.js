@@ -23,34 +23,35 @@ export default class EventScroll extends Component {
 
     state = {
         events: [],
-        eventsGoing:[]
     }
+    
 
     componentWillMount() {
         var Dorm = this.props.Dorm;
         var User = this.props.User;
-        var eventsArr;
         var database = firebase.database();
-        database.ref('school/' + User.school + '/' + Dorm.key + '/events').on('value', snapshot => {
-            snapshot.forEach(events => {
-                eventsArr = this.state.events.slice();
-                eventsArr.push(events);
-                this.setState({events: eventsArr});
-            })
+       
+        
+        database.ref('school/' + User.school + '/' + Dorm.key + '/events').once('value', snapshot => {
+           this.setState({events: []});
+            snapshot.forEach((event) => {
+                this.setState({events: [...this.state.events, event]});
+            });
+            
         });
+        
 
     }
 
-
-    
     render() {
-        
+        var events = this.state.events;
         return(
             <View>
             <Text style={styles.eventstitle}>Events:</Text>
                <ScrollView contentContainerStyle={{}} style={styles.eventsScroll}>
                  
-                    {this.state.events.map(event => {
+                    {events.map(event => {
+                        
                         var isGoing = false;
                         var eventkey= event.key;
                         for (user in event.val().going) {
@@ -58,10 +59,7 @@ export default class EventScroll extends Component {
                             if (value == this.props.User.uid) {
                                 isGoing = true; 
                             }
-                            
-                            
                         }
-
                         return(
                             <Event
                                 Dorm={this.props.Dorm}
@@ -71,6 +69,7 @@ export default class EventScroll extends Component {
                                 description={event.val().description}
                                 isGoing={isGoing}
                                 eventKey={event.key}
+                                navigation={this.props.navigation}
                             />
                         );
                     })}

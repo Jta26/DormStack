@@ -39,7 +39,7 @@ export default class Logout extends Component {
 
 const styles = StyleSheet.create({
     button: {
-        flex: 1,
+        
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FFFFFF',

@@ -8,10 +8,12 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Linking,
 } from 'react-native';
 import { StackNavigator} from 'react-navigation';
 import firebase from 'firebase';
+import QRCodeScanner from 'react-native-qrcode-scanner';
 
 //Custom Views
 import LoginView from './views/LoginView';
@@ -23,6 +25,8 @@ import DormStackSettingsView from './views/DormStackSettingsView';
 import AddDormImageView from './views/AddDormImageView'
 import CreateEventView from './views/CreateEventView';
 import ImageView from './views/ImageView';
+import MemberListView from './views/MemberListView';
+import QRScanView from './views/QRScanView';
 
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
@@ -34,6 +38,7 @@ firebase.initializeApp({
 });
 
 const App = StackNavigator({
+  
 
   Login: { 
     screen: LoginView,
@@ -43,51 +48,49 @@ const App = StackNavigator({
   },
   Register: { 
     screen: RegisterView,
-    navigationOptions: {
-      header: null
-    }
   },
   CreateDorm: {
     screen: CreateDormView,
-    navigationOptions: {
-      header: null
-    }
   },
   DormStack: {
     screen: DormStackView,
     navigationOptions: {
-      header: null
+       header: null
     }
   },
   Dorm: {
     screen: DormView,
+  },
+  QRScan: {
+    screen: QRScanView,
     navigationOptions: {
-      header: null
+       header: null
     }
   },
   Image: {
     screen: ImageView,
-    navigationOptions: {
-      header: null
-    }
   },
   AddImage: {
     screen: AddDormImageView,
     navigationOptions: {
-      header: null
+       header: null
     }
   },
   CreateEvent: {
     screen: CreateEventView,
     navigationOptions: {
-      header: null
+       header: null
+    }
+  },
+  MemberList: {
+    screen: MemberListView,
+    navigationOptions: {
+       header: null
     }
   },
   DormStackSettings: {
     screen: DormStackSettingsView,
-    navigationOptions: {
-      header: null
-    }
+    
   },
 
 });

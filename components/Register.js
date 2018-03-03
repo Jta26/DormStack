@@ -10,6 +10,8 @@ import {
     ActivityIndicator,
     Picker,
     ScrollView,
+    Image,
+    Dimensions
 } from 'react-native';
 import * as firebase from 'firebase';
 import { Jiro, Hoshi, Madoka } from 'react-native-textinput-effects';
@@ -74,34 +76,46 @@ export default class Register extends Component {
         if (!UserImage) {
             this.setState({error: 'Please Select a Profile Picture'});
         }
-        
+        this.AddProfilePic();
+    }
+    onAccountCreate = (imageUrl) => {
+        var database = firebase.database();
+        const {first, last, email, password, passConfirm, UserImage, campus} = this.state;
         firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then(this.AddProfilePic())
+        .then(() => {
+            
+           
+            this.setState({loading: false});
+            var user = firebase.auth().currentUser;
+            firebase.database().ref('users/' + user.uid).set({
+                    email: user.email,
+                    campus: campus,
+                    firstname: first,
+                    lastname: last,
+                    profilepic: imageUrl 
+            })
+                .then(() => {
+                    this.setState({error: '', loading: false});
+                
+                })
+                .catch((error) => {
+                    this.setState({error: '', loading: false});
+                    alert(error);
+                }); ;
+
+        })
         .catch((error) => {
             this.setState({error: error.message, loading: false});
             return;
         });
-    }
-    onAccountCreate = (imageUrl) => {
-        var database = firebase.database();
-        const {first, campus, last ,email, password} = this.state;
-        firebase.auth().signInWithEmailAndPassword(email, password)
-       .then(() => {
-            var user = firebase.auth().currentUser;
-            firebase.database().ref('users/' + user.uid).set({
-                email: user.email,
-                campus: campus,
-                firstname: first,
-                lastname: last,
-                profilepic: imageUrl 
-            });
-            this.setState({error: '', loading: false}); 
-            this.props.navigation.navigate('DormStack');
-        })
-       .catch((error) => {
-           this.setState({error: '', loading: false});
-           alert(error);
-       });   
+
+            
+        
+ 
+            ;
+ 
+
+ 
     }
 
 

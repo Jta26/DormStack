@@ -42,7 +42,11 @@ export default class DormStackitem extends Component {
                     this.props.navigation.navigate('Dorm', {Dorm: this.props.Dorm, User: this.props.User})
                 }}>
                     <Image source={{uri: this.state.url}} style={styles.image}/>
-                    <Text style={styles.text}>{this.props.Dorm.name}</Text>
+                    <View>
+                        <Text style={styles.dormTitle}>{this.props.Dorm.name}</Text>
+                        <Text style={styles.text}>{this.props.Dorm.desc}</Text>
+                    </View>
+
                 </TouchableOpacity>
             </View>
             
@@ -52,25 +56,31 @@ export default class DormStackitem extends Component {
 }
 const styles = StyleSheet.create({
     container: {
-        height: 75,
+        height: 100,
     },
     button: {
-        alignItems: 'center',
-        flex: 1,
         flexDirection: 'row',
-
     },
     image: {
-        width: 75,
-        height: 75,
-        marginRight: 10
+        width: 100,
+        height: 100,
+        marginRight: 10,
+        borderWidth: 1,
+        borderColor: '#000000'
+    },
+    dormTitle: {
+        color: '#000000',
+        textShadowRadius: 2,
+        textDecorationLine: 'underline',
+        fontSize: 25,
+        fontFamily: 'fjallaone',
+        width: 150
     },
     text: {
         color: '#000000',
         textShadowRadius: 2,
-        textAlign: 'center',
-        fontSize: 20,
+        fontSize: 15,
         fontFamily: 'fjallaone',
-        width: 150
+        width: 200
     }
 });

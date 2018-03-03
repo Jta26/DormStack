@@ -39,22 +39,21 @@ export default class DormStackOptions extends Component {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
-        flex: 1,
         flexDirection: 'row',
         marginLeft: 20,
-        
+        marginTop: 10
     },
     settings: {
         width: 100,
         height: 50,
-        marginBottom: 75
+    
     },
     button: {
         width: 250,
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
-        marginBottom: 70       
+     
         
     },
     text: {

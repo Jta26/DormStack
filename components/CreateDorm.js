@@ -30,6 +30,21 @@ export default class CreateDorm extends Component {
         Dorm: {dormName: '', dormDesc: '', dormImage: ''}, 
         User: {uid: '', school: '', first: '', last: ''}
     }
+
+    static navigationOptions = {
+        header: {
+            style: {
+                elevation: 0,
+                shadowOpacity: 0,
+                shadowOffset: {
+                  height: 0,
+                },
+                shadowRadius: 0,
+            }
+
+        }
+
+    }
     onDormCreate = () => {
         this.props.navigation.navigate('DormStack');
         this.setState({loading: false});

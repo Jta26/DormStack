@@ -19,6 +19,19 @@ import PhotoView from 'react-native-photo-view';
 const {width, height} = Dimensions.get('window')
 
 export default class ImageView extends Component {
+    static navigationOptions = ({ navigation }) => {
+
+        const {params} = navigation.state;
+
+        return {
+            title: 'Image',
+            headerTitleStyle: {
+                fontWeight: 'normal',
+                fontSize: 30,
+                fontFamily: 'fjallaone',       
+            }
+        }
+    }  
 
     render() {
         var image = this.props.navigation.state.params.image;
@@ -30,7 +43,7 @@ export default class ImageView extends Component {
                     maximumZoomScale={3}
                     androidScaleType="fitCenter"
                     onLoad={() => console.log("Image loaded!")}
-                    style={{ width: width, height: height, alignItems: 'center'}} 
+                    style={{ width: width, height: height}} 
                 />
             </View>
            

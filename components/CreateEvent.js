@@ -49,7 +49,7 @@ export default class CreateEvent extends Component {
             return;
         }
         var eventRef = database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events').push(this.state.Event);
-        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events/' + eventRef.key + '/going').push({uid: this.state.User.uid});
+        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events/' + eventRef.key + '/going').push({uid: this.state.User.uid, role: 0});
         this.setState({loading: false});
         this.props.navigation.navigate('Dorm', {navigation: this.props.navigation, Dorm: this.state.Dorm, User: this.state.User})
     }

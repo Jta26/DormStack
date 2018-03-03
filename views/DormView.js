@@ -19,6 +19,8 @@ import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
 import Title from '../components/Title';
 import Motd from '../components/Motd';
 import EventScroll from '../components/EventScroll';
+import QRCodeScanner from 'react-native-qrcode-scanner';
+
 
 const {height, width} = Dimensions.get('window');
 
@@ -32,33 +34,75 @@ export default class DormView extends Component {
     state = {
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User,
+        DormMembers: '',
+        isValidated: false
     }
 
-    
-    componentWillMount() {
-       
-        
+    static navigationOptions = ({ navigation }) => {
 
-    }
+        const {params} = navigation.state;
 
-    CheckMembership = (User, Dorm) => {
-        Dorm.members.forEach(element => {
-            if (User.uid == Dorm.dormId) {
-                return true
+        return {
+            title: params.Dorm.name,
+            headerTitleStyle: {
+                fontWeight: 'normal',
+                fontSize: 30,
+                fontFamily: 'fjallaone',       
             }
-        });
-        return false;
-    }
+        }
+    }   
+    componentWillMount() {
+       var database = firebase.database();
+       database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
+       .once('value', (snapshot => {
+            snapshot.forEach((member) => {
+               
+                if (this.CheckMembership(this.state.User, member.val().uid)) {
+                    this.setState({isValidated: true});
+                }  
+            });
+            
 
-    onMembershipValidate = (isValidated) => {
-        if (isValidated) {
-            this.props.navigation.navigate('Dorm');
+       }));
+    }
+    CheckMembership = (User, uid) => {
+        if (User.uid == uid) {
+            return true;
         }
         else {
-            this.props.navigation.navigate('DormPreview');
+            return false
         }
     }
+    onMembershipValidate = () => {
 
+        if (this.state.isValidated) {
+            return (
+                <View>
+
+                    <HorizontalPhotoScroll
+                        style={styles.photoScroll}
+                        Dorm={this.state.Dorm}
+                        User={this.state.User}
+                        navigation={this.props.navigation}
+                    />
+                    <Motd
+                        style={styles.Motd}
+                        motd={this.state.Dorm.motd}
+                    />
+                    <EventScroll
+                        style={styles.eventScroll}
+                        Dorm={this.state.Dorm}
+                        User={this.state.User}
+                        navigation={this.props.navigation}
+                        events={[]}
+                    />
+                </View>
+            );
+        }
+        else {
+           
+        }
+    }
     render() {
         //View Design
         //Title
@@ -69,28 +113,8 @@ export default class DormView extends Component {
        
         return(
             <View style={styles.container}>
-                    <Title
-                        title={this.state.Dorm.name}
-                        navigation={this.props.navigation}
-                        Dorm={this.state.Dorm}
-                        User={this.state.User}
-                    /> 
-                <HorizontalPhotoScroll
-                    style={styles.photoScroll}
-                    Dorm={this.state.Dorm}
-                    User={this.state.User}
-                    navigation={this.props.navigation}
-                />
-                <Motd
-                    style={styles.Motd}
-                    motd={this.state.Dorm.desc}
-                />
-                <EventScroll
-                    style={styles.eventScroll}
-                    Dorm={this.state.Dorm}
-                    User={this.state.User}
-                />
-
+                    
+                {this.onMembershipValidate()}
             </View>
         );
     }

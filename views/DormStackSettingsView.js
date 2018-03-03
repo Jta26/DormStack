@@ -15,7 +15,7 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 
 import Logout from '../components/Logout';
-import DisplayUser from '../components/DisplayUser';
+import Member from '../components/Member';
 
 import DormStackView from '../views/DormStackView';
 
@@ -24,12 +24,29 @@ import DormStackView from '../views/DormStackView';
 
 export default class DormStackSettingsView extends Component {
 
+    static navigationOptions = ({ navigation }) => {
+
+        const {params} = navigation.state;
+
+        return {
+            title: 'User Settings',
+            headerTitleStyle: {
+                fontWeight: 'normal',
+                fontSize: 20,
+                fontFamily: 'fjallaone',       
+            }
+        }
+    } 
     render() {
         return(
 
-            <View>
-                <DisplayUser/>
+            <View style={{alignItems: 'center'}}>
+               <Member
+                style={{ width: 350}}
+                uid={firebase.auth().currentUser.uid}
+               />
                 <Logout
+                    style={{width: 200}}
                     navigation={this.props.navigation}
                 />
             </View>
@@ -41,9 +58,4 @@ export default class DormStackSettingsView extends Component {
 
         )
     }
-
-
-
-
-
 }

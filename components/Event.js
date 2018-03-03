@@ -49,7 +49,8 @@ export default class Event extends Component {
                         <Text style={{fontFamily: 'fjallaone', color: '#000000'}}>Going:</Text>
                         <Image style={styles.goingimg} source={this.state.goingURL}/>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.seeGoing}>
+                    <TouchableOpacity style={styles.seeGoing} onPress={() => 
+                        this.props.navigation.navigate('MemberList', {User: this.props.User, Dorm: this.props.Dorm, isEvent: true})}>
                         <Text style={styles.goingText}>See Who's Going</Text>
                     </TouchableOpacity>
                     

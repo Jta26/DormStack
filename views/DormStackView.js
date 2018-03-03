@@ -9,7 +9,8 @@ import {
   TextInput,
   ScrollView,
   KeyboardAvoidingView,
-  TouchableOpacity
+  TouchableOpacity,
+  Dimensions
 } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
@@ -21,6 +22,8 @@ import CreateDorm from './CreateDormView';
 //Custom Components
 import DormStackItem from '../components/DormStackItem';
 import DormStackOptions from '../components/DormStackOptions';
+
+const {width, height} = Dimensions.get('window');
 
 export default class DormStackView extends Component {
   
@@ -74,24 +77,25 @@ export default class DormStackView extends Component {
 
     return(
       <View style={styles.container}>
-        <ScrollView contentContainerStyle={styles.Dormstack}>
+        <View style={styles.titlecontainer}>
           <Text style={styles.title}>Welcome to the DormStack</Text>
-          <Text style={styles.title}>{this.state.User.first} {this.state.User.last}</Text>
+          
+        </View>
+        <ScrollView style={{height: height * .75}} contentContainerStyle={styles.Dormstack}>
       
         {this.state.Dorms.map(dorm => {
           return <View style={styles.Dormstackitem}>
                     <DormStackItem navigation={this.props.navigation} Dorm={dorm} User={this.state.User}/>
                 </View>
         })}
-        
-          
         </ScrollView>
         <View style={styles.settings}>
           <DormStackOptions
-          navigation={this.props.navigation}
+            navigation={this.props.navigation}
           />
-        
+
         </View>
+
         <Spinner style={{flex:1}} visible={this.state.loading} />
        
       </View>
@@ -106,7 +110,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',  
   },
   Dormstack: {
-    marginBottom: 1000,
+
     alignItems: 'center'
 
   },
@@ -119,14 +123,29 @@ const styles = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5
   },
+  titlecontainer: {
+    height: height * .1,
+    backgroundColor: '#ffffff',
+    elevation: 5
+  },
   title: {
     textAlign: 'center',
     fontFamily:'fjallaone',
-    marginBottom: 20,
     fontSize: 30,
+    marginTop: 20,
     color: '#000000',
   },
+  titlename: {
+    textAlign: 'center',
+    fontFamily:'fjallaone',
+    fontSize: 25,
+    color: '#000000',
+    marginTop: 10,
+    textDecorationLine: 'underline'
+  },
   settings: {
-    marginBottom: 40
+    backgroundColor: '#ffffff',
+    elevation: 5,
+    height: height * .15
   }
 });

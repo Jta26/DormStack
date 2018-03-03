@@ -23,17 +23,18 @@ export default class Login extends Component {
     state = {email: '', password: '', error: '', loading: false};
     
     componentWillMount() {
-        this.setState({loading: true});
-        var user = firebase.auth().currentUser;
-       if (user) {
-        this.setState({loading: false});
-        this.props.navigation.navigate('DormStack');
-        return; 
-       }
-       else {
-        this.setState({loading: false});
-       }
-        
+        this.setState({loading: true})
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                this.setState({loading: false});
+                this.props.navigation.navigate('DormStack');
+                return; 
+               }
+               else {
+                this.setState({loading: false});
+               }
+        })
+
     }
     onLoginPress = () => {
         
@@ -44,8 +45,8 @@ export default class Login extends Component {
        
        firebase.auth().signInWithEmailAndPassword(email, password)
        .then(() => {
-            this.setState({error: '', loading: false});
-            this.props.navigation.navigate('DormStack');
+      
+            
 
         })
        .catch((error) => {

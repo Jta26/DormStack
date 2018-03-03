@@ -24,6 +24,28 @@ export default class Title extends Component {
     
     state = {}
 
+    isDormView() {
+        if (this.props.hasPicker) {
+            return (
+                <View style={styles.optionsPicker}>
+                    <ImageBackground
+                    style={styles.optionsImage}
+                    source={require('../img/dots.png')}>
+                        <Picker mode={'dropdown'} style={styles.button}
+                            onValueChange={this.selectOption.bind(this)}
+                        >
+                            <Picker.Item label='Select' value='select'/>
+                            <Picker.Item label='Add Image' value='image'/>
+                            <Picker.Item label='Add Event' value='event'/>
+                            <Picker.Item label='Change MoTD' value='motd'/>
+                        </Picker>
+                    </ImageBackground>
+
+                </View>
+            )
+        }
+    }
+
     selectOption = (option) => {
         switch (option) {
             case 'select':
@@ -46,6 +68,8 @@ export default class Title extends Component {
                                 onValueChange={this.selectOption.bind(this)}
                             >
                                 <Picker.Item label='Select' value='select'/>
+                                <Picker.Item label='View Dorm Members' value='members'/>
+                                <Picker.Item label='Contact RA' value='contactRA'/>
                                 <Picker.Item label='Add Image' value='image'/>
                                 <Picker.Item label='Add Event' value='event'/>
                                 <Picker.Item label='Change MoTD' value='motd'/>
@@ -57,22 +81,11 @@ export default class Title extends Component {
     render() {
         return(
             <View style={styles.container}>
+                <TouchableOpacity onPress={() => this.props.navigation.goBack()}>
+                    <Image style={{width: width - 360, height: width - 360, marginTop: 5}} source={require('../img/back.png')}/>
+                </TouchableOpacity>
                 <Text style={styles.title}>{this.props.title}</Text>
-                <View style={styles.optionsPicker}>
-                    <ImageBackground
-                    style={styles.optionsImage}
-                    source={require('../img/dots.png')}>
-                        <Picker mode={'dropdown'} style={styles.button}
-                            onValueChange={this.selectOption.bind(this)}
-                        >
-                            <Picker.Item label='Select' value='select'/>
-                            <Picker.Item label='Add Image' value='image'/>
-                            <Picker.Item label='Add Event' value='event'/>
-                            <Picker.Item label='Change MoTD' value='motd'/>
-                        </Picker>
-                    </ImageBackground>
-
-                </View>
+                
 
                 
                
