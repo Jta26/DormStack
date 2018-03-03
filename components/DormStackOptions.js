@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 25,
-        fontFamily: 'Fjalla One3',
+        fontFamily: 'Fjalla One',
         color: '#000000',
         textAlign: 'center'
         

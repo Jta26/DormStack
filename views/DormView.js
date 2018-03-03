@@ -59,6 +59,7 @@ export default class DormView extends Component {
     }   
     componentWillMount() {
         this.setState({loading: true});
+        this.GetRAs();
        var database = firebase.database();
        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
        .once('value', (snapshot => {
@@ -85,7 +86,17 @@ export default class DormView extends Component {
         }
     }
     GetRAs = () => {
-
+        var database = firebase.database();
+        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
+        .once('value', snapshot => {
+            snapshot.forEach(member => {
+                if (member.val().role == 0) {
+                        var arrRA = this.state.RAs.slice();
+                        arrRA.push(member.val().uid);
+                        this.setState({RAs: arrRA});
+                }
+            });
+        })
     }
     onMembershipValidate = () => {
         
@@ -116,11 +127,27 @@ export default class DormView extends Component {
         else if (!this.state.isValidated) {
             return(
                 <View>
-                    <Text>You are not a part of this Dorm Yet!</Text>
-                    <Text>You can Join by contacting an RA and getting their QR Code.</Text>
-                    <ScrollView>
-
+                    <View style={{height: height * .22, borderBottomColor: '#000000', borderBottomWidth: 1}}>
+                    <Text style={styles.nonmembertitle}>You are not a part of this Dorm!</Text>
+                    <Text style={styles.nonmembertext}>You can Join by contacting an RA and getting their QR Code. and scanning it using the button below.</Text>
+                    <Text style={styles.nonmembertext}>{this.state.Dorm.name} Resident Advisors</Text>
+                    </View>
+                   
+                    <ScrollView style={{height: height * .5}} contentContainerStyle={styles.RAList}>
+                        {this.state.RAs.map(uid => {
+                            return(
+                                <Member
+                                    uid={uid}
+                                />
+                            )
+                        })}
                     </ScrollView>
+                    <View style={{alignItems: 'center', height: height * 18}}>
+                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('QRScan')}>
+                            <Text style={styles.text}>Scan QR Code</Text>
+                        </TouchableOpacity>
+                    </View>
+                    
                 </View>
             )
         }
@@ -163,7 +190,6 @@ const styles = StyleSheet.create({
       
     },
     button: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#ffffff',
@@ -175,10 +201,27 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#000000',
-        textShadowRadius: 2,
         textAlign: 'center',
         fontSize: 20,
         fontFamily: 'Fjalla One',
         width: 150
+    },
+    nonmembertitle: {
+        marginTop: 10,
+        color: '#000000',
+        textAlign: 'center',
+        fontSize: 30,
+        fontFamily: 'Fjalla One',
+    },
+    nonmembertext: {
+        marginTop: 20,
+        color: '#000000',
+        textAlign: 'center',
+        fontSize: 15,
+        fontFamily: 'Fjalla One',   
+    },
+    RAList: {
+        alignItems: 'center',
+        paddingTop: 5
     }
 });

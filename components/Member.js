@@ -57,7 +57,7 @@ export default class Member extends Component {
             this.setState({role: 'Resident Advisor'});
         }
         else {
-            this.setState({role: 'resident'});
+            this.setState({role: ''});
         }
     }
 

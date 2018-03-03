@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     eventsScroll: {
-        height: height * .47,
+        height: height * .49,
         
         
     },

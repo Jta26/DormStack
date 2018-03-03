@@ -63,9 +63,6 @@ const App = StackNavigator({
   },
   QRScan: {
     screen: QRScanView,
-    navigationOptions: {
-       header: null
-    }
   },
   Image: {
     screen: ImageView,
