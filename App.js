@@ -15,6 +15,7 @@ import { StackNavigator} from 'react-navigation';
 import firebase from 'firebase';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
+
 //Custom Views
 import LoginView from './views/LoginView';
 import RegisterView from './views/RegisterView';
@@ -38,8 +39,6 @@ firebase.initializeApp({
 });
 
 const App = StackNavigator({
-  
-
   Login: { 
     screen: LoginView,
     navigationOptions: {
@@ -69,21 +68,12 @@ const App = StackNavigator({
   },
   AddImage: {
     screen: AddDormImageView,
-    navigationOptions: {
-       header: null
-    }
   },
   CreateEvent: {
     screen: CreateEventView,
-    navigationOptions: {
-       header: null
-    }
   },
   MemberList: {
     screen: MemberListView,
-    navigationOptions: {
-       header: null
-    }
   },
   DormStackSettings: {
     screen: DormStackSettingsView,

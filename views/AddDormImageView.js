@@ -31,6 +31,18 @@ export default class AddDormImageView extends Component {
         Dorm: this.props.navigation.state.params.Dorm,
         User: this.props.navigation.state.params.User
     }
+    static navigationOptions = ({navigation}) => {
+        const {params} = navigation.state
+        return {
+            title: 'Add an Image to ' + params.Dorm.name,
+            headerTitleStyle: {
+                fontWeight: 'normal',
+                fontSize: 30,
+                fontFamily: 'Fjalla One',
+                
+            }
+        }
+    }
     uuidv4 = () => {
         return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
           var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -83,7 +95,6 @@ export default class AddDormImageView extends Component {
     render() {
         return(
             <View style={styles.container}>
-                <Text style={styles.title}>Add an Image to {this.state.Dorm.name}</Text>
                 <View style={styles.selectImage}>
                     <SelectImage
                         stateDormImageJSON={dormImageJSON => {

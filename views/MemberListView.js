@@ -28,15 +28,31 @@ export default class MemberListView extends Component {
         isEvent: this.props.navigation.state.params.isEvent,
         members: []
     }
+    static navigationOptions = ({navigation}) => {
+        const {params} = navigation.state
+        var title = '';
+        if (params.isEvent) {
+            title = 'Event'
+        }
+        else {
+            title= params.Dorm.name
+        }
+        return {
+            title: title +  ' members', 
+            headerTitleStyle: {
+                fontWeight: 'normal',
+                fontSize: 30,
+                fontFamily: 'Fjalla One',
+                
+            }
+        }
+    }
 
     componentWillMount() {
         //Maps each member in the memberList to a Member.js Component
         //Determines Members from list of uid passed to it.
         var database = firebase.database();
         if (!this.state.isEvent) {
-
-        }
-        else {
             database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members').on('value', (snapshot) => {
                 snapshot.forEach((member) => {
                     var memArr = this.state.members.slice();
@@ -44,6 +60,10 @@ export default class MemberListView extends Component {
                     this.setState({members: memArr});
                 });
             });
+
+        }
+        else {
+
         }
         
 
@@ -51,7 +71,6 @@ export default class MemberListView extends Component {
     render() {
         return(
             <View>
-                <Text style={styles.text}>{this.state.Dorm.name} Members</Text>
                 <ScrollView contentContainerStyle={styles.container}>
                     {this.state.members.map((member) => {
                         return(

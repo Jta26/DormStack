@@ -15,7 +15,7 @@ import {
 
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
-const {width} = Dimensions.get('window');
+const {width, height} = Dimensions.get('window');
 
 export default class QRScanView extends Component {
 
@@ -49,7 +49,16 @@ export default class QRScanView extends Component {
           <View style={{flex:1, backgroundColor: '#000000'}}>
           <View style={{width: width}}></View>
         </View>
+        
         }
+        showMarker={true}
+        customMarker={
+          <View style={{width: 275, height: 275, borderRadius: 45, borderColor: '#ffffff', borderWidth: 2}}>
+
+          </View>
+        }
+        fadeIn={true}
+        cameraStyle={{height: height - 30}}
       />
     );
   }

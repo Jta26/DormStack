@@ -16,6 +16,7 @@
     "react-native-icon": "^0.2.10",
     "react-native-image-crop-picker": "^0.19.2",
     "react-native-loading-spinner-overlay": "^0.5.2",
+    "react-native-modal": "^5.2.0",
     "react-native-photo-view": "^1.5.2",
     "react-native-qrcode-scanner": "0.0.30",
     "react-native-textinput-effects": "^0.4.2",
