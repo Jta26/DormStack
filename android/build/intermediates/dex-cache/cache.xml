@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_436da2e1714e74ce94aa6c7eadf6a4c629072fe0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
         optimize="true"
@@ -12,30 +21,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.0/2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1/rxjava-2.1.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.0_d874e1adfd9b8f17b757f64866fa0b2162006e76.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_874434e94167913050cf8c246bc40f47cbe4fbc2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.0_c86ccc56c3d73e6965d54fa2a8bb3a4cf19534c7.jar" />
+        revision="26.0.1"
+        sha1="2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/rxjava-2.1.0_01ef04cbc5bf7cd0a28b45643f6b2ed6a505a341.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,15 +39,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_bef79aa20269e56a82fb5a79b970eab045b480b3.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -66,48 +48,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_494ef286f5e351f6a43f3b33423957b8195eb11f.jar" />
+        revision="26.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.1.0_6b1875b54ae982c767a24ec9e11cba6ddfea2b21.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_a8df2eafb687c7e24c936a811271e8300e4a5610.jar" />
+        revision="26.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_872f0ae86f90128c8e68d79e6ab2f8f0686d71b3.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-fetch-blob/unspecified/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="b3690b1390b865608f8549b77f1443146e9cd343">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-fetch-blob-unspecified_72c7c9d4d84c6be657c703cd8eb07254015bd4eb.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.0_c43147cade131895a3ea74d7a0b642d7bfb4fef6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_16b97d6b533d87e7d5111d27bffc2c09f4cd5cb2.jar" />
+        revision="26.0.1"
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_8e70878fab6f0855f6f8612415ef1b4edd4c5c0c.jar" />
     </item>
     <item
         is-multidex="false"
@@ -120,66 +84,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_a35965c473c2d274542b2c855494025afc521ade.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="175bd41549bdb54a20105c14f0df0d4fc97e0c4c">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-image-crop-picker-unspecified_78b5b2621c02cbff9ce86cf5470b71ae26d70b99.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_81e95be08462403080b60d3163172b9a251891ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2e492787f157c13839c02e0b7293871dbaed9911">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.github.yalantis-ucrop-2.2.1-native_e77d6f232f5b99ac31e0994975697c65fa7c02ca.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_d6679b7da29712082e4ff1f2492d9c394d91cebd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.0_055ee910d312f88f0a7dc13f15e6b74c95b3b9ff.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_244c75cdf8335b0dc99a9d1031f5cd074fe3e55e.jar" />
+        revision="26.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_1378503b9509589322197c0286a46d092d2f836d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -192,48 +102,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.0_7dcfac11b962dcce0ecb6e95ae2a950318df0740.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.0_43cf85a9af7721757d1e1acc54f9318321283479.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_edb068d8796f0f486f355c666dd3cc81e5d50977.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3d05ef7ec1cf00769ae040a3ad6128164e115398.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.0_90833310553e36a1570862a4b8d8977c645fe081.jar" />
+        revision="26.0.1"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.0_ce92029a826437a1bdb0559a6207c55507e2ab78.jar" />
     </item>
     <item
         is-multidex="false"
@@ -246,48 +120,30 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_1378503b9509589322197c0286a46d092d2f836d.jar" />
+        revision="26.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_244c75cdf8335b0dc99a9d1031f5cd074fe3e55e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_36cebc36aa679b4b122c75bbffa4a2013071ec63.jar" />
+        revision="26.0.1"
+        sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.1.0_f74514654fa53d9cf89f0936e8527f3faa7b264f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_312964e7f4f478f6dab7b0ec49f695e13d34816d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_f78365f5a09b90f57f9ff848d7087bb14fb9b5d9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0_a16fe6daf2a9077395d92706a43cf2654563fc35.jar" />
+        revision="26.0.1"
+        sha1="e5ceac4d4c5f5559d813fb8e0419203a51b40462">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/me.relex-photodraweeview-1.0.0_16c3ba47a675fcc363c602826bb0072a3efab16e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -318,30 +174,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.android.support/support-annotations/27.1.0/39ded76b5e1ce1c5b2688e1d25cdc20ecee32007/support-annotations-27.1.0.jar"
         jumboMode="false"
         optimize="true"
-        revision="23.0.1"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0_024eaed52c6c5f4b79855022b97cb0d916425523.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_331c234fb18c34c4a988aa77e4e84109a066819e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="e5ceac4d4c5f5559d813fb8e0419203a51b40462">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/me.relex-photodraweeview-1.0.0_16c3ba47a675fcc363c602826bb0072a3efab16e.jar" />
+        revision="26.0.1"
+        sha1="39ded76b5e1ce1c5b2688e1d25cdc20ecee32007">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/support-annotations-27.1.0_11886684047fe3e1ffa3b1ccfc32fea092246889.jar" />
     </item>
     <item
         is-multidex="false"
@@ -354,12 +192,480 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/jars/classes.jar"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.1.0_b5acda7f8bbbf1da0bee37a043463736a366dae0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_c1776e07e90499fd2f46732740da7ab6c20eccb5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1ac56e5801e986583cbe27f2cce57f626cc7ff93">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.2.0_95be287a7c6713a7c2e9c319e219c09f71539c5f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_494ef286f5e351f6a43f3b33423957b8195eb11f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-photo-view/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d2db2ea04fdcef16fc0ceeb5f040fb83c12de2ad">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-photo-view-unspecified_5b2f38a5adb201f8aee3a8f581451bb53c601b33.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_312964e7f4f478f6dab7b0ec49f695e13d34816d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="b9a51262d663efadea9d0c402a5e76aace2685cb">
-        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.53.0_f6afbc059e3d408a2e5230ceaf6e3efc28bd27db.jar" />
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_edb068d8796f0f486f355c666dd3cc81e5d50977.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_35921b9cb00073f5098eb12efbadb57be18f7ccf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_1378503b9509589322197c0286a46d092d2f836d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_cb1cfe637c63efb99704f2dd7ceec9a5c8229ab8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_8dd29701b19dd4ad1591d9569d45081de9710abc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_c285a25ad57a9d80fc3fc9e19156aa31839944a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3d13e510077b35fe8e49930a627dd849ad5da0dc">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.2.0_f708a68176b4a4a727f6589b8e841fb71d9058a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/me.relex/photodraweeview/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e5ceac4d4c5f5559d813fb8e0419203a51b40462">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/me.relex-photodraweeview-1.0.0_16c3ba47a675fcc363c602826bb0072a3efab16e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/id.zelory/compressor/2.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6b1555196d65ffa1174f6f49efb2f278905f537a">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/id.zelory-compressor-2.1.0_8c37370a7dbab151b58dd543c306cceb2daf85fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_42e05b7976c0f5538d7cb1c79d5bcc83e24248f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_874434e94167913050cf8c246bc40f47cbe4fbc2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/exifinterface/27.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0d6df4057d1620a785f5bd2e69dd0d7866f3613c">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-exifinterface-27.1.0_48f1400800e6a5355b245fb448df3246b8300f98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_494ef286f5e351f6a43f3b33423957b8195eb11f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_81e95be08462403080b60d3163172b9a251891ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="175bd41549bdb54a20105c14f0df0d4fc97e0c4c">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-image-crop-picker-unspecified_78b5b2621c02cbff9ce86cf5470b71ae26d70b99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-camera/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6fb3138c07a7fa9bd68e465a064043999cf467e7">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-camera-unspecified_e1f9a218d7d31d12cf6f0eae976d7a516c91d399.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-fetch-blob/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="b3690b1390b865608f8549b77f1443146e9cd343">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-fetch-blob-unspecified_72c7c9d4d84c6be657c703cd8eb07254015bd4eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3d05ef7ec1cf00769ae040a3ad6128164e115398.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/android.arch.core/common/1.0.0/a2d487452376193fc8c103dd2b9bd5f2b1b44563/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_363f9f31952e0f1cd721561d87dde511888fe73d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3d05ef7ec1cf00769ae040a3ad6128164e115398.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2e492787f157c13839c02e0b7293871dbaed9911">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.github.yalantis-ucrop-2.2.1-native_e77d6f232f5b99ac31e0994975697c65fa7c02ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.0_edb068d8796f0f486f355c666dd3cc81e5d50977.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_312964e7f4f478f6dab7b0ec49f695e13d34816d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_e7b28d3cd62d7f55c637b1639dbfe423985c10f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9bc5c658348a96fc5110ac2a8785920bb9417c07">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.54.0_230bb92844e98565d6d216668caf3e0596300cf4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-fetch-blob/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b3690b1390b865608f8549b77f1443146e9cd343">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-fetch-blob-unspecified_72c7c9d4d84c6be657c703cd8eb07254015bd4eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_f8878af3905611b25fb55ff4d472e5b938a5febc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.0_d874e1adfd9b8f17b757f64866fa0b2162006e76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_331c234fb18c34c4a988aa77e4e84109a066819e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/d5d9b0d925494ef451ce3eef3fdf14cc874d9baa/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b4c16f9d50f6e5b420e03126c296c7ca08ad43f8">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.github.react-native-community-cameraview-d5d9b0d925494ef451ce3eef3fdf14cc874d9baa_dbff0193eb7fea1b92f3eb8f16b004af23391f17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bd75f9f0296fe220da6d0ad961831b04541c4452">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.2.0_e21be7e31e53152e115fe1054956b7532ff79a25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_2d1ef3fc68abcb75f15c93a5d94d0a658e1a90a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_36cebc36aa679b4b122c75bbffa4a2013071ec63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_ed23be0a30993cb53b992b13be8a252d1aacb6bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="175bd41549bdb54a20105c14f0df0d4fc97e0c4c">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-image-crop-picker-unspecified_78b5b2621c02cbff9ce86cf5470b71ae26d70b99.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_81e95be08462403080b60d3163172b9a251891ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2e492787f157c13839c02e0b7293871dbaed9911">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.github.yalantis-ucrop-2.2.1-native_e77d6f232f5b99ac31e0994975697c65fa7c02ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_12d81711f1239f410da820142d7ea5b09a4f179e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_d6679b7da29712082e4ff1f2492d9c394d91cebd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_244c75cdf8335b0dc99a9d1031f5cd074fe3e55e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="444f9de23145e8caba7bf1c1772acad142ea6013">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-10.2.0_23c6cd8a405f068d281fa894acdbe8ba759742ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_d6679b7da29712082e4ff1f2492d9c394d91cebd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_0f8ca2810181ba1a74d275e006b5b5df29031625.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.0_36cebc36aa679b4b122c75bbffa4a2013071ec63.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_874434e94167913050cf8c246bc40f47cbe4fbc2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.0/14b8c877d98005ba3941c9257cfe09f6ed0e0d74/reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.0_d874e1adfd9b8f17b757f64866fa0b2162006e76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_331c234fb18c34c4a988aa77e4e84109a066819e.jar" />
     </item>
 
 </items>

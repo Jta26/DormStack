@@ -17,7 +17,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/dev_loading_view.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/layout/dev_loading_view.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/res/layout/dev_loading_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
@@ -40,12 +40,12 @@
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/layout/redbox_view.xml"
-    },
-    {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/redbox_view.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/res/layout/redbox_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
@@ -97,7 +97,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/redbox_item_frame.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/layout/redbox_item_frame.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/res/layout/redbox_item_frame.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
@@ -112,12 +112,12 @@
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_action_bar_up_container.xml"
     },
     {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/redbox_item_title.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/layout/redbox_item_title.xml"
-    },
-    {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/redbox_item_title.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/res/layout/redbox_item_title.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
@@ -130,6 +130,10 @@
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/surface_view.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/d5d9b0d925494ef451ce3eef3fdf14cc874d9baa/res/layout/surface_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_custom.xml",
@@ -181,19 +185,11 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/fps_view.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.53.0/res/layout/fps_view.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/res/layout/fps_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_list_menu_item_radio.xml"
-    },
-    {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/notification_template_lines.xml"
-    },
-    {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/list_item.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-picker/unspecified/res/layout/list_item.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/ucrop_controls.xml",
@@ -216,15 +212,15 @@
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/res/layout/ucrop_layout_rotate_wheel.xml"
     },
     {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/ucrop_activity_photobox.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/res/layout/ucrop_activity_photobox.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_list_menu_item_layout.xml"
     }
 ]
