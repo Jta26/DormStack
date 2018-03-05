@@ -106,7 +106,6 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
-        vectorDrawables.useSupportLibrary = true
     }
     splits {
         abi {
@@ -138,10 +137,19 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-fetch-blob')
+    compile project(':react-native-photo-view')
+    compile project(':react-native-image-crop-picker')
+    compile project(':react-native-fetch-blob')
     compile project(':react-native-camera')
     compile project(':react-native-photo-view')
-    compile project(':react-native-fetch-blob')
     compile project(':react-native-image-crop-picker')
+    compile project(':react-native-fetch-blob')
+    compile project(':react-native-camera')
+    compile project(':react-native-photo-view')
+    compile project(':react-native-image-crop-picker')
+    compile project(':react-native-fetch-blob')
+    compile project(':react-native-camera')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules

@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'DormStack' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+	pod 'GoogleMobileVision/FaceDetector'
+	pod 'GoogleMobileVision/MVDataOutput'
+	pod 'RSKImageCropper'
+    	pod 'QBImagePickerController'		
+  # Pods for DormStack
+
+  target 'DormStack-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+
+    pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
+
+  end
+
+  target 'DormStackTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'DormStack-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for DormStack-tvOS
+
+
+end

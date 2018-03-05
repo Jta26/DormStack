@@ -15,7 +15,6 @@ import {
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import Spinner from 'react-native-loading-spinner-overlay';
-import QRCodeScanner from 'react-native-qrcode-scanner';
 import Modal from "react-native-modal";     
 
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
