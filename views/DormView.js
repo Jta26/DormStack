@@ -51,7 +51,7 @@ export default class DormView extends Component {
             headerStyle: {
                 shadowColor: '#000000',
                 shadowOffset: {width: 0, height: -3},
-                shadowOpacity: 1.00,
+                shadowOpacity: 1,
             },
             headerTitleStyle: {
                 fontWeight: 'normal',
@@ -125,7 +125,7 @@ export default class DormView extends Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.modalButton} onPress={() => {
                         this.setState({modalIsVisible: false});
-                        this.props.navigation.navigate('AddMember', {Dorm: this.state.Dorm, User: this.state.User})}
+                        this.props.navigation.navigate('QRCode', {Dorm: this.state.Dorm, User: this.state.User})}
                     }>
                     <Text style={styles.text}>Add Member</Text>
                     </TouchableOpacity>

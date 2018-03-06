@@ -6,7 +6,6 @@ import com.facebook.react.ReactApplication;
 import com.horcrux.svg.SvgPackage;
 import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.reactnative.photoview.PhotoViewPackage;
-import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.RNFetchBlob.RNFetchBlobPackage;
 import org.reactnative.camera.RNCameraPackage;
 

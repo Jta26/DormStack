@@ -59,11 +59,11 @@ export default class QRScanView extends Component {
 
             <QRCode
                 logo={logoFile}
-                value={this.state.resQR}
+                value={'testing'}
             />
             <QRCode
                 logo={logoFile}
-                value={this.state.raQR}
+                value={'testing'}
             />
         </View>
     )
