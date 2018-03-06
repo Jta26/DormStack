@@ -7,16 +7,15 @@ target 'DormStack' do
 	pod 'GoogleMobileVision/FaceDetector'
 	pod 'GoogleMobileVision/MVDataOutput'
 	pod 'RSKImageCropper'
-    	pod 'QBImagePickerController'		
+    	pod 'QBImagePickerController'
+ 			
   # Pods for DormStack
 
   target 'DormStack-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
 
-    pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
-
-    pod 'RNSVG', :path => '../node_modules/react-native-svg'
+   
 
   end
 

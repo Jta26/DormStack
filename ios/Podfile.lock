@@ -15,21 +15,13 @@ PODS:
   - GoogleUtilities (1.3.2):
     - GoogleSymbolUtilities (~> 1.1)
   - QBImagePickerController (3.4.0)
-  - react-native-fetch-blob (0.10.6):
-    - React/Core
-  - React/Core (0.11.0)
   - RSKImageCropper (2.0.0)
 
 DEPENDENCIES:
   - GoogleMobileVision/FaceDetector
   - GoogleMobileVision/MVDataOutput
   - QBImagePickerController
-  - react-native-fetch-blob (from `../node_modules/react-native-fetch-blob`)
   - RSKImageCropper
-
-EXTERNAL SOURCES:
-  react-native-fetch-blob:
-    :path: ../node_modules/react-native-fetch-blob
 
 SPEC CHECKSUMS:
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
@@ -38,10 +30,8 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
-  React: ab1a2e21deb34965c38328d5ec40cc7d12c6050a
-  react-native-fetch-blob: 63394b1d7b0781547b3e4463b3195790177b1222
   RSKImageCropper: d9a1acbc0600bf8decc8f0d21895872c99a9e4cf
 
-PODFILE CHECKSUM: a64b4f2dfd48bff2b312284873a699ccca13401e
+PODFILE CHECKSUM: 0b9865243875f2a2f7aae3ffa82cfb35e2cd4fec
 
 COCOAPODS: 1.4.0
