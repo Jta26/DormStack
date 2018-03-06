@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
         color: '#000000',
     },
     button: {
-        flex: 1,
+        
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
         marginTop: 20,
-        padding: 20,
+   
         height: 35
     },
     text: {

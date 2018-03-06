@@ -25,9 +25,13 @@ import DormView from './views/DormView';
 import DormStackSettingsView from './views/DormStackSettingsView';
 import AddDormImageView from './views/AddDormImageView'
 import CreateEventView from './views/CreateEventView';
+import EditMoTDView from './views/EditMoTDView';
 import ImageView from './views/ImageView';
 import MemberListView from './views/MemberListView';
 import QRScanView from './views/QRScanView';
+import QRCodeView from './views/QRCodeView';
+
+
 
 firebase.initializeApp({
   apiKey: "AIzaSyAbVD9D_R1y1MVwuvXDETRAQs7VucmiCiA",
@@ -37,6 +41,7 @@ firebase.initializeApp({
   storageBucket: "club-stack.appspot.com",
   messagingSenderId: "294725688831"
 });
+console.disableYellowBox = true;
 
 const App = StackNavigator({
   Login: { 
@@ -75,10 +80,15 @@ const App = StackNavigator({
   MemberList: {
     screen: MemberListView,
   },
+  EditMotD: {
+    screen: EditMoTDView
+  },
   DormStackSettings: {
     screen: DormStackSettingsView,
-    
   },
+  QRCode: {
+    screen: QRCodeView
+  }
 
 });
 

@@ -16,6 +16,8 @@ target 'DormStack' do
 
     pod 'react-native-fetch-blob', :path => '../node_modules/react-native-fetch-blob'
 
+    pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   end
 
   target 'DormStackTests' do

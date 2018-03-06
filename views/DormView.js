@@ -48,6 +48,11 @@ export default class DormView extends Component {
         const {params} = navigation.state;
         return {
             title: params.Dorm.name,
+            headerStyle: {
+                shadowColor: '#000000',
+                shadowOffset: {width: 0, height: -3},
+                shadowOpacity: 1.00,
+            },
             headerTitleStyle: {
                 fontWeight: 'normal',
                 fontSize: 30,
@@ -62,7 +67,7 @@ export default class DormView extends Component {
             )
         }
     }   
-    componentWillMount() {
+    componentDidMount() {
         this.setState({loading: true});
 
         this.GetRAs();
@@ -75,7 +80,7 @@ export default class DormView extends Component {
                     this.props.navigation.setParams({contextVisible: this.state.isValidated, ToggleModal: this.ToggleModal.bind(this)});
                     if (member.val().role == 0) {
                         this.setState({ Role: true});
-                        alert(this.state.Role);
+                       
                     }
                 }  
             });
@@ -111,17 +116,21 @@ export default class DormView extends Component {
         if (this.state.Role) {
             return(
                 <View>
-                    <TouchableOpacity style={styles.modalButton} onPress={() => this.props.navigation.navigate('ChangeMotD')}>
+                    <TouchableOpacity style={styles.modalButton} onPress={() => {
+                        this.setState({modalIsVisible: false});
+                        this.props.navigation.navigate('EditMotD', {Dorm: this.state.Dorm, User: this.state.User})}
+                        
+                    }>
                     <Text style={styles.text}>Edit MotD</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.modalButton} onPress={() => this.props.navigation.navigate('AddMember',
-                        {Dorm: this.state.Dorm, User: this.state.User}
-                    )}>
+                    <TouchableOpacity style={styles.modalButton} onPress={() => {
+                        this.setState({modalIsVisible: false});
+                        this.props.navigation.navigate('AddMember', {Dorm: this.state.Dorm, User: this.state.User})}
+                    }>
                     <Text style={styles.text}>Add Member</Text>
                     </TouchableOpacity>
                 </View>
             )
-
         }
         else {
             return
@@ -132,7 +141,6 @@ export default class DormView extends Component {
         if (this.state.isValidated) {
             return (
                 <View>
-
                     <HorizontalPhotoScroll
                         style={styles.photoScroll}
                         Dorm={this.state.Dorm}
@@ -297,12 +305,12 @@ const styles = StyleSheet.create({
         paddingTop: 5
     },
     modalButton: {
-        justifyContent: 'center',
         alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#ffffff',
         borderWidth: 1,
         borderColor: '#000000',
-        padding: 20,
+   
         height: 35,
         width: 300,
         marginTop: 20

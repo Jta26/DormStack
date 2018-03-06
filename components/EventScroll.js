@@ -26,7 +26,7 @@ export default class EventScroll extends Component {
     }
     
 
-    componentWillMount() {
+    componentDidMount() {
         var Dorm = this.props.Dorm;
         var User = this.props.User;
         var database = firebase.database();
@@ -92,7 +92,10 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingLeft: 5,
         backgroundColor: '#ffffff',
-        elevation: 5
+        elevation: 5,
+        shadowColor: '#000000',
+        shadowOffset: {width: 0, height: 6},
+        shadowOpacity: .3
     },
     eventsScroll: {
         height: height * .49,

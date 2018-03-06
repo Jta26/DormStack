@@ -18,7 +18,7 @@ export default class Event extends Component {
 
     state = {isGoing: this.props.isGoing, goingURL: require('../img/question.png')}
 
-    componentWillMount() {
+    componentDidMount() {
         if (this.props.isGoing) {
             this.setState({isGoing: true, goingURL: require('../img/verified.png')});
         }

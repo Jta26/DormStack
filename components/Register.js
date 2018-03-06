@@ -83,8 +83,6 @@ export default class Register extends Component {
         const {first, last, email, password, passConfirm, UserImage, campus} = this.state;
         firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(() => {
-            
-           
             this.setState({loading: false});
             var user = firebase.auth().currentUser;
             firebase.database().ref('users/' + user.uid).set({
@@ -192,14 +190,12 @@ export default class Register extends Component {
 }
 const styles = StyleSheet.create({
     button: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
         marginTop: 30,
-        padding: 20,
         height: 35
     },
     text: {

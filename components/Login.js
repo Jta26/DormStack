@@ -22,7 +22,7 @@ import RegisterView from '../views/RegisterView';
 export default class Login extends Component {
     state = {email: '', password: '', error: '', loading: false};
     
-    componentWillMount() {
+    componentDidMount() {
         this.setState({loading: true})
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
@@ -88,10 +88,10 @@ export default class Login extends Component {
                 />
                 <TouchableOpacity
                     style={styles.button}
-                    onPress={this.onLoginPress  }
+                    onPress={this.onLoginPress}
                     >
                     <Text style={styles.text}>Login</Text>
-                    </TouchableOpacity>
+                </TouchableOpacity>
                     <Text style={styles.errortext}>{this.state.error}</Text>
                     <Spinner style={{flex:1}} visible={this.state.loading} />
                 <TouchableOpacity
@@ -108,19 +108,20 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
     button: {
-        flex: 1,
+       
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
         marginTop: 30,
-        padding: 20,
+        paddingTop: 10,
+        paddingBottom: 10
     },
     text: {
         fontSize: 20,
         fontFamily: 'Fjalla One',
         color: '#000000'
+        
     },
     errortext: {
         textAlign: 'center',

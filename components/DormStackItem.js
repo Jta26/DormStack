@@ -19,7 +19,7 @@ export default class DormStackitem extends Component {
 
     state = {url: ''}
 
-    componentWillMount() {
+    componentDidMount() {
         var storage = firebase.storage();
         var database = firebase.database();
         var User = this.props.User;

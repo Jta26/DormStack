@@ -41,13 +41,32 @@ export default class CreateDorm extends Component {
                 },
                 shadowRadius: 0,
             }
-
         }
+    }
+    uuidv4 = () => {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+          var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+          return v.toString(16);
+        });
+      }
+    GenerateQR = (DormKey) => {
+  
+        var addMemberId = this.uuidv4();
+        var addRaId = this.uuidv4();
+        var database = firebase.database();
+        database.ref('school/' + this.state.User.school + '/' + DormKey + '/qr/res').set(addMemberId);
+        database.ref('school/' + this.state.User.school + '/' + DormKey + '/qr/resad').set(addRaId);
+        
+
+
 
     }
-    onDormCreate = () => {
-        this.props.navigation.navigate('DormStack');
+    onDormCreate = (DormKey) => {
+        
+        this.GenerateQR(DormKey);
         this.setState({loading: false});
+        this.props.navigation.navigate('DormStack');
+        
     }
     StoreImage = (database, dormKey, Dorm, User) => {
         const Blob = RNFetchBlob.polyfill.Blob;
@@ -74,7 +93,8 @@ export default class CreateDorm extends Component {
                 database.ref('school/' + User.school + '/' + dormKey + '/images').push({
                     url: imageUrl
                 });
-                this.onDormCreate();
+               
+                this.onDormCreate(dormKey);
             });
         });
     }
@@ -90,6 +110,7 @@ export default class CreateDorm extends Component {
             role: 0
         });
         this.StoreImage(database, dormKey, Dorm, User);
+        
     }
     onCreatePress = () => {
         this.setState({loading:true});
@@ -212,14 +233,13 @@ export default class CreateDorm extends Component {
 }
 const styles = StyleSheet.create({
     button: {
-        flex: 1,
+       
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
         marginTop: 30,
-        padding: 20,
         height: 35
     },
     text: {

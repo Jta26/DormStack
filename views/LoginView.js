@@ -27,11 +27,11 @@ const LoginView = ({navigation}) => {
             <Image style={styles.logo} source={require('../img/logo2.png')}></Image>
           </View>   
           
-            <KeyboardAvoidingView keyboardVerticalOffset={100} behavior={'padding'} style={styles.login}>
+            <View style={styles.login}>
               <Login
                 navigation={navigation}
               />
-            </KeyboardAvoidingView>
+            </View>
         </View>
     );
 };

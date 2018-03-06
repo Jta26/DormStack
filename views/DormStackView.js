@@ -35,7 +35,7 @@ export default class DormStackView extends Component {
     loading: false
   }
  
-  componentWillMount() {
+  componentDidMount() {
     this.setState({loading: true});
     //Resets Dorm Array on Load;
     this.setState({Dorm: []});
@@ -126,7 +126,10 @@ const styles = StyleSheet.create({
   titlecontainer: {
     height: height * .1,
     backgroundColor: '#ffffff',
-    elevation: 5
+    elevation: 5,
+    shadowColor: '#000000',
+    shadowOffset: {width: 0, height: -3},
+    shadowOpacity: 1.00,
   },
   title: {
     textAlign: 'center',
@@ -134,6 +137,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginTop: 20,
     color: '#000000',
+    
   },
   titlename: {
     textAlign: 'center',
@@ -146,6 +150,9 @@ const styles = StyleSheet.create({
   settings: {
     backgroundColor: '#ffffff',
     elevation: 5,
-    height: height * .15
+    height: height * .15,
+    shadowColor: '#000000',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 1.00,
   }
 });

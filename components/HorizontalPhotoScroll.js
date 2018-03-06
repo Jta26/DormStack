@@ -54,9 +54,9 @@ export default class HorizontalPhotoScroll extends Component {
             snapToAlignment={"center"}
             contentInset={{
               top: 0,
-              left: 30,
+              left: 0,
               bottom: 0,
-              right: 30,
+              right: 0,
             }}>
            {this.state.images.map(url => {
                return <TouchableOpacity onPress={() => this.props.navigation.navigate('Image', {image: {uri: url}})}><Image style={styles.image} source={{uri: url}}/></TouchableOpacity>

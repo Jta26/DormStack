@@ -48,12 +48,12 @@ export default class MemberListView extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         //Maps each member in the memberList to a Member.js Component
         //Determines Members from list of uid passed to it.
         var database = firebase.database();
         if (!this.state.isEvent) {
-            database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members').on('value', (snapshot) => {
+            database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members').once('value', (snapshot) => {
                 snapshot.forEach((member) => {
                     var memArr = this.state.members.slice();
                     memArr.push(member);

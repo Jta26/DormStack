@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "firebase": "^4.10.1",
+    "qrious": "^4.0.2",
     "react": "16.2.0",
     "react-native": "0.54.0",
     "react-native-camera": "^1.0.1",
@@ -19,6 +20,8 @@
     "react-native-modal": "^5.2.0",
     "react-native-photo-view": "^1.5.2",
     "react-native-qrcode-scanner": "0.0.30",
+    "react-native-qrcode-svg": "^5.0.6",
+    "react-native-svg": "^6.2.2",
     "react-native-textinput-effects": "^0.4.2",
     "react-navigation": "^1.4.0",
     "uuid": "^3.2.1"

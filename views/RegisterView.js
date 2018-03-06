@@ -18,6 +18,8 @@ import { StackNavigator } from 'react-navigation';
 import Register from "../components/Register";
 import Title from '../components/Title';
 
+const {width, height} = Dimensions.get('window');
+
 export default class RegisterView extends Component {
     static navigationOptions = {
         title: 'Join the DormStack',
@@ -32,10 +34,14 @@ export default class RegisterView extends Component {
         return (
             <View style={styles.container}>
     
-            <ScrollView contentContainerStyle={{height: 2000}}>
-                    <Register
+            <ScrollView contentContainerStyle={{width: width, height: height + 100, alignItems: 'center'}}>
+                <View style={{width: width - 100,}}>
+                <Register
+                    stye={{width: 200}}
                         navigation={this.props.navigation}
                     />
+
+                </View>
             </ScrollView>
             </View>
         );

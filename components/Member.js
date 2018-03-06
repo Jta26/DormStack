@@ -23,7 +23,7 @@ export default class Member extends Component {
     //Member
     state={uid: this.props.uid, first: '', last: '', email: '', role: '', profilepicURL: ''}
 
-    componentWillMount(){
+    componentDidMount(){
         this.GetMemberData(this.state.uid);
         this.DetermineRole();
     }

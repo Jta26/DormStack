@@ -101,14 +101,14 @@ const styles = StyleSheet.create({
         marginTop: 20,
     },
     button: {
-        flex: 1,
+        
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#000000',
         
-        padding: 20,
+        
         height: 35
     },
     text: {
