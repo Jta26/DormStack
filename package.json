@@ -19,6 +19,7 @@
     "react-native-loading-spinner-overlay": "^0.5.2",
     "react-native-modal": "^5.2.0",
     "react-native-photo-view": "^1.5.2",
+    "react-native-qrcode": "^0.2.6",
     "react-native-qrcode-scanner": "0.0.30",
     "react-native-qrcode-svg": "^5.0.6",
     "react-native-svg": "^6.2.2",

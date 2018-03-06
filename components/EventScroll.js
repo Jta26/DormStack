@@ -31,48 +31,84 @@ export default class EventScroll extends Component {
         var User = this.props.User;
         var database = firebase.database();
        
-        
-        database.ref('school/' + User.school + '/' + Dorm.key + '/events').once('value', snapshot => {
-           this.setState({events: []});
+        database.ref('school/' + User.school + '/' + Dorm.key + '/events').on('value', snapshot => {
+            var arrEvents = [];
+            this.setState({events: []});
             snapshot.forEach((event) => {
-                this.setState({events: [...this.state.events, event]});
+                var isGoing = false;
+                var key = event.key;
+                event.child('going').forEach((user) => {
+                    if (user.val().uid == User.uid) {
+                        isGoing = true;
+                    }
+                })
+                
+                var objEvent = {
+                    name: event.val().name,
+                    date: event.val().date,
+                    description: event.val().description,
+                    isGoing: isGoing,
+                    key: key
+                }
+                
+                arrEvents.push(objEvent);
+               
+                
             });
+            this.setState({events: arrEvents});
             
         });
-        
+    
 
     }
+    CheckGoing = (eventKey) => {
+        var database = firebase.database();
+        var User = this.props.User
+        var Dorm = this.props.Dorm
+        isGoing = false;
+        
+        database.ref('school/' + User.school + '/' + Dorm.key + '/events/' + eventKey + '/going').once('value', (snapshot) => {
+            snapshot.forEach(user => {
+                var value = user.child('uid').val();
+                if (value == this.props.User.uid) {
+                    isGoing = true;
+                }
+                else { 
 
-    render() {
+                }
+            });
+        })
+       
+    }
+    mapEvents() {
         var events = this.state.events;
+        console.log(events);
+        return events.map(event => {
+            console.log('mapped' + JSON.stringify(event));
+             return(
+                 <Event
+                     Dorm={this.props.Dorm}
+                     User={this.props.User}
+                     eventKey={event.key}
+                     name={event.name}
+                     date={event.date}
+                     description={event.description}
+                     isGoing={event.isGoing}
+                     navigation={this.props.navigation}
+                 />
+             );
+         })
+    }
+    
+    render() {
+        
+        
+        
         return(
             <View>
             <Text style={styles.eventstitle}>Events:</Text>
                <ScrollView contentContainerStyle={{}} style={styles.eventsScroll}>
-                 
-                    {events.map(event => {
-                        
-                        var isGoing = false;
-                        var eventkey= event.key;
-                        for (user in event.val().going) {
-                            var value = event.val().going[user].uid
-                            if (value == this.props.User.uid) {
-                                isGoing = true; 
-                            }
-                        }
-                        return(
-                            <Event
-                                Dorm={this.props.Dorm}
-                                User={this.props.User}
-                                name={event.val().name}
-                                date={event.val().date}
-                                description={event.val().description}
-                                isGoing={isGoing}
-                                eventKey={event.key}
-                                navigation={this.props.navigation}
-                            />
-                        );
-                    })}
+                    {this.mapEvents()}
                 </ScrollView>
             </View>
         )

@@ -18,12 +18,23 @@ import { StackNavigator } from 'react-navigation';
 const {height, width} = Dimensions.get('window');
 
 export default class Motd extends Component {
+    state = {motd: this.props.motd}
+    componentDidMount() {
+        this.UpdateMotD();
+    }
+    
+    UpdateMotD = () => {
+        var database = firebase.database();
+        database.ref('school/' + this.props.User.school + '/' + this.props.Dorm.key + '/motd').on('value', (snapshot) => {
+            this.setState({motd: snapshot.val()});
+        })
+    }
     
     render() {
         return(
             <View style={styles.container}>
                 <Text style={styles.motdtitle}>Message of the Day:</Text>
-                <Text style={styles.motd}>{this.props.motd}</Text>
+                <Text style={styles.motd}>{this.state.motd}</Text>
             </View>
         );
     }

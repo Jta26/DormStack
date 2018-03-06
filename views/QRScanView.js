@@ -12,7 +12,7 @@ import {
   Linking,
   Dimensions,
 } from 'react-native';
-
+import firebase from 'firebase';
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 const {width, height} = Dimensions.get('window');
@@ -29,10 +29,32 @@ export default class QRScanView extends Component {
         }
     }
 }  
-
   onScan(data) {
-      alert(JSON.stringify(data));
+      var params = this.props.navigation.state.params;
+      var database = firebase.database();
+      database.ref('school/' + params.User.school + '/' + params.Dorm.key + '/qr').once('value', (snapshot) => {
+        if (data.data == snapshot.val().res) {
+            //Add Resident
+            this.addResident(params.Dorm, params.User, 1);
+        }
+        else if (data.data == snapshot.val().resad) {
+          this.addResident(params.Dorm, params.User, 0);
+        }
+        else {
+            alert('QR Code Not Recoginized');
+
+        }
+      });
     // this.props.navigation.goBack();
+  }
+  addResident = (Dorm, User, role) => {
+    var database = firebase.database();
+    database.ref('school/' + User.school + '/' + Dorm.key + '/members').push({
+        uid: firebase.auth().currentUser.uid,
+        role: role
+    }).then(() => {
+        this.props.navigation.navigate('Dorm', {User: User, Dorm: Dorm});
+    });
   }
   
   render() {

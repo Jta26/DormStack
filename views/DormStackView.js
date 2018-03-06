@@ -63,6 +63,7 @@ export default class DormStackView extends Component {
           members:dorm.val().members,
           images:dorm.val().images
         }
+       
         
         var arrDorm = this.state.Dorms.slice();
         arrDorm.push(Dorm);

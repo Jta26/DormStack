@@ -16,6 +16,7 @@ import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import Spinner from 'react-native-loading-spinner-overlay';
 import Modal from "react-native-modal";     
+import { HeaderBackButton } from 'react-navigation';
 
 import HorizontalPhotoScroll from '../components/HorizontalPhotoScroll';
 import Title from '../components/Title';
@@ -26,6 +27,7 @@ import Member from '../components/Member';
 
 
 const {height, width} = Dimensions.get('window');
+
 
 export default class DormView extends Component {
     //Goals for this class
@@ -46,7 +48,9 @@ export default class DormView extends Component {
 
     static navigationOptions = ({ navigation }) => {
         const {params} = navigation.state;
+        
         return {
+            gesturesEnabled: false,
             title: params.Dorm.name,
             headerStyle: {
                 shadowColor: '#000000',
@@ -58,13 +62,19 @@ export default class DormView extends Component {
                 fontSize: 30,
                 fontFamily: 'Fjalla One',       
             },
+            headerLeft: <HeaderBackButton onPress={() => navigation.navigate('DormStack')} />,
             headerRight: (
                 params.contextVisible &&
+                <View style={{flexDirection: 'row'}}>
+                <TouchableOpacity style={{marginRight: 20}} onPress={() => 
+                    navigation.navigate('Dorm', {contextVisile: true, Dorm: params.Dorm, User: params.User})}>
+                    <Image style={{width: 30, height: 30, marginTop: 5}} source={require('../img/refresh.png')}/>
+                </TouchableOpacity>
                 <TouchableOpacity style={{marginRight: 20}} onPress={params.ToggleModal}>
                     <Image style={{width: 40, height: 40}} source={require('../img/dots.png')}/>
                 </TouchableOpacity>
-
-            )
+                </View>
+            ),
         }
     }   
     componentDidMount() {
@@ -73,11 +83,12 @@ export default class DormView extends Component {
         this.GetRAs();
        var database = firebase.database();
        database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
-       .once('value', (snapshot => {
+       .on('value', snapshot => {
             snapshot.forEach((member) => {    
                 if (this.CheckMembership(this.state.User, member.val().uid)) {
+                    console.log('true')
                     this.setState({isValidated: true});
-                    this.props.navigation.setParams({contextVisible: this.state.isValidated, ToggleModal: this.ToggleModal.bind(this)});
+                    this.props.navigation.setParams({contextVisible: true, ToggleModal: this.ToggleModal.bind(this)});
                     if (member.val().role == 0) {
                         this.setState({ Role: true});
                        
@@ -85,7 +96,7 @@ export default class DormView extends Component {
                 }  
             });
             this.setState({loading: false})
-       }));
+       });
     }
     ToggleModal = () => {
         this.setState({modalIsVisible: true});
@@ -102,7 +113,8 @@ export default class DormView extends Component {
     GetRAs = () => {
         var database = firebase.database();
         database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/members')
-        .once('value', snapshot => {
+        .on('value', snapshot => {
+            this.setState({RAs: []});
             snapshot.forEach(member => {
                 if (member.val().role == 0) {
                         var arrRA = this.state.RAs.slice();
@@ -149,7 +161,8 @@ export default class DormView extends Component {
                     />
                     <Motd
                         style={styles.Motd}
-                        motd={this.state.Dorm.motd}
+                        User={this.state.User}
+                        Dorm={this.state.Dorm}
                     />
                     <EventScroll
                         style={styles.eventScroll}
@@ -163,9 +176,9 @@ export default class DormView extends Component {
                         onBackButtonPress={() => this.setState({modalIsVisible: false})}
                         onBackdropPress={() => this.setState({modalIsVisible: false})}
                         animationIn="slideInLeft"
-                        animationInTiming={1000}
+                        animationInTiming={600}
                         animationOut="slideOutLeft"
-                        animationOutTiming={1000}
+                        animationOutTiming={600}
                      >
                         <View style={{ 
                             flex: 1,
@@ -223,7 +236,8 @@ export default class DormView extends Component {
                         })}
                     </ScrollView>
                     <View style={{alignItems: 'center', height: height * 18}}>
-                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('QRScan')}>
+                        <TouchableOpacity style={styles.button} onPress={() => 
+                            this.props.navigation.navigate('QRScan', {User: this.state.User, Dorm: this.state.Dorm})}>
                             <Text style={styles.text}>Scan QR Code</Text>
                         </TouchableOpacity>
                     </View>
@@ -270,12 +284,12 @@ const styles = StyleSheet.create({
       
     },
     button: {
-        justifyContent: 'center',
+        justifyContent: 'center',   
         alignItems: 'center',
         backgroundColor: '#ffffff',
         borderWidth: 1,
         borderColor: '#000000',
-        padding: 20,
+    
         height: 35,
         width: 200,
     },
@@ -283,8 +297,7 @@ const styles = StyleSheet.create({
         color: '#000000',
         textAlign: 'center',
         fontSize: 20,
-        fontFamily: 'Fjalla One',
-        
+        fontFamily: 'Fjalla One', 
     },
     nonmembertitle: {
         marginTop: 10,

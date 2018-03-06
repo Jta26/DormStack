@@ -31,7 +31,8 @@ export default class HorizontalPhotoScroll extends Component {
         var User = this.props.User;
         var storage = firebase.storage();
         var database = firebase.database();
-        database.ref('school/' + User.school + '/' + Dorm.key + '/images').once('value').then(snapshot => {
+        database.ref('school/' + User.school + '/' + Dorm.key + '/images').on('value',snapshot => {
+          this.setState({images: []});
           snapshot.forEach(child => {
               storage.ref(child.val().url).getDownloadURL().then(url => {
                 var arrImages = this.state.images.slice();
