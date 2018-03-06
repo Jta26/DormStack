@@ -26,6 +26,7 @@ MERGED from [com.facebook.react:react-native:0.54.0] /home/joellinux/Desktop/Dev
 		ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /home/joellinux/Desktop/Development/DormStack/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [DormStack:react-native-svg:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-svg/unspecified/AndroidManifest.xml:7:5-9:41
 MERGED from [DormStack:react-native-image-crop-picker:unspecified] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.yalantis:ucrop:2.2.1-native] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.github.yalantis/ucrop/2.2.1-native/AndroidManifest.xml:8:5-10:41
 MERGED from [id.zelory:compressor:2.1.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/id.zelory/compressor/2.1.0/AndroidManifest.xml:8:5-10:41
@@ -39,6 +40,7 @@ MERGED from [com.google.android.gms:play-services-vision:10.2.0] /home/joellinux
 MERGED from [com.google.android.gms:play-services-base:10.2.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-tasks:10.2.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.0/AndroidManifest.xml:3:5-43
 MERGED from [com.google.android.gms:play-services-basement:10.2.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:multidex:1.0.1] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/AndroidManifest.xml:18:5-42
 MERGED from [com.facebook.react:react-native:0.54.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.0.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:26.1.0] /home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/AndroidManifest.xml:21:5-23:54

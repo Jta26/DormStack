@@ -372,6 +372,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-svg/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2deaa846588295912e1539abaaca3dc295d6b5b8">
+        <dex dex="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/pre-dexed/debug/DormStack-react-native-svg-unspecified_a24bebe40216bc69cf0f663cf864f66aa924ba4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/DormStack/react-native-image-crop-picker/unspecified/jars/classes.jar"
         jumboMode="false"
         optimize="true"
