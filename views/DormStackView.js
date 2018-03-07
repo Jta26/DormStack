@@ -15,6 +15,7 @@ import {
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import Spinner from 'react-native-loading-spinner-overlay';
+import PushNotification from 'react-native-push-notification';
 
 //Views
 import CreateDorm from './CreateDormView';
@@ -36,6 +37,12 @@ export default class DormStackView extends Component {
   }
  
   componentDidMount() {
+    PushNotification.configure({
+      onNotification: () => {
+        alert('notify');
+      }
+    });
+
     this.setState({loading: true});
     //Resets Dorm Array on Load;
     this.setState({Dorm: []});
@@ -91,6 +98,13 @@ export default class DormStackView extends Component {
         })}
         </ScrollView>
         <View style={styles.settings}>
+          <Button title={'test'} onPress={() => {
+            alert('test');
+            PushNotification.localNotificationSchedule({
+              message: "My Notification Message", // (required)
+              date: new Date(Date.now() + (1 * 1000)) // in 60 secs
+            });
+          }}/>
           <DormStackOptions
             navigation={this.props.navigation}
           />

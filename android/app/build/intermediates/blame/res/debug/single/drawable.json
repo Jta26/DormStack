@@ -9,7 +9,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/ucrop_vector_ic_crop.xml",
@@ -33,7 +33,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
@@ -49,11 +49,11 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_dark.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_light_focused.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_light_focused.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
@@ -65,7 +65,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
@@ -73,7 +73,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_light_normal.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
@@ -93,7 +93,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_disabled.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
@@ -109,7 +109,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_dark.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
@@ -117,15 +117,15 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
@@ -133,7 +133,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_disabled.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_disabled.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/notification_bg.xml",
@@ -165,7 +165,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_icon_light.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
@@ -185,7 +185,7 @@
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/drawable/common_google_signin_btn_text_light.xml"
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",

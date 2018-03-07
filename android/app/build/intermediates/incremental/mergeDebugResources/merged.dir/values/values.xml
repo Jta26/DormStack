@@ -470,7 +470,7 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="cancel_button_image_alpha">127</integer>
-    <integer name="google_play_services_version">10298000</integer>
+    <integer name="google_play_services_version">11910000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="ucrop_progress_loading_anim_time">1500</integer>
     <string name="abc_action_bar_home_description">Navigate home</string>
@@ -535,6 +535,7 @@
     <string msgid="7153882981874058840" name="common_google_play_services_install_button">Install</string>
     <string name="common_google_play_services_install_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are missing from your device.</string>
     <string msgid="7215213145546190223" name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
     <string name="common_google_play_services_notification_ticker">Google Play services error</string>
     <string name="common_google_play_services_unknown_issue"><ns1:g id="app_name">%1$s</ns1:g> is having trouble with Google Play services. Please try again.</string>
     <string name="common_google_play_services_unsupported_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are not supported by your device.</string>
@@ -546,6 +547,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="gcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="ucrop_error_input_data_is_absent">Both input and output Uri must be specified</string>

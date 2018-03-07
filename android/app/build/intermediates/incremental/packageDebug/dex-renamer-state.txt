@@ -1,4 +1,4 @@
-#Mon Mar 05 22:46:36 EST 2018
+#Tue Mar 06 21:42:04 EST 2018
 base.0=/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

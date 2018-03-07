@@ -372,13 +372,13 @@
                     "endOffset": 2146
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 0,
-                        "startOffset": 283,
+                        "startOffset": 281,
                         "endColumn": 107,
-                        "endOffset": 390
+                        "endOffset": 388
                     }
                 }
             },
@@ -391,13 +391,13 @@
                     "endOffset": 2333
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 0,
-                        "startOffset": 391,
+                        "startOffset": 389,
                         "endColumn": 186,
-                        "endOffset": 577
+                        "endOffset": 575
                     }
                 }
             },
@@ -410,13 +410,13 @@
                     "endOffset": 2471
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 0,
-                        "startOffset": 578,
+                        "startOffset": 576,
                         "endColumn": 133,
-                        "endOffset": 711
+                        "endOffset": 709
                     }
                 }
             },
@@ -429,13 +429,13 @@
                     "endOffset": 2578
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 0,
-                        "startOffset": 712,
+                        "startOffset": 710,
                         "endColumn": 102,
-                        "endOffset": 814
+                        "endOffset": 812
                     }
                 }
             },
@@ -448,13 +448,13 @@
                     "endOffset": 2784
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 8,
                         "startColumn": 0,
-                        "startOffset": 815,
+                        "startOffset": 813,
                         "endColumn": 205,
-                        "endOffset": 1020
+                        "endOffset": 1018
                     }
                 }
             },
@@ -467,13 +467,13 @@
                     "endOffset": 2916
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 9,
                         "startColumn": 0,
-                        "startOffset": 1021,
+                        "startOffset": 1019,
                         "endColumn": 127,
-                        "endOffset": 1148
+                        "endOffset": 1146
                     }
                 }
             },
@@ -482,17 +482,17 @@
                     "startLine": 27,
                     "startColumn": 4,
                     "startOffset": 2921,
-                    "endColumn": 134,
-                    "endOffset": 3051
+                    "endColumn": 156,
+                    "endOffset": 3073
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 10,
                         "startColumn": 0,
-                        "startOffset": 1149,
-                        "endColumn": 130,
-                        "endOffset": 1279
+                        "startOffset": 1147,
+                        "endColumn": 152,
+                        "endOffset": 1299
                     }
                 }
             },
@@ -500,18 +500,18 @@
                 "to": {
                     "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 3056,
-                    "endColumn": 205,
-                    "endOffset": 3257
+                    "startOffset": 3078,
+                    "endColumn": 134,
+                    "endOffset": 3208
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 11,
                         "startColumn": 0,
-                        "startOffset": 285,
-                        "endColumn": 205,
-                        "endOffset": 490
+                        "startOffset": 1300,
+                        "endColumn": 130,
+                        "endOffset": 1430
                     }
                 }
             },
@@ -519,18 +519,18 @@
                 "to": {
                     "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 3262,
-                    "endColumn": 230,
-                    "endOffset": 3488
+                    "startOffset": 3213,
+                    "endColumn": 205,
+                    "endOffset": 3414
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/11.8.0/res/values-tr/values.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 4,
                         "startColumn": 0,
-                        "startOffset": 1280,
-                        "endColumn": 230,
-                        "endOffset": 1510
+                        "startOffset": 283,
+                        "endColumn": 205,
+                        "endOffset": 488
                     }
                 }
             },
@@ -538,18 +538,18 @@
                 "to": {
                     "startLine": 30,
                     "startColumn": 4,
-                    "startOffset": 3493,
-                    "endColumn": 108,
-                    "endOffset": 3597
+                    "startOffset": 3419,
+                    "endColumn": 230,
+                    "endOffset": 3645
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 0,
-                        "startOffset": 1511,
-                        "endColumn": 104,
-                        "endOffset": 1615
+                        "startOffset": 1431,
+                        "endColumn": 230,
+                        "endOffset": 1661
                     }
                 }
             },
@@ -557,18 +557,18 @@
                 "to": {
                     "startLine": 31,
                     "startColumn": 4,
-                    "startOffset": 3602,
-                    "endColumn": 187,
-                    "endOffset": 3785
+                    "startOffset": 3650,
+                    "endColumn": 108,
+                    "endOffset": 3754
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 13,
                         "startColumn": 0,
-                        "startOffset": 1616,
-                        "endColumn": 187,
-                        "endOffset": 1803
+                        "startOffset": 1662,
+                        "endColumn": 104,
+                        "endOffset": 1766
                     }
                 }
             },
@@ -576,18 +576,18 @@
                 "to": {
                     "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 3790,
-                    "endColumn": 135,
-                    "endOffset": 3921
+                    "startOffset": 3759,
+                    "endColumn": 187,
+                    "endOffset": 3942
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 14,
                         "startColumn": 0,
-                        "startOffset": 1804,
-                        "endColumn": 131,
-                        "endOffset": 1935
+                        "startOffset": 1767,
+                        "endColumn": 187,
+                        "endOffset": 1954
                     }
                 }
             },
@@ -595,18 +595,18 @@
                 "to": {
                     "startLine": 33,
                     "startColumn": 4,
-                    "startOffset": 3926,
-                    "endColumn": 203,
-                    "endOffset": 4125
+                    "startOffset": 3947,
+                    "endColumn": 135,
+                    "endOffset": 4078
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 0,
-                        "startOffset": 1936,
-                        "endColumn": 203,
-                        "endOffset": 2139
+                        "startOffset": 1955,
+                        "endColumn": 131,
+                        "endOffset": 2086
                     }
                 }
             },
@@ -614,18 +614,18 @@
                 "to": {
                     "startLine": 34,
                     "startColumn": 4,
-                    "startOffset": 4130,
-                    "endColumn": 196,
-                    "endOffset": 4322
+                    "startOffset": 4083,
+                    "endColumn": 203,
+                    "endOffset": 4282
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 16,
                         "startColumn": 0,
-                        "startOffset": 2140,
-                        "endColumn": 192,
-                        "endOffset": 2332
+                        "startOffset": 2087,
+                        "endColumn": 203,
+                        "endOffset": 2290
                     }
                 }
             },
@@ -633,18 +633,18 @@
                 "to": {
                     "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 4327,
-                    "endColumn": 91,
-                    "endOffset": 4414
+                    "startOffset": 4287,
+                    "endColumn": 196,
+                    "endOffset": 4479
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 17,
                         "startColumn": 0,
-                        "startOffset": 2333,
-                        "endColumn": 87,
-                        "endOffset": 2420
+                        "startOffset": 2291,
+                        "endColumn": 192,
+                        "endOffset": 2483
                     }
                 }
             },
@@ -652,18 +652,18 @@
                 "to": {
                     "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 4419,
-                    "endColumn": 93,
-                    "endOffset": 4508
+                    "startOffset": 4484,
+                    "endColumn": 91,
+                    "endOffset": 4571
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 0,
-                        "startOffset": 2421,
-                        "endColumn": 89,
-                        "endOffset": 2510
+                        "startOffset": 2484,
+                        "endColumn": 87,
+                        "endOffset": 2571
                     }
                 }
             },
@@ -671,18 +671,18 @@
                 "to": {
                     "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 4513,
-                    "endColumn": 108,
-                    "endOffset": 4617
+                    "startOffset": 4576,
+                    "endColumn": 93,
+                    "endOffset": 4665
                 },
                 "from": {
-                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.0/res/values-tr/values.xml",
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 0,
-                        "startOffset": 2511,
-                        "endColumn": 104,
-                        "endOffset": 2615
+                        "startOffset": 2572,
+                        "endColumn": 89,
+                        "endOffset": 2661
                     }
                 }
             },
@@ -690,9 +690,47 @@
                 "to": {
                     "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 4622,
+                    "startOffset": 4670,
+                    "endColumn": 108,
+                    "endOffset": 4774
+                },
+                "from": {
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/11.8.0/res/values-tr/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 0,
+                        "startOffset": 2662,
+                        "endColumn": 104,
+                        "endOffset": 2766
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 4779,
+                    "endColumn": 102,
+                    "endOffset": 4877
+                },
+                "from": {
+                    "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/11.8.0/res/values-tr/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 228,
+                        "endColumn": 98,
+                        "endOffset": 326
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 4882,
                     "endColumn": 78,
-                    "endOffset": 4696
+                    "endOffset": 4956
                 },
                 "from": {
                     "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-tr/values-tr.xml",
@@ -707,11 +745,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 4701,
+                    "startOffset": 4961,
                     "endColumn": 100,
-                    "endOffset": 4797
+                    "endOffset": 5057
                 },
                 "from": {
                     "file": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/values-tr/values-tr.xml",
