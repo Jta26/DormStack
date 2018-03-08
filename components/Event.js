@@ -13,6 +13,8 @@ import {
 } from 'react-native';
 import * as firebase from 'firebase';
 import StackNavigator from 'react-navigation';
+import moment from 'moment';
+import PushNotification from 'react-native-push-notification';
 
 export default class Event extends Component {
 
@@ -30,10 +32,23 @@ export default class Event extends Component {
             var database = firebase.database();
             database.ref('school/' + this.props.User.school + '/' + this.props.Dorm.key + '/events/' + this.props.eventKey + '/going').push({
                 uid: this.props.User.uid
+            }).then(() => {
+                this.RegisterNotification();
             });
             this.setState({isGoing: true});
         }
         
+    }
+    RegisterNotification = () => {
+        eventMoment = moment(this.props.date, 'llll');
+        eventDate = eventMoment.toDate();
+        fifteenBefore = eventMoment.subtract(15, 'm').toDate();
+       
+        PushNotification.localNotificationSchedule({
+            title: this.props.name + ' Soon',
+            message: this.props.name + ' in 15 minutes',
+            date: fifteenBefore
+        });
     }
     render() {
       

@@ -32,12 +32,12 @@
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_search_view.xml"
-    },
-    {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_search_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow_custom.xml",
@@ -60,12 +60,12 @@
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_alert_dialog_material.xml"
     },
     {
-        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_activity_chooser_view.xml"
-    },
-    {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",
         "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/home/joellinux/Desktop/Development/DormStack/android/app/build/intermediates/res/merged/debug/layout/notification_template_big_media_narrow.xml",

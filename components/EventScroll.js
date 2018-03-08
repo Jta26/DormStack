@@ -14,6 +14,7 @@ import {
   } from 'react-native';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
+import moment from 'moment';
 
 import Event from './Event';
 
@@ -24,7 +25,6 @@ export default class EventScroll extends Component {
     state = {
         events: [],
     }
-    
 
     componentDidMount() {
         var Dorm = this.props.Dorm;
@@ -37,26 +37,27 @@ export default class EventScroll extends Component {
             snapshot.forEach((event) => {
                 var isGoing = false;
                 var key = event.key;
-                event.child('going').forEach((user) => {
-                    if (user.val().uid == User.uid) {
-                        isGoing = true;
-                    }
-                })
-                
-                var objEvent = {
-                    name: event.val().name,
-                    date: event.val().date,
-                    description: event.val().description,
-                    isGoing: isGoing,
-                    key: key
+                date = moment(event.val().date, 'llll').toDate();
+                if (date < Date.now()) {
+                    database.ref('school/' + User.school + '/' + Dorm.key + "/events/" + key).set(null);
                 }
-                
-                arrEvents.push(objEvent);
-               
-                
+                else {
+                    event.child('going').forEach((user) => {
+                        if (user.val().uid == User.uid) {
+                            isGoing = true;
+                        }
+                    }); 
+                    var objEvent = {
+                        name: event.val().name,
+                        date: event.val().date,
+                        description: event.val().description,
+                        isGoing: isGoing,
+                        key: key
+                    }
+                    arrEvents.push(objEvent);
+                }
             });
             this.setState({events: arrEvents});
-            
         });
     
 

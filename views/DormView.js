@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         borderWidth: 1,
         borderColor: '#000000',
-    
+        marginTop: 20,
         height: 35,
         width: 200,
     },

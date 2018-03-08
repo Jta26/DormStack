@@ -107,6 +107,6 @@ const styles = StyleSheet.create({
         margin: 20
     },
     qrcontainer: {
-        height: height * .5,
+        height: height * .4,
     }
 });

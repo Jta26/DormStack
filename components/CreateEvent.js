@@ -10,14 +10,18 @@ import {
     ScrollView,
     KeyboardAvoidingView,
     TouchableOpacity,
-    Dimensions
+    Dimensions,
+    PushNotificationIOS
 } from 'react-native';
 import firebase from 'firebase';
 import StackNavigator from 'react-navigation';
 import { Hoshi } from 'react-native-textinput-effects';
 import Spinner from 'react-native-loading-spinner-overlay';
+import PushNotification from 'react-native-push-notification';
+import moment from 'moment';
 
 import DatePicker from 'react-native-datepicker';
+import NotificationController from './NotificationController';
 
 const {width, height} = Dimensions.get('window');
 
@@ -53,13 +57,27 @@ export default class CreateEvent extends Component {
         }
         var eventRef = database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events').push(this.state.Event);
         database.ref('school/' + this.state.User.school + '/' + this.state.Dorm.key + '/events/' + eventRef.key + '/going').push({uid: this.state.User.uid, role: 0});
+        console.log('test');
+        this.RegisterNotification();
         this.setState({loading: false});
         this.props.navigation.navigate('Dorm', {navigation: this.props.navigation, Dorm: this.state.Dorm, User: this.state.User})
+    }
+    RegisterNotification = () => {
+        eventMoment = moment(this.state.Event.date, 'llll');
+        eventDate = eventMoment.toDate();
+        fifteenBefore = eventMoment.subtract(15, 'm').toDate();
+        alert(fifteenBefore);
+        PushNotification.localNotificationSchedule({
+            title: this.state.Event.name + ' Soon',
+            message: this.state.Event.name + " in 15 minutes",
+            date: fifteenBefore
+        });
     }
 
     render() {
         return(
             <View style={styles.container}>
+                <NotificationController/>
                 <View style={styles.form}>
                     <Text style={styles.textTitle}>Add an Event to {this.state.Dorm.name}</Text>
                     <Hoshi      
